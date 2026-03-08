@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { MARKETPLACE_CONFIG } from "@casa-yolotl/shared";
 
 const FooterBottom = () => {
     const { t } = useLanguage();
@@ -19,8 +20,8 @@ const FooterBottom = () => {
 
             <div className="flex items-center space-x-12">
                 <div className="flex items-center space-x-6">
-                    <span className="text-[8px] uppercase tracking-[0.4em] text-brand-cream/20">ES / EN</span>
-                    <span className="text-[8px] uppercase tracking-[0.4em] text-brand-cream/20">EUR / MXN</span>
+                    <span className="text-[8px] uppercase tracking-[0.4em] text-brand-cream/20">{MARKETPLACE_CONFIG.i18n.locales.join(' / ').toUpperCase()}</span>
+                    <span className="text-[8px] uppercase tracking-[0.4em] text-brand-cream/20">{MARKETPLACE_CONFIG.currency.code} / MXN</span>
                 </div>
                 <div className="flex space-x-6">
                     {["Instagram", "LinkedIn"].map((social) => (

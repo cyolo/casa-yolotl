@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Product, trackMarketplaceExit } from "@casa-yolotl/shared";
+import { Product, trackMarketplaceExit, MARKETPLACE_CONFIG } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface ProductCardProps {
@@ -61,7 +61,7 @@ const ProductCard = ({ product, onMarketplaceClick }: ProductCardProps) => {
 
                 <div className="mt-auto pt-6 border-t border-[#1A1A1A]/5 flex items-center justify-between">
                     <span className="text-sm font-sans font-medium text-[#1A1A1A] tracking-tighter">
-                        €{product.price}
+                        {MARKETPLACE_CONFIG.currency.symbol}{product.price}
                     </span>
 
                     <a

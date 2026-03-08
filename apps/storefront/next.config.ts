@@ -1,5 +1,15 @@
 import type { NextConfig } from "next";
 
+// Fail-fast environment validation
+(function validateEnv() {
+  const required = ['DATABASE_URL', 'NEXTAUTH_SECRET', 'DATA_SOURCE'];
+  const missing = required.filter(key => !process.env[key]);
+
+  if (missing.length > 0 && process.env.NODE_ENV === 'production') {
+    throw new Error(`[CRITICAL] Missing required environment variables: ${missing.join(', ')}`);
+  }
+})();
+
 const nextConfig: NextConfig = {
   transpilePackages: ["@casa-yolotl/shared"],
   images: {

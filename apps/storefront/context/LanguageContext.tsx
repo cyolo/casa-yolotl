@@ -91,9 +91,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     };
 
     const t = (key: string, replacements?: Record<string, string>) => {
-        const resolve = (obj: any, path: string) => {
-            return path.split('.').reduce((prev, curr) => {
-                return prev ? prev[curr] : undefined;
+        const resolve = (obj: Record<string, unknown> | undefined, path: string): unknown => {
+            return path.split('.').reduce<unknown>((prev, curr) => {
+                if (prev && typeof prev === 'object' && !Array.isArray(prev)) {
+                    return (prev as Record<string, unknown>)[curr];
+                }
+                return undefined;
             }, obj);
         };
 
@@ -105,12 +108,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         };
 
         // 1. Check current translations
-        const translated = resolve(translations, key);
-        if (translated) return interpolate(translated, replacements);
+        const translated = resolve(translations as Record<string, unknown>, key);
+        if (typeof translated === 'string') return interpolate(translated, replacements);
 
         // 2. Check fallback
-        const fallback = resolve(fallbackTranslations, key);
-        if (fallback) {
+        const fallback = resolve(fallbackTranslations as Record<string, unknown>, key);
+        if (typeof fallback === 'string') {
             const result = interpolate(fallback, replacements);
             if (currentLanguage.code !== 'es') {
                 return `[${currentLanguage.code.toUpperCase()}] ${result}`;

@@ -1,3 +1,4 @@
+export * from "./auth";
 export * from "./data/products";
 export * from "./data/stories";
 export * from "./data/heritage";
@@ -6,5 +7,9 @@ export * from "./constants";
 export * from "./constants/i18n";
 export * from "./repositories/IProductRepository";
 export * from "./repositories/StaticProductRepository";
+export * from "./repositories/SupabaseProductRepository";
+export * from "./repositories/ProductRepositoryFactory";
+export * from "./services/ProductService";
 export * from "./types/ui";
 export * from "./config/navigation";
+export * from "./config/marketplace.config";
