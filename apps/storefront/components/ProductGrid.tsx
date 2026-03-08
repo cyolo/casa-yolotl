@@ -1,37 +1,40 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Product, StaticProductRepository } from "@casa-yolotl/shared";
+import { Product, productService } from "@casa-yolotl/shared";
 import ProductCard from "./ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
 const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion"];
-const productRepo = new StaticProductRepository();
 
 const ProductGrid = () => {
     const { t } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("todos");
-    const [allProducts, setAllProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState(true);
+    const [products, setProducts] = useState<Product[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchProducts = async () => {
-            setLoading(true);
+            setIsLoading(true);
             try {
-                const data = await productRepo.getAll();
-                setAllProducts(data);
+                let result;
+                // Mapping "todos" to "all" for the service internal logic if needed, 
+                // or just using the filters.
+                if (activeCategory === "todos") {
+                    result = await productService.getProducts(1, 50);
+                } else {
+                    result = await productService.getProductsByCategory(activeCategory, 1, 50);
+                }
+                setProducts(result.items);
             } catch (error) {
                 console.error("Failed to fetch products:", error);
             } finally {
-                setLoading(false);
+                setIsLoading(false);
             }
         };
-        fetchProducts();
-    }, []);
 
-    const filteredProducts = activeCategory === "todos"
-        ? allProducts
-        : allProducts.filter(p => p.category === activeCategory);
+        fetchProducts();
+    }, [activeCategory]);
 
     const handleTrackClick = (productId: string) => {
         console.log(`[TRACKING]: User clicked on product ${productId} to view in marketplace.`);
@@ -60,8 +63,8 @@ const ProductGrid = () => {
                                 key={catKey}
                                 onClick={() => setActiveCategory(catKey)}
                                 className={`text-[10px] uppercase tracking-[0.3em] transition-all duration-300 relative pb-1 ${activeCategory === catKey
-                                    ? "text-[#C5A059] font-bold"
-                                    : "text-[#1A1A1A]/40 hover:text-[#1A1A1A]"
+                                        ? "text-[#C5A059] font-bold"
+                                        : "text-[#1A1A1A]/40 hover:text-[#1A1A1A]"
                                     }`}
                             >
                                 {catLabel}
@@ -74,17 +77,23 @@ const ProductGrid = () => {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    {filteredProducts.map((product) => (
-                        <ProductCard
-                            key={product.id}
-                            product={product}
-                            onMarketplaceClick={handleTrackClick}
-                        />
-                    ))}
-                </div>
+                {isLoading ? (
+                    <div className="flex justify-center py-20">
+                        <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                        {products.map((product) => (
+                            <ProductCard
+                                key={product.id}
+                                product={product}
+                                onMarketplaceClick={handleTrackClick}
+                            />
+                        ))}
+                    </div>
+                )}
 
-                {filteredProducts.length === 0 && (
+                {!isLoading && products.length === 0 && (
                     <div className="py-20 text-center">
                         <p className="text-sm font-sans text-[#1A1A1A]/40 uppercase tracking-widest italic">
                             Próximamente nuevas piezas en esta categoría.
