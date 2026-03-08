@@ -1,0 +1,24 @@
+{
+    "Admin": {
+        "title": "Panel de Dirección (ROI)",
+        "subtitle": "Casa Yolotl & Co. | Eficiencia Empresarial",
+        "system_status": "Estado del Sistema",
+        "operational": "Operativo",
+        "total_revenue": "Interés Proyectado",
+        "active_users": "Leads Marketplace",
+        "system_health": "Technical Health (CI)",
+        "roi_performance": "Rendimiento Financiero (ROI)",
+        "geo_attribution": "Atribución Geográfica"
+    },
+    "Hero": {
+        "title1": "Dashboard de Administración"
+    },
+    "Auth": {
+        "welcome": "Acceso Administrativo",
+        "signInGoogle": "Acceder con Google",
+        "accessDenied": "Acceso restringido al Administrador Principal",
+        "subtitle": "Terminal Administrativa",
+        "quote": "\"Representamos cultura con disciplina empresarial.\"",
+        "warning": "Acceso restringido. El sistema monitorea intentos de entrada no autorizados."
+    }
+}

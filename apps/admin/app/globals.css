@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-gold: #C5A02D;
+    --color-brand-cream: #FDFCFB;
+    --color-brand-black: #0D0D0D;
+}
+
+:root {
+    --background: #FDFCFB;
+    --foreground: #0D0D0D;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.text-gold {
+    color: var(--color-brand-gold);
+}
+
+/* Minimalist Premium Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F5F1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C5A059;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a38244;
+}

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --color-obsidian: #0D0D0D;
+  --color-gold-matte: #C5A02D;
+  --color-ivory: #FDFCFB;
+
+  --brand-cream: var(--color-ivory);
+  --brand-black: var(--color-obsidian);
+  --brand-gold: var(--color-gold-matte);
+
+  --background: var(--brand-cream);
+  --foreground: var(--brand-black);
+}
+
+@theme inline {
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-black: var(--brand-black);
+  --color-brand-gold: var(--brand-gold);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+
+  --border-brand: var(--brand-black);
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-spin-slow: spin-slow 12s linear infinite;
+  --animate-slide-in-right: slide-in-right 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-up: fade-in-up 1s ease-out forwards;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-medium;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* Elegant minimalist scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-cream;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-black/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-black/40;
+}

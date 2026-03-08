@@ -1,0 +1,99 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { Product, StaticProductRepository } from "@casa-yolotl/shared";
+import ProductCard from "./ProductCard";
+import { useLanguage } from "@/context/LanguageContext";
+
+const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion"];
+const productRepo = new StaticProductRepository();
+
+const ProductGrid = () => {
+    const { t } = useLanguage();
+    const [activeCategory, setActiveCategory] = useState("todos");
+    const [allProducts, setAllProducts] = useState<Product[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            setLoading(true);
+            try {
+                const data = await productRepo.getAll();
+                setAllProducts(data);
+            } catch (error) {
+                console.error("Failed to fetch products:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchProducts();
+    }, []);
+
+    const filteredProducts = activeCategory === "todos"
+        ? allProducts
+        : allProducts.filter(p => p.category === activeCategory);
+
+    const handleTrackClick = (productId: string) => {
+        console.log(`[TRACKING]: User clicked on product ${productId} to view in marketplace.`);
+    };
+
+    return (
+        <section className="py-32 px-8 bg-[#F5F5F1] scroll-mt-24 md:scroll-mt-32" id="curaduria">
+            <div className="max-w-7xl mx-auto">
+                {/* Header */}
+                <div className="mb-20">
+                    <span className="text-[10px] uppercase tracking-[0.6em] text-[#1A1A1A]/40 block mb-4">Marketplace</span>
+                    <h2 className="text-3xl md:text-5xl font-serif text-[#1A1A1A] mb-6">{t('Marketplace.title') || "Nuestra Curaduría"}</h2>
+                    <p className="text-sm font-sans text-[#1A1A1A]/60 uppercase tracking-[0.2em]">{t('Marketplace.subtitle') || "Piezas con Identidad"}</p>
+                </div>
+
+                {/* Filter Bar */}
+                <div className="flex flex-wrap items-center gap-8 mb-16 border-b border-[#1A1A1A]/5 pb-8">
+                    <span className="text-[9px] uppercase tracking-widest text-[#1A1A1A] font-bold mr-4">Categorías:</span>
+                    {categoriesKeys.map((catKey) => {
+                        const catLabel = catKey === "todos"
+                            ? (t('Marketplace.categories.todos') === 'Marketplace.categories.todos' ? "Todos" : t('Marketplace.categories.todos'))
+                            : t(`Marketplace.categories.${catKey}`);
+
+                        return (
+                            <button
+                                key={catKey}
+                                onClick={() => setActiveCategory(catKey)}
+                                className={`text-[10px] uppercase tracking-[0.3em] transition-all duration-300 relative pb-1 ${activeCategory === catKey
+                                    ? "text-[#C5A059] font-bold"
+                                    : "text-[#1A1A1A]/40 hover:text-[#1A1A1A]"
+                                    }`}
+                            >
+                                {catLabel}
+                                {activeCategory === catKey && (
+                                    <span className="absolute bottom-0 left-0 w-full h-px bg-[#C5A059]"></span>
+                                )}
+                            </button>
+                        );
+                    })}
+                </div>
+
+                {/* Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    {filteredProducts.map((product) => (
+                        <ProductCard
+                            key={product.id}
+                            product={product}
+                            onMarketplaceClick={handleTrackClick}
+                        />
+                    ))}
+                </div>
+
+                {filteredProducts.length === 0 && (
+                    <div className="py-20 text-center">
+                        <p className="text-sm font-sans text-[#1A1A1A]/40 uppercase tracking-widest italic">
+                            Próximamente nuevas piezas en esta categoría.
+                        </p>
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+};
+
+export default ProductGrid;

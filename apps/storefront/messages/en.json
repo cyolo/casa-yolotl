@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Our Essence",
+        "catalog": "Catalog",
+        "contacto": "Contact Us"
+    },
+    "Hero": {
+        "badge": "Culture and Business Discipline",
+        "title1": "Mexico to the ",
+        "title_italic": "World",
+        "title2": " with Identity",
+        "description": "We represent Mexican culture through business discipline and sober elegance.",
+        "btn_catalog": "Explore Catalog",
+        "aria_catalog": "Explore the full catalog of premium pieces",
+        "btn_history": "Our History",
+        "scroll": "Scroll"
+    },
+    "Esencia": {
+        "title": "Yollotl: The Heartbeat That Defines Us",
+        "subtitle": "Our Essence",
+        "button": "Explore the Collection"
+    },
+    "Contact": {
+        "title": "Contact & Global Distribution",
+        "presence": "Global Footprint",
+        "mexico": "Mexico (Showroom)",
+        "europe": "Europe (Distribution)",
+        "consultations": "Direct Consultations",
+        "form": {
+            "heading": "Get in Touch",
+            "name": "Full Name",
+            "email": "Email Address",
+            "country": "Country",
+            "message": "Message / Inquiry",
+            "submitting": "Sending...",
+            "submit": "Send Message",
+            "success_title": "Successfully Sent",
+            "success_msg": "Thank you for reaching out. Our concierge will review your inquiry and contact you shortly.",
+            "send_another": "Send another inquiry"
+        }
+    },
+    "Footer": {
+        "brand_desc": "We represent culture through business discipline. A bridge connecting ancestral craftsmanship with the global market.",
+        "trust": "Trust & Authenticity",
+        "exploration": "Exploration",
+        "catalog": "Catalog",
+        "essence": "Our Essence",
+        "stories": "Origin Stories",
+        "special_projects": "Special Projects",
+        "sustainability": "Sustainability",
+        "support": "Support",
+        "shipping": "Shipping Policy (3PL)",
+        "returns": "Returns (SLA)",
+        "terms": "Terms of Service",
+        "authenticity": "Certificate of Authenticity",
+        "contact": "Global Contact",
+        "concierge": "Digital Concierge",
+        "newsletter_desc": "Subscribe for exclusive event invitations and cultural chronicles.",
+        "newsletter_placeholder": "YOUR EMAIL",
+        "newsletter_btn": "Subscribe",
+        "copyright": "© 2026 CASA YOLOTL & CO. GLOBAL OPERATIONS.",
+        "systems_active": "Systems Active (MFA Enabled)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filter by language or family...",
+        "empty": "Exploration yielded no results"
+    },
+    "Marketplace": {
+        "title": "Strategic Curatorship",
+        "subtitle": "Pieces with Soul and Purpose",
+        "crisis_cta": "Reserve with Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Craftsmanship",
+            "decoracion": "Interior Decor"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Ancestral Espadín Mezcal",
+                "desc": "Distilled in clay pots, honoring the millennial tradition of Oaxaca's master mezcaleros."
+            },
+            "textil-01": {
+                "title": "San Juan K Gala Huipil",
+                "desc": "Woven on a backstrap loom with silk threads, a masterpiece narrating local cosmogony."
+            },
+            "decor-01": {
+                "title": "Burnished Black Clay Vessel",
+                "desc": "Organic elegance hand-molded in San Bartolo Coyotepec, boasting a natural metallic finish."
+            },
+            "mezcal-02": {
+                "title": "Wild Tobalá Mezcal",
+                "desc": "The crown jewel, distilled from wild agaves foraged in high-altitude mountains."
+            },
+            "textil-02": {
+                "title": "Teotitlán del Valle Rug",
+                "desc": "Virgin wool dyed with natural cochineal and indigo, featuring ancestral geometric artistry."
+            },
+            "artesania-02": {
+                "title": "'Jaguar of the Soul' Alebrije",
+                "desc": "Copal wood carving, meticulously painted with dreamlike precision by Arrazola artisans."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Culture & Origin",
+        "subtitle": "Chronicles of Ancestral Wisdom",
+        "badge": "Stories & Heritage",
+        "description": "We honor the artisanal process and the deep meaning behind each creation. Because every object is a fragment of Mexico's history.",
+        "read_more": "READ FULL STORY",
+        "read_more_aria": "Read the full story about {title}",
+        "seal": "CASA YOLOTL & CO. • AUTHENTICITY SEAL •",
+        "related_pieces": "Related Pieces",
+        "back_to_gallery": "Back to Gallery",
+        "items": {
+            "story-barro-negro": {
+                "title": "The Soul of Black Clay",
+                "excerpt": "Discover the ancient process of San Bartolo Coyotepec, where the earth transforms into obsidian by the hands of artisans.",
+                "content": "# The Soul of Black Clay\n\nBlack clay is more than a technique; it is a heritage pulsating in the heart of Oaxaca. In San Bartolo Coyotepec, master artisans transform local clay into pieces of profound, metallic elegance.\n\n## The Process\nThe secret lies in the **burnishing** and **baking**. Using a quartz stone, the artisan polishes the piece before it enters the two-mouth kiln. The smoke trapped during firing imparts that intense and mystical black hue, requiring no glazes.\n\n## Living Heritage\nEvery curve and fretwork tells a story of patience. There is no rush in the workshop; the earth dictates the timing, and the artisan simply listens.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Liquid Heritage",
+                "excerpt": "More than a distilled spirit, mezcal is the blood of the earth...",
+                "content": "# Liquid Heritage\n\nMezcal is the spirit of Mexico bottled...",
+                "location": "Central Valleys, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Threads Narrating the Cosmos",
+                "excerpt": "The backstrap loom is a physical extension of the artisan woman's body...",
+                "content": "# Threads Narrating the Cosmos\n\nThe backstrap loom is one of the most ancient textile technologies...",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: The Heartbeat That Defines Us",
+        "philosophy": "In the ancient world of Anáhuac, the heart was not merely an organ; it was the 'Yollotl', the epicenter of knowledge, bravery, and creativity. For the Mexica, the heart is where a person's essence resides, providing the force that brings life to an artisan's hands.",
+        "culturalValue": "Casa Yolotl & Co. is born from this heartbeat. We do not merely offer craftsmanship; we preserve Mexican cultural value by bridging ancestral wisdom with contemporary business discipline, ensuring every piece bridges a glorious past and a purposeful future."
+    }
+}

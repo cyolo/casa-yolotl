@@ -1,0 +1,24 @@
+{
+    "Admin": {
+        "title": "Executive Dashboard (ROI)",
+        "subtitle": "Casa Yolotl & Co. | Business Efficiency",
+        "system_status": "System Status",
+        "operational": "Operational",
+        "total_revenue": "Projected Interest",
+        "active_users": "Marketplace Leads",
+        "system_health": "Technical Health (CI)",
+        "roi_performance": "Financial Performance (ROI)",
+        "geo_attribution": "Geo Attribution"
+    },
+    "Hero": {
+        "title1": "Administration Dashboard"
+    },
+    "Auth": {
+        "welcome": "Administrative Access",
+        "signInGoogle": "Sign In with Google",
+        "accessDenied": "Restricted access to Principal Administrator",
+        "subtitle": "Administrative Terminal",
+        "quote": "\"We represent culture with business discipline.\"",
+        "warning": "Restricted access. System monitors unauthorized entry attempts."
+    }
+}
