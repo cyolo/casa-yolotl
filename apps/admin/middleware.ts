@@ -3,11 +3,11 @@ import { NextResponse } from "next/server";
 
 // Security Guard: Ensure critical environment variables are present
 const NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET;
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ALLOWED_ADMIN_EMAILS = process.env.ALLOWED_ADMIN_EMAILS ? process.env.ALLOWED_ADMIN_EMAILS.split(",") : [];
 
-if (!NEXTAUTH_SECRET || !ADMIN_EMAIL) {
+if (!NEXTAUTH_SECRET || ALLOWED_ADMIN_EMAILS.length === 0) {
     throw new Error(
-        "[SECURITY CRITICAL] Missing NEXTAUTH_SECRET or ADMIN_EMAIL environment variables. " +
+        "[SECURITY CRITICAL] Missing NEXTAUTH_SECRET or ALLOWED_ADMIN_EMAILS environment variables. " +
         "Server startup aborted to prevent insecure state."
     );
 }
@@ -17,8 +17,8 @@ export default withAuth(
         const { pathname } = req.nextUrl;
         const email = req.nextauth.token?.email;
 
-        // Strict email check against environment variable
-        const isAdmin = email === ADMIN_EMAIL;
+        // Strict email check against list of allowed admins
+        const isAdmin = email && ALLOWED_ADMIN_EMAILS.includes(email);
 
         if (!isAdmin && pathname.startsWith("/dashboard")) {
             return NextResponse.redirect(new URL("/403", req.url));

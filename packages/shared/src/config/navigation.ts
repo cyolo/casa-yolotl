@@ -7,5 +7,5 @@ export const SITE_ROUTES = {
     CONTACT: "/contacto",
     STORIES: "/cultura",
     ESSENCE: "/esencia",
-    CATALOG_SECTION: "/#curaduria", // Combined route + anchor for home catalog section
+    CATALOG_SECTION: "#curaduria", // Strictly use anchor for home catalog section
 } as const;
