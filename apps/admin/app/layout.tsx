@@ -22,7 +22,7 @@ export default async function RootLayout({
 
     return (
         <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-            <body className="bg-[#F5F5F1] text-[#1A1A1A] font-sans min-h-screen font-sans selection:bg-[#C5A059] selection:text-white">
+            <body className="bg-[#F5F5F1] text-[#1A1A1A] font-sans min-h-screen selection:bg-[#C5A059] selection:text-white">
                 <AuthProvider>
                     {session?.user?.email === 'cesar.vargas.alanis@gmail.com' && (
                         <nav className="sticky top-0 z-50 bg-[#F5F5F1]/90 backdrop-blur-md border-b justify-between items-center border-[#C5A059]/30 px-8 py-4 flex">

@@ -3,7 +3,7 @@
 import { signIn } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { LogIn, Github, Lock, AlertCircle } from 'lucide-react';
+import { Github, Heart, AlertCircle, ShieldCheck } from 'lucide-react';
 import { Suspense } from 'react';
 
 function SignInContent() {
@@ -21,7 +21,7 @@ function SignInContent() {
         'EmailSignin': 'The e-mail could not be sent.',
         'CredentialsSignin': 'Sign in failed. Check the details you provided are correct.',
         'SessionRequired': 'Please sign in to access this page.',
-        'AccessDenied': 'Access denied. Your email is not authorized for the Admin Portal.',
+        'AccessDenied': 'Access Denied - Contact CIARO Architecture Team.',
         'default': 'Unable to sign in.',
     };
 
@@ -31,25 +31,31 @@ function SignInContent() {
         <div className="flex flex-col justify-center px-8 py-12 lg:px-20 xl:px-24">
             <div className="mx-auto w-full max-w-sm lg:w-96">
                 <div className="text-center lg:text-left">
-                    <div className="flex items-center justify-center lg:justify-start mb-6">
-                        <div className="h-12 w-12 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
-                            <Lock className="h-6 w-6 text-white" />
+                    <div className="flex items-center justify-center lg:justify-start mb-10">
+                        <div className="relative group">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-indigo-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <div className="relative h-14 w-14 bg-white ring-1 ring-slate-200 rounded-full flex items-center justify-center shadow-2xl">
+                                <Heart className="h-7 w-7 text-red-600 fill-red-500" />
+                            </div>
                         </div>
-                        <span className="ml-3 text-2xl font-bold text-slate-900 tracking-tight">Casa Yolotl Admin</span>
+                        <div className="ml-4">
+                            <span className="block text-2xl font-bold text-slate-900 tracking-tight leading-none">Casa Yolotl</span>
+                            <span className="block text-sm font-medium text-slate-500 mt-1 uppercase tracking-widest">Admin Control</span>
+                        </div>
                     </div>
-                    <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Welcome back</h2>
-                    <p className="mt-3 text-sm text-slate-600">
-                        Secure access to our artisanal heritage management system.
+                    <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Welcome back</h2>
+                    <p className="mt-4 text-base text-slate-600 leading-relaxed font-light">
+                        Representando cultura con disciplina empresarial.
                     </p>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-12">
                     {errorMessage && (
-                        <div className="mb-6 flex items-start p-4 rounded-lg bg-red-50 border border-red-100 animate-in fade-in slide-in-from-top-2 duration-300">
-                            <AlertCircle className="h-5 w-5 text-red-600 mt-0.5" />
-                            <div className="ml-3">
-                                <h3 className="text-sm font-medium text-red-800">Authentication error</h3>
-                                <p className="mt-1 text-sm text-red-700">{errorMessage}</p>
+                        <div className="mb-8 flex items-start p-5 rounded-xl bg-red-50 border border-red-100 ring-4 ring-red-50/50 animate-in fade-in slide-in-from-top-4 duration-500">
+                            <AlertCircle className="h-6 w-6 text-red-600 mt-0.5 flex-shrink-0" />
+                            <div className="ml-4">
+                                <h3 className="text-sm font-bold text-red-900">Security Notification</h3>
+                                <p className="mt-1 text-sm text-red-700 font-medium leading-normal">{errorMessage}</p>
                             </div>
                         </div>
                     )}
@@ -57,7 +63,7 @@ function SignInContent() {
                     <div className="space-y-4">
                         <button
                             onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
-                            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-slate-200 rounded-xl bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all duration-200 shadow-sm active:scale-[0.98]"
+                            className="w-full flex items-center justify-center gap-4 px-6 py-4 border border-slate-200 rounded-2xl bg-white text-sm font-bold text-slate-800 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 shadow-sm active:scale-[0.98] ring-offset-2 focus:ring-2 focus:ring-slate-200 outline-none"
                         >
                             <svg className="h-5 w-5" viewBox="0 0 24 24">
                                 <path
@@ -77,25 +83,26 @@ function SignInContent() {
                                     fill="#EA4335"
                                 />
                             </svg>
-                            Sign in with Google
+                            Continue with Google
                         </button>
 
                         <button
                             onClick={() => signIn('github', { callbackUrl: '/dashboard' })}
-                            className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-slate-900 rounded-xl bg-slate-900 text-sm font-semibold text-white hover:bg-slate-800 transition-all duration-200 shadow-lg shadow-slate-200 active:scale-[0.98]"
+                            className="w-full flex items-center justify-center gap-4 px-6 py-4 border border-slate-900 rounded-2xl bg-slate-900 text-sm font-bold text-white hover:bg-slate-800 transition-all duration-300 shadow-xl shadow-slate-200 active:scale-[0.98] ring-offset-2 focus:ring-2 focus:ring-slate-900 outline-none"
                         >
-                            <Github className="h-5 w-5" />
-                            Sign in with GitHub
+                            <Github className="h-5 w-5 text-white" />
+                            Continue with GitHub
                         </button>
                     </div>
 
-                    <div className="mt-8 pt-8 border-t border-slate-100">
-                        <div className="flex items-center justify-between text-xs text-slate-400 font-medium">
-                            <p>&copy; 2026 Casa Yolotl & Co.</p>
-                            <p className="flex items-center gap-1.5">
-                                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                Secure System Active
-                            </p>
+                    <div className="mt-12 pt-10 border-t border-slate-100 flex flex-col items-center">
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-100 shadow-sm mb-6">
+                            <ShieldCheck className="h-4 w-4 text-emerald-600" />
+                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Enterprise Shield Active</span>
+                        </div>
+                        <div className="flex items-center justify-between w-full text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">
+                            <p>&copy; 2026 CASA YOLOTL & CO.</p>
+                            <p>Global Admin Portal</p>
                         </div>
                     </div>
                 </div>
@@ -106,41 +113,68 @@ function SignInContent() {
 
 export default function SignInPage() {
     return (
-        <div className="min-h-screen bg-white flex overflow-hidden">
-            {/* Split Screen Logic */}
-            <div className="hidden lg:block relative w-0 flex-1 bg-slate-50 overflow-hidden">
-                {/* Decorative Overlay */}
-                <div className="absolute inset-0 z-10 bg-gradient-to-br from-indigo-900/40 to-transparent mix-blend-multiply" />
-                <div className="absolute inset-0 z-10 bg-black/10" />
+        <div className="min-h-screen bg-white flex flex-col lg:flex-row overflow-hidden font-sans">
+            {/* Left Panel (Visual/Brand) */}
+            <div className="hidden lg:block relative flex-1 bg-slate-950 overflow-hidden group/bg" style={{ minWidth: '0' }}>
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/auth/signin-bg.png"
+                        alt="Ancient Mexican heritage craftsmanship"
+                        className="w-full h-full object-cover transition-transform duration-[20000ms] group-hover/bg:scale-125 opacity-70 scale-110 grayscale-[0.2] contrast-[1.1]"
+                    />
+                </div>
 
-                {/* Image Component */}
-                <Image
-                    src="/auth/signin-bg.png"
-                    alt="Ancient Mexican heritage craftsmanship"
-                    fill
-                    className="object-cover transition-transform duration-10000 hover:scale-110"
-                    priority
-                />
+                {/* Decorative Overlays */}
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent" />
+                <div className="absolute inset-0 z-10 bg-slate-950/20 backdrop-blur-[1px]" />
 
-                {/* Quote Overlay */}
-                <div className="absolute bottom-12 left-12 right-12 z-20 transition-all transform hover:translate-y-[-4px]">
-                    <p className="text-white text-3xl font-light italic leading-relaxed drop-shadow-md">
-                        "Preserving our ancestral crafts, one artisan at a time."
-                    </p>
-                    <div className="mt-4 flex items-center gap-3">
-                        <div className="h-px w-8 bg-white/60" />
-                        <span className="text-white/80 uppercase tracking-widest text-xs font-bold">The Casa Yolotl Mission</span>
+                {/* Ambient Glows */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-indigo-500/10 rounded-full blur-[200px] z-0" />
+                <div className="absolute -bottom-1/4 -right-1/4 w-[80%] h-[80%] bg-red-500/10 rounded-full blur-[180px] z-0" />
+
+                {/* Brand Presence */}
+                <div className="absolute inset-0 flex flex-col justify-end p-20 z-20 pointer-events-none">
+                    <div className="max-w-xl transition-all duration-1000 transform group-hover/bg:translate-y-[-8px]">
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="h-10 w-1 bg-red-600" />
+                            <span className="text-white text-sm font-black tracking-[0.5em] uppercase">Enterprise Access</span>
+                        </div>
+                        <h1 className="text-white text-6xl font-black tracking-tight leading-[0.9] mb-6 drop-shadow-2xl">
+                            CASA YOLOTL & CO <br />
+                            <span className="text-slate-400 font-light">Admin Portal</span>
+                        </h1>
+                        <p className="text-slate-300 text-xl font-light leading-relaxed max-w-lg">
+                            Representando cultura con disciplina empresarial. Gestión operativa de alto nivel para el mercado artesanal global.
+                        </p>
+                        <div className="mt-12 flex items-center gap-6">
+                            <div className="flex -space-x-3">
+                                {[1, 2, 3, 4].map(i => (
+                                    <div key={i} className="h-10 w-10 rounded-full border-2 border-slate-950 bg-slate-800 flex items-center justify-center">
+                                        <div className="h-8 w-8 rounded-full bg-slate-700 overflow-hidden ring-1 ring-white/10" />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="h-px w-24 bg-white/20" />
+                            <span className="text-white/40 text-[10px] uppercase font-black tracking-widest italic">Authorized Personal Only</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="flex-1 flex flex-col justify-center items-center lg:w-[540px] xl:w-[600px] relative">
-                {/* Subtle Background Elements */}
-                <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-indigo-50 rounded-full blur-[100px] opacity-60 z-0 pointer-events-none" />
-                <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-pink-50 rounded-full blur-[100px] opacity-60 z-0 pointer-events-none" />
+            {/* Right Panel (Auth) */}
+            <div className="relative flex flex-col justify-center items-center bg-slate-50/30 lg:w-[580px] xl:w-[640px] shrink-0">
+                {/* Visual Depth Elements */}
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-white shadow-2xl z-0" />
+                <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent z-0" />
 
-                <Suspense fallback={<div className="animate-pulse flex space-x-4"><div className="rounded-full bg-slate-200 h-10 w-10"></div></div>}>
-                    <SignInContent />
+                <Suspense fallback={
+                    <div className="flex items-center justify-center h-full">
+                        <div className="h-12 w-12 border-4 border-slate-200 border-t-indigo-600 rounded-full animate-spin" />
+                    </div>
+                }>
+                    <div className="relative z-10 w-full flex justify-center">
+                        <SignInContent />
+                    </div>
                 </Suspense>
             </div>
         </div>

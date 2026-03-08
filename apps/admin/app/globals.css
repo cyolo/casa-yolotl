@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "../**/*.{ts,tsx}";
+@source "../../../packages/shared/src/**/*.{ts,tsx}";
 
 @theme {
     --color-brand-gold: #C5A02D;

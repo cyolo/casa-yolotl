@@ -20,6 +20,7 @@ export default withAuth(
         const token = req.nextauth.token;
         const email = token?.email;
         const role = (token as any)?.role || "USER";
+        const authorizedEmail = process.env.AUTHORIZED_ADMIN_EMAIL;
 
         // Security Audit Log: Capture every access attempt to sensitive zones
         SecurityValidator.logSecurityEvent("ZONE_ACCESS_REQUEST", {

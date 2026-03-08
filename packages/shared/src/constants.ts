@@ -5,3 +5,10 @@ export const BRAND_COLORS = {
     BONE: "#F9F9F7",
     WHITE: "#FFFFFF",
 };
+
+export const USER_ROLES = {
+    CEO: "CEO",
+    ADMIN: "ADMIN",
+    OPERATOR: "OPERATOR",
+    USER: "USER",
+} as const;

@@ -7,22 +7,26 @@ import { useRouter } from "next/navigation";
 function AuthGuard({ children }: { children: React.ReactNode }) {
     const { data: session, status } = useSession();
     const router = useRouter();
+    const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+
+    const isPublicRoute = pathname === "/auth/signin" || pathname === "/403";
 
     useEffect(() => {
-        if (status === "unauthenticated") {
+        if (!isPublicRoute && status === "unauthenticated") {
             router.push("/auth/signin");
         } else if (status === "authenticated" && session?.user?.email !== "cesar.vargas.alanis@gmail.com") {
             signOut({ redirect: false }).then(() => {
                 router.push("/403");
             });
         }
-    }, [session, status, router]);
+    }, [session, status, router, isPublicRoute]);
 
-    if (status === "loading") {
+    if (status === "loading" && !isPublicRoute) {
         return <div className="min-h-screen flex items-center justify-center bg-[#F5F5F1] text-[#1A1A1A]">Validando identidad...</div>;
     }
 
-    if (status === "authenticated" && session?.user?.email === "cesar.vargas.alanis@gmail.com") {
+    // Always render for public routes or if authorized
+    if (isPublicRoute || (status === "authenticated" && session?.user?.email === "cesar.vargas.alanis@gmail.com")) {
         return <>{children}</>;
     }
 
