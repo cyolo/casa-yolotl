@@ -91,18 +91,9 @@ const LanguageSelector = () => {
                                                 <button
                                                     key={lang.code}
                                                     onClick={() => {
-                                                        const segments = pathname.split("/");
-                                                        if (segments.length > 1 && allLanguages.some(l => l.code === segments[1])) {
-                                                            segments[1] = lang.code;
-                                                        } else {
-                                                            segments.splice(1, 0, lang.code);
-                                                        }
-                                                        const newPath = segments.join("/") || "/";
-
                                                         setLanguage(lang.code);
                                                         setIsOpen(false);
                                                         setSearchQuery("");
-                                                        router.push(newPath);
                                                     }}
                                                     className={`px-8 py-4 text-left hover:bg-white/60 transition-all flex items-center justify-between group/item border-l-2 border-transparent hover:border-brand-gold/20 ${currentLanguage.code === lang.code ? 'bg-white/80 border-l-brand-gold' : ''}`}
                                                 >
