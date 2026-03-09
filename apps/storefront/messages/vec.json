@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "La Nostra Esensa",
+        "catalog": "Catàłogo",
+        "contacto": "Contato"
+    },
+    "Hero": {
+        "badge": "Cultura e Disiplina",
+        "title1": "El Mèsico al ",
+        "title_italic": "Mondo",
+        "title2": " con Identità",
+        "description": "Rapresentemo ła cultura mesicana con disiplina de inpreza e n'ełegansa sobria.",
+        "btn_catalog": "Esplora el Catàłogo",
+        "aria_catalog": "Esplora el catàłogo conpleto de pèsi de łuso",
+        "btn_history": "La Nostra Storia",
+        "scroll": "Scori"
+    },
+    "Esencia": {
+        "title": "Yollotl: El Bàtito che ne Definise",
+        "subtitle": "La Nostra Esensa",
+        "button": "Esplora ła Colesion"
+    },
+    "Contact": {
+        "title": "Contato e Distribusion",
+        "presence": "Presensa Globałe",
+        "mexico": "Mèsico (Showroom)",
+        "europe": "Europa (Distribusion)",
+        "consultations": "Consułense Direte",
+        "form": {
+            "heading": "Scrivène",
+            "name": "Nome Conpleto",
+            "email": "Indiriso E-mail",
+            "country": "Paese",
+            "message": "Mesajo / Domanda",
+            "submitting": "Invio in corso...",
+            "submit": "Invia el Mesajo",
+            "success_title": "Invià con Suceso",
+            "success_msg": "Ve grasemo par averne contatà. El nostro concierge el vardarà ła vostra domanda e el ve risponderà fito.",
+            "send_another": "Invia n'altro mesajo"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Rapresentemo ła cultura con disiplina de inpreza. Un ponte tra ł'arte antiga e el comersio globałe.",
+        "trust": "Fidusa e Autentisità",
+        "exploration": "Esplorasion",
+        "catalog": "Catàłogo",
+        "essence": "La Nostra Esensa",
+        "stories": "Storie de Orizene",
+        "special_projects": "Projeti Spesiałi",
+        "sustainability": "Sostenibiłità",
+        "support": "Suporto",
+        "shipping": "Połìtega de Spedision (3PL)",
+        "returns": "Resi (SLA)",
+        "terms": "Tèrmini de Servisio",
+        "authenticity": "Autentisità",
+        "contact": "Contati Globałi",
+        "concierge": "Concierge Digitałe",
+        "newsletter_desc": "Iscrivìve par riséver inviti escluzivi e cronaghe culturałi.",
+        "newsletter_placeholder": "LA VOSTRA E-MAIL",
+        "newsletter_btn": "Iscrivìve",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERASION GLOBAŁI.",
+        "systems_active": "Sistemi Ativi (MFA Abiłità)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtra par łengua o fameja...",
+        "empty": "Nissun rizultà catà"
+    },
+    "Marketplace": {
+        "title": "La Nostra Curateła",
+        "subtitle": "Pèsi con Ànima e Scopo",
+        "crisis_cta": "Rizerva con Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artisanà",
+            "decoracion": "Decorasion"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestrałe Espadín",
+                "desc": "Distiłà in pignate de piera, onorando ła tradision miłenaria dei maestri mezcaleros de Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Tessù sora un tełaro de sintura con fiłi de seda, un cao d'opera che conta ła cosmogonia locałe."
+            },
+            "decor-01": {
+                "title": "Vazo de Tera Negra Lustrà",
+                "desc": "Ełegansa orgànica modełà a man a San Bartolo Coyotepec, con na finidura metàłica naturałe."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Selvadego",
+                "desc": "La zoia de ła corona, distiłà da agave selvàdeghe de ł'alta montagna."
+            },
+            "textil-02": {
+                "title": "Tapeto de Teotitlán del Valle",
+                "desc": "Lana vèrzene tinta con pigmenti naturałi de cochinilla e indigo, con un dezenjo geomètrico ancestrałe."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Giaguar de ł'Ànima'",
+                "desc": "Scolpì in łegno de copal, pinto con cura onìrica dai artisani de Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura e Orizene",
+        "subtitle": "Cronaghe de Sapiensa Ancestrałe",
+        "badge": "Conti e Eredità",
+        "description": "Onoremo el proceso artisanàl e el significà profondo drio ogni creasion. Parchè ogni ogeto el xe un pèso de ła storia del Mèsico.",
+        "read_more": "LEZI LA CRONAGA CONPLETA",
+        "read_more_aria": "Lezi ła cronaga conpleta sora {title}",
+        "seal": "CASA YOLOTL & CO. • SIZEŁO DE AUTENTISITÀ •",
+        "related_pieces": "Pèsi Corełà",
+        "back_to_gallery": "Torna a ła Gałeria",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Ànima de ła Tera Negra",
+                "excerpt": "Scovri el proceso ancestrałe de San Bartolo Coyotepec, dove ła tera deventa ossidiana inte łe man dei artisani.",
+                "content": "# L'Ànima de ła Tera Negra\n\nLa tera negra ła xe pì de na tècnega; ła xe n'eredità che bate inte el cor de Oaxaca. A San Bartolo Coyotepec, i maestri artisani i trasforma ła crea locałe in pèsi de n'ełegansa profonda e metàłica.\n\n## El Proceso\nEl segreto el xe inte el **lustrà** e inte ła **cotura**. Con na pria de quarzo, ł'artisan el łustra el pèso prima de métarlo inte el forno. El fumo che resta drento inte el forno el xe queło che ghe dà queło nero forte e mìstico.\n\n## Eredità Viva\nOgni curva ła conta na storia de pasiensa. No ghe xe fura inte ła botega; ła tera ła detà i tenpi e ł'artisan el scolta el cor.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Patrimonio Liquido",
+                "excerpt": "Pì de un distiłà, el mezcal el xe el sangue de ła tera...",
+                "content": "# Patrimonio Liquido\n\nEl mezcal el xe lo spirito del Mèsico in bota. Inte i palenques tradisionałi, el proceso el taca con ła riserca de ł'agave madura, che ła ga assorbì el sole e i minerałi de ła tera par ani.\n\n## El Forno de Pria\nI cor (piñas) i vien coti sota tera in forni de pria vulcànica scaldà con łegno de rure. Sto pasajo el dà el saor de fumo caraterìstico dei mejo mezcal del mondo.\n\n## Distiłasion Ancestrałe\nCon pignate de tera, ła distiłasion ła se fa gota par gota. La xe n'alcimia sacra che ła vołe ł'ocio esperto del maestro mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fiłi che Conta el Cosmos",
+                "excerpt": "El tełaro de sintura el xe n'estension del corpo de ł'artisana...",
+                "content": "# Fiłi che Conta el Cosmos\n\nEl tełaro de sintura el xe una de łe tecnołozìe tèsiłi pì vegne de ła Mesoamerica. Ligà a un àlbaro da na parte e a ła sintura de ł'artisana da ł'altra, sto strumento el parmete un łigame forte con ł'opera.\n\n## Geometria Sacra\nI recami no i xe miga soło decorasion. I xe segni de ancò che rapresenta ła flora, ła fauna e ła cosmogonia. Ogni huipil el xe na carta d'identità regionałe.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: El Bàtito che ne Definise",
+        "philosophy": "Inte el mondo antigo de ł'Anáhuac, el cor no el gera miga soło n'organo; el gera el 'Yollotl', el sentro de ła sapiensa, del corajo e de ła creatività[cite: 3]. Par i Mexica, inte el cor sta ł'essensa de ła parsona[cite: 3].",
+        "culturalValue": "Casa Yolotl & Co. ła nase de sto bàtito[cite: 3]. No rapresentemo miga soło artisanà; prezervemo el vałore culturałe mesicano łigando ła sapiensa ancestrałe con ła disiplina de inpreza de ancò[cite: 3, 4]."
+    }
+}

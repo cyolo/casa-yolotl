@@ -66,8 +66,8 @@ export async function middleware(request: NextRequest) {
     const url = request.nextUrl.clone()
 
     if (looksLikeLocale && !isSupportedLocale) {
-        // Scenario: Path starts with UNSUPPORTED locale (e.g., /ru/...) -> REPLACE with defaultLocale (/es)
-        // User Requirement: "Cualquier otro no soportado Redirige limpiamente a /es sin stacking"
+        // Scenario: Path starts with UNSUPPORTED locale (e.g., /ru/...) -> REPLACE with defaultLocale (/en)
+        // User Requirement: "Cualquier otro no soportado Redirige limpiamente a /en sin stacking"
         segments[0] = defaultLocale;
         url.pathname = `/${segments.join('/')}`
     } else if (!looksLikeLocale) {

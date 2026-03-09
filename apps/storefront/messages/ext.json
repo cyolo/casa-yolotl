@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "La Nuestra Esencia",
+        "catalog": "Catálogu",
+        "contacto": "Contactu"
+    },
+    "Hero": {
+        "badge": "Cultura i Desciplina",
+        "title1": "Méhicu pal ",
+        "title_italic": "Mondu",
+        "title2": " con Identidá",
+        "description": "Representamus la cultura mehenga con desciplina d'impresa i elegancia sobria.",
+        "btn_catalog": "Esproral el Catálogu",
+        "aria_catalog": "Esproral el catálogu completu de pieças premium",
+        "btn_history": "La Nuestra Historia",
+        "scroll": "Baha"
+    },
+    "Esencia": {
+        "title": "Yollotl: El Latíu que nos Defini",
+        "subtitle": "La Nuestra Esencia",
+        "button": "Esproral la Coleción"
+    },
+    "Contact": {
+        "title": "Contactu i Distribución",
+        "presence": "Presencia Global",
+        "mexico": "Méhicu (Showroom)",
+        "europe": "Europa (Distribución)",
+        "consultations": "Consultas Diretas",
+        "form": {
+            "heading": "Escríbinus",
+            "name": "Nombre Completu",
+            "email": "Correu Electrónicu",
+            "country": "País",
+            "message": "Mensahi / Consulta",
+            "submitting": "Ninviandu...",
+            "submit": "Ninviar Mensahi",
+            "success_title": "Ninviáu con Ésitu",
+            "success_msg": "Gracias por contactar con nusotrus. El nuestru concierge revisará la su consulta i se pondrá en contactu con usté nuna miguina.",
+            "send_another": "Ninviar otru mensahi"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Representamus cultura con desciplina d'impresa. Una puenti entre l'arti ancestral i el comerciu global.",
+        "trust": "Enfotu i Autenticidá",
+        "exploration": "Esproración",
+        "catalog": "Catálogu",
+        "essence": "La Nuestra Esencia",
+        "stories": "Historias d'Orizin",
+        "special_projects": "Proyetus Especialis",
+        "sustainability": "Sostenibilidá",
+        "support": "Soporti",
+        "shipping": "Polítiica d'Invíu (3PL)",
+        "returns": "Devolucionis (SLA)",
+        "terms": "Términus de Serviciu",
+        "authenticity": "Autenticidá",
+        "contact": "Contactu Global",
+        "concierge": "Concierge Dijital",
+        "newsletter_desc": "Suscríbite pa recebir invitacionis esclussivas a lanchamientos i crónicas culturalis.",
+        "newsletter_placeholder": "EL TU CORREU",
+        "newsletter_btn": "Suscribissi",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERACIONIS GLOBALIS.",
+        "systems_active": "Sistemas Ativus (MFA Ativáu)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar por luenga o familia...",
+        "empty": "No s'alcontrun resultáus"
+    },
+    "Marketplace": {
+        "title": "La Nuestra Curaduría",
+        "subtitle": "Pieças con Alma i Propósitu",
+        "crisis_cta": "Reservar con Concierge",
+        "categories": {
+            "mezcales": "Mezcalis",
+            "artesanias": "Artesanía",
+            "decoracion": "Decoración"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Destiláu en ollas de barru, onrandu la tradición milenaria de los maestrus mezcalerus d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Tehiu en telar de cintura con hilos de seda, una obra maestra que narra la cosmogonía local."
+            },
+            "decor-01": {
+                "title": "Harru de Barru Negru Bruñíu",
+                "desc": "Elegancia orgánica moldeá a manu en San Bartolo Coyotepec, con un acabáu metálicu natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Sarvahi",
+                "desc": "La hoya de la corona, destiláu a partir d'agavis sarvahitirus alcontráus nas altas montañas."
+            },
+            "textil-02": {
+                "title": "Alfombra de Teotitlán del Valle",
+                "desc": "Lana virhin teñía con pigmentus naturalis de cochinilla i índigu, diseño geométricu ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Haguar de l'Alma'",
+                "desc": "Esculpiu en madera de copal, pintáu con meticulosidá onírica polos artesanus d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura i Orizin",
+        "subtitle": "Crónicas de Sabiduría Ancestral",
+        "badge": "Relatus i Herencia",
+        "description": "Onramus el procesu artesanal i el significáu hondu tras de cada creción. Porque cada ohetu es un fragmentu de la historia de Méhicu.",
+        "read_more": "LEER LA CRÓNICA COMPLETA",
+        "read_more_aria": "Leer la crónica completa sobri {title}",
+        "seal": "CASA YOLOTL & CO. • SELLO D'AUTENTICIDÁ •",
+        "related_pieces": "Pieças Relacionás",
+        "back_to_gallery": "Tornar a la Galería",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Alma del Barru Negru",
+                "excerpt": "Descubri el procesu ancestral de San Bartolo Coyotepec, ondi la tierra se torna obsidiana nas manus de los artesanus.",
+                "content": "# L'Alma del Barru Negru\n\nEl barru negru es más qu'una técnica; es una herencia que lati en el corazón d'Oaxaca. En San Bartolo Coyotepec, los maestrus artesanus transforman l'archila local en pieças d'una elegancia honda i metálica.\n\n## El Procesu\nEl secretu residi en el **bruñíu** i la **cocción**. Por meyul d'una piedra de cuarçu, l'artesanu puli la pieça antis qu'entre en el fornu de dos bocas. El fumu atrapáu mientris la cocción es lo que da esi negru intensu i místicu.\n\n## Herencia Viva\nCada curva i cada furacu cuenta una historia de paciencia. No ai priesa en el taller; la tierra dita el tiempu, i l'artesanu puramenti escucha.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Herencia Líquida",
+                "excerpt": "Más qu'un destiláu, el mezcal es la sangri de la tierra...",
+                "content": "# Herencia Líquida\n\nEl mezcal es el espritu de Méhicu embotelláu. En los palenquis tradicionalis, el procesu prencipia con la busca del agavi mairu, qu'absorbió el sol i los mineralis de la tierra mientris añus.\n\n## El Fornu de Piedra\nLos corazonis (piñas) se cuecin bahu tierra en fornus de piedra volcánica calentáus con leña de roble. Esti pasu aporta el perfil afumáu característicu que dinstingui a los mejoris mezcalis del mondu.\n\n## Destilación Ancestral\nPor meyul d'ollas de barru, la destilación se hazi gota a gota. Es una alquimia sagrá que requiri l'ohu espertu del maestru mezcaleru.",
+                "location": "Valles Centralis, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Hilus que Narran el Cosmos",
+                "excerpt": "El telar de cintura es una estensión del cuerpu de l'artesana...",
+                "content": "# Hilus que Narran el Cosmos\n\nEl telar de cintura es una de las tecnologías téxtilis más antiguas i sofisticás de la Mesoamérica. Lligáu a un árbol o posti por un estremu i a la cintura de l'artesana pol otru, isti trastu permiti una conexión íntima con la obra.\n\n## Geometría Sagrá\nLos brocaus i bordáus no son namás ornamentus. Son glifus contemporáneus que representan la flora, la fauna i la cosmogonía de la comunidá. Cada huipil es un mapa d'identidá rejional.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: El Latíu que nos Defini",
+        "philosophy": "En el mondu antigu de l'Anáhuac, el corazón no era namás un órganu; era el 'Yollotl', el centru del conoçimientu, del balol i de la creatividá. Pa los mehengas, el corazón es ondi residi l'esencia de la persona.",
+        "culturalValue": "Casa Yolotl & Co. naci d'isti corazón. No representamus namás artesanía; preservamus el balol cultural mehenga conectandu la sabiduría ancestral con la desciplina d'impresa contemporánea."
+    }
+}

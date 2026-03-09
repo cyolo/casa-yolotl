@@ -43,10 +43,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
     const loadDictionary = async (code: string) => {
         try {
-            // Load Base (Spanish) for fallbacks using dynamic import
+            // Load Base (English) for fallbacks using dynamic import
             if (Object.keys(fallbackTranslations).length === 0) {
-                const esFallback = await import(`../messages/es.json`);
-                setFallbackTranslations(esFallback.default || esFallback);
+                const enFallback = await import(`../messages/en.json`);
+                setFallbackTranslations(enFallback.default || enFallback);
             }
 
             // Attempt to load current language
@@ -124,7 +124,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         const fallback = resolve(fallbackTranslations as Record<string, unknown>, key);
         if (typeof fallback === 'string') {
             const result = interpolate(fallback, replacements);
-            if (currentLanguage.code !== 'es') {
+            if (currentLanguage.code !== 'en') {
                 return `[${currentLanguage.code.toUpperCase()}] ${result}`;
             }
             return result;

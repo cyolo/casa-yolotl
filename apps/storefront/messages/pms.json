@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Nòstra Essensa",
+        "catalog": "Catàlogh",
+        "contacto": "Contat"
+    },
+    "Hero": {
+        "badge": "Cultura e Dissiplina",
+        "title1": "Ël Mèssich al ",
+        "title_italic": "Mond",
+        "title2": " con Identità",
+        "description": "I rapresentoma la cultura messican-a con dissiplina d'imprèisa e n'elegansa drita.",
+        "btn_catalog": "Esplora ël Catàlogh",
+        "aria_catalog": "Esplora ël catàlogh complet ëd tòch premium",
+        "btn_history": "Nòstra Stòria",
+        "scroll": "Scorr"
+    },
+    "Esencia": {
+        "title": "Yollotl: Ël Batit ch'an Definiss",
+        "subtitle": "Nòstra Essensa",
+        "button": "Esplora la Colession"
+    },
+    "Contact": {
+        "title": "Contat e Distribussion",
+        "presence": "Presensa Global",
+        "mexico": "Mèssich (Showroom)",
+        "europe": "Euròpa (Distribussion)",
+        "consultations": "Consultassion Direte",
+        "form": {
+            "heading": "Scrivine",
+            "name": "Nòm Complet",
+            "email": "Indiriss E-mail",
+            "country": "Paìs",
+            "message": "Messagi / Domanda",
+            "submitting": "Spedition...",
+            "submit": "Mandé ël Messagi",
+            "success_title": "Mandà con Sucess",
+            "success_msg": "Mercì d'avejne contatà. Nòstr concierge a tasterà vòstra domanda e as buterà an contat con voi tòst.",
+            "send_another": "Mandé n'àutr messagi"
+        }
+    },
+    "Footer": {
+        "brand_desc": "I rapresentoma la cultura con dissiplina d'imprèisa. Un pont antra l'art ancestral e ël comersi global.",
+        "trust": "Fiducia e Autenticità",
+        "exploration": "Esplorassion",
+        "catalog": "Catàlogh",
+        "essence": "Nòstra Essensa",
+        "stories": "Stòrie d'Origin",
+        "special_projects": "Proget Speciaj",
+        "sustainability": "Sostenibilità",
+        "support": "Suport",
+        "shipping": "Polìtica dë Spedition (3PL)",
+        "returns": "Res (SLA)",
+        "terms": "Termo dël Servissi",
+        "authenticity": "Autenticità",
+        "contact": "Contat Globaj",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Iscrivve për arseive n'invit esclusiv ai lans e crònache colturaj.",
+        "newsletter_placeholder": "VÒSTRA E-MAIL",
+        "newsletter_btn": "Iscrivve",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERASSION GLOBAJ.",
+        "systems_active": "Sistemi Ativ (MFA Abilità)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtra për lenga o famija...",
+        "empty": "Gnun arzultà trovà"
+    },
+    "Marketplace": {
+        "title": "Nòstra Curatela",
+        "subtitle": "Tòch con Ànima e Mirà",
+        "crisis_cta": "Reserva con Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artigianà",
+            "decoracion": "Decorassion"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Distilà an vasi ëd tèrra, onorant la tradission millenaria dij magìster mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil ëd Gala San Juan K",
+                "desc": "Tessù an sël telar ëd sentura con fij ëd seda, un caplavòr ch'a conta la cosmogonìa local."
+            },
+            "decor-01": {
+                "title": "Vasi ëd Tèrra Nèira Lustrà",
+                "desc": "Elegansa orgànica modelà a man a San Bartolo Coyotepec, con na finidura metàlica natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salvaj",
+                "desc": "La gema dla coron-a, distilà da agave salvaj trovà ant j'àute montagne."
+            },
+            "textil-02": {
+                "title": "Tappet ëd Teotitlán del Valle",
+                "desc": "Lan-a vèrgine tinta con pigment naturaj ëd cochenille e indigo, con un dissègn geométrich ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Giaguar dl'Ànima'",
+                "desc": "Scolpì an bòsch ëd copal, piturà con na cura onìrica dai artisan d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura e Origin",
+        "subtitle": "Crònache ëd Sapiensa Ancestral",
+        "badge": "Cont e Eredità",
+        "description": "I onoroma ël process artigianal e ël significà profond darera a minca creassion. Përché minca oget a l'é un tòch ëd la stòria dël Mèssich.",
+        "read_more": "LEZE LA CRÒNACA COMPLETA",
+        "read_more_aria": "Leze la crònaca completa ansima a {title}",
+        "seal": "CASA YOLOTL & CO. • SIGIL D'AUTENTICITÀ •",
+        "related_pieces": "Tòch Corelà",
+        "back_to_gallery": "Torné a la Galerìa",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Ànima dla Tèrra Nèira",
+                "excerpt": "Descovrì ël process ancestral ëd San Bartolo Coyotepec, andoa la tèrra a dventa ossidiana ant le man dij artisan.",
+                "content": "# L'Ànima dla Tèrra Nèira\n\nLa tèrra nèira a l'é pì che na técnica; a l'é n'eredità ch'a bat ant ël cheur d'Oaxaca. A San Bartolo Coyotepec, ij magìster artisan a trasformo la crèja local an tòch d'n'elegansa profonda e metàlica.\n\n## Ël Process\nËl segret a l'é ant ël **lustré** e ant la **cotura**. Con na pera ëd quarz, l'artisan a lustra ël tòch prima ch'as buta ant ël forn. Ël fùm ch'as ferma ant la cotura a l'é lòn ch'a dà col neir intens e mìstich.\n\n## Eredità Viva\nMinca curva a conta na stòria ëd pasiensa. A-i é pa 'd pressa ant ël laboratòri; la tèrra a detà ij temp e l'artisan a scota ël cheur.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Patrimòni Lìquid",
+                "excerpt": "Pì che un distilà, ël mezcal a l'é ël sangh ëd la tèrra...",
+                "content": "# Patrimòni Lìquid\n\nËl mezcal a l'é lë spìrit dël Mèssich an bota. Ant ij palenques tradissionaj, ël process as taca con la serca dl'agave madura, ch'a l'ha assorbì ël sol e ij mineraj ëd la tèrra për agn.\n\n## Ël Forn ëd Pera\nIj cheur (piñas) as cheuso sota tèrra an forn ëd pera volcànica scalda con bòsch ëd rure. Sto passagi a dà ël savor ëd fùm caraterìstich dij mèj mezcal dël mond.\n\n## Distillassion Ancestral\nCon vasi ëd tèrra, la distillassion as fa gota për gota. A l'é n'alchimìa sacra ch'a veul l'euj espert dël magìster mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fij ch'a Conto ël Cosmos",
+                "excerpt": "Ël telar ëd sentura a l'é n'estension dël còrp ëd l'artigian-a...",
+                "content": "# Fij ch'a Conto ël Cosmos\n\nËl telar ëd sentura a l'é un-a dle tecnologìe tessij pì rèis dla Mesoamerica. Ligà a n'erbo da na part e a la sentura ëd l'artigian-a da l'àutra, sto dëstument a përmet na conession ìntima con l'òpra.\n\n## Geometrìa Sacra\nIj rissamo a son pa mach decession. A son segn contemporani ch'a rapresento la flora, la fàuna e la cosmogonìa. Minca huipil a l'é na carta d'identità regional.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: Ël Batit ch'an Definiss",
+        "philosophy": "Ant ël mond antich d'Anáhuac, ël cheur a l'era pa mach n'òrgo; a l'era ël 'Yollotl', ël sènter dla sapiensa, dël corage e dla creatività. Për ij Mexica, ant ël cheur as treuva l'essensa dla përson-a.",
+        "culturalValue": "Casa Yolotl & Co. a nass da sto batit. I rapresentoma pa mach l'artigianà; i preservoma ël valor coltural messican con la conession dla sapiensa ancestral con la dissiplina d'imprèisa dël di d'ancheuj."
+    }
+}

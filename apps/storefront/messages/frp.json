@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Noutra Essence",
+        "catalog": "Cataloge",
+        "contacto": "Contact"
+    },
+    "Hero": {
+        "badge": "Cultura et Deciplina",
+        "title1": "Lo Mèxico u ",
+        "title_italic": "Mondo",
+        "title2": " avouéc Identitât",
+        "description": "Represantens la cultura mèxicana avouéc una deciplina d'entreprêsa et una èlègance sôbra.",
+        "btn_catalog": "Èxplorar lo Cataloge",
+        "aria_catalog": "Èxplorar lo cataloge complèt de piéces premium",
+        "btn_history": "Noutra Histouère",
+        "scroll": "Dèfilar"
+    },
+    "Esencia": {
+        "title": "Yollotl : Lo Batement que nos Definét",
+        "subtitle": "Noutra Essence",
+        "button": "Èxplorar la Colleccion"
+    },
+    "Contact": {
+        "title": "Contact et Distribucion",
+        "presence": "Prèsence Globala",
+        "mexico": "Mèxico (Showroom)",
+        "europe": "Eropa (Distribucion)",
+        "consultations": "Demandes Dirèctes",
+        "form": {
+            "heading": "Ècrivèd-nos",
+            "name": "Nom Complèt",
+            "email": "Adreça Èlèctronica",
+            "country": "Payis",
+            "message": "Mèssâjo / Demanda",
+            "submitting": "Mandâ en cors...",
+            "submit": "Mandar lo Mèssâjo",
+            "success_title": "Mandâ avouéc Succès",
+            "success_msg": "Mèrcis de nos avêr contactâs. Noutre concierge ètudira voutra demanda et vos contactara d'ici pou.",
+            "send_another": "Mandar un ôtro mèssâjo"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Represantens la cultura mèxicana avouéc una deciplina d'entreprêsa. Un pont entre l'art ancestral et lo comèrce global.",
+        "trust": "Confiance et Otenticitât",
+        "exploration": "Èxploracion",
+        "catalog": "Cataloge",
+        "essence": "Noutra Essence",
+        "stories": "Histouères d'Origina",
+        "special_projects": "Projèts Spèciâls",
+        "sustainability": "Sostegnabilitât",
+        "support": "Supôrt",
+        "shipping": "Politica de Mandâ (3PL)",
+        "returns": "Retorns (SLA)",
+        "terms": "Condicions de Sèrvicio",
+        "authenticity": "Otenticitât",
+        "contact": "Contact Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Abonâd-vos por recêvre d'envitacions èsclusives ux lancements et des croniques culturales.",
+        "newsletter_placeholder": "VOUTRE CORRIÈL",
+        "newsletter_btn": "S'abonar",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPÈRACIONS GLOBALES.",
+        "systems_active": "Sistèmos Actifs (MFA Activâ)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar per lengoua ou familia...",
+        "empty": "Gnun rèsultat trovâ"
+    },
+    "Marketplace": {
+        "title": "Noutra Curatèla",
+        "subtitle": "Piéces avouéc Âma et Fin",
+        "crisis_cta": "Rèservar avouéc lo Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artisanat",
+            "decoracion": "Dècoracion"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Distilâ dens des pignates de tèrra, en onorant la tradicion milenèra des mêtre-mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Tèssu sur un mèstier de cintura avouéc des fials de sêda, un chièf-d'ôvra que conte la cosmogonia locala."
+            },
+            "decor-01": {
+                "title": "Vâso de Tèrra Nêre Luétrâ",
+                "desc": "Èlègance organica molâ a la man a San Bartolo Coyotepec, avouéc una finicion mètalica naturala."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Sarvâjo",
+                "desc": "La pèrla de la corona, distilâ a partir d'agaves sarvâjos trovâs dens les hôtes montagnes."
+            },
+            "textil-02": {
+                "title": "Tapìs de Teotitlán del Valle",
+                "desc": "Lana vièrge tinta avouéc des colorants naturèls de cochenille et d'endigo, dèsign gèomètrico ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar de l'Âma'",
+                "desc": "Escultâ en bouès de copal, pintrâ avouéc una rècura onirica per los artisans d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura et Origina",
+        "subtitle": "Croniques de Sapience Ancestrala",
+        "badge": "Rècits et Hèritâjo",
+        "description": "Onorens lo procèssus artisanal et lo sens profond darrér châque crèacion. Châque objèt est un bocon de l'histouère du Mèxico.",
+        "read_more": "LIRE LA CRONIQUE COMPLÈTA",
+        "read_more_aria": "Lire la cronique complèta sur {title}",
+        "seal": "CASA YOLOTL & CO. • SÊL D'OTENTICITÂT •",
+        "related_pieces": "Piéces Liyês",
+        "back_to_gallery": "Tornar a la Galeria",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Âma de la Tèrra Nêre",
+                "excerpt": "Dècovrèd lo procèssus ancestral de San Bartolo Coyotepec, yô que la tèrra vint obsidiana entre les mans des artisans.",
+                "content": "# L'Âma de la Tèrra Nêre\n\nLa tèrra nêre est més qu'una tecnica ; est un hèritâjo que bat u côr d'Oaxaca. A San Bartolo Coyotepec, los mêtre-artisans transformont l'argila locala en piéces d'una èlègance profonda et mètalica.\n\n## Lo Procèssus\nLo secrèt sè trôve dens lo **luétrâjo** et la **quêta**. Avouéc una piérre de quars, l'artisan luétre la piéce devant qu'entre dens lo forn de doves boches. La fumiére prêsa pendent la quêta est cen que balye ceti nêr dènso et mistico.\n\n## Hèritâjo Vivant\nChâque corba et châque trauco conte una histouère de pacience. Y at pas de prèssa dens lo taliér ; la tèrra dicte lo temps, et l'artisan sè contante d'ècouter.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Hèritâjo Liquido",
+                "excerpt": "Més qu'un alcolat, lo mezcal est lo sang de la tèrra...",
+                "content": "# Hèritâjo Liquido\n\nLo mezcal est l'èsprit du Mèxico en botelye. Dens los palenques tradicionèls, lo procèssus comence avouéc la rechèrche de l'agave mur, qu'at absorbâ lo solèly et los minèrâls de la tèrra pendent des ans.\n\n## Lo Forn de Piérre\nLos côrs (piñas) sont quôts sot tèrra dens des forns de piérre volcanica chôfâs avouéc du bouès de châgne. Ceti ètape balye lo profil fumiê caractèristico que distingue los mèlyors mezcals du mondo.\n\n## Distilacion Ancestrala\nAvouéc des pignates de tèrra, la distilacion sè fêt gota a gota. Est una alquimia sacrâ que demande l'uely èxpèrt du mêtre-mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fials que contont lo Cosmos",
+                "excerpt": "Lo mèstier de cintura est una èstension du côrp de l'artisana...",
+                "content": "# Fials que contont lo Cosmos\n\nLo mèstier de cintura est una des tecnologies tèxtiles les més vielyes de Mèsoamèrica. Liyê a un ârbro ou a un piô d'un fllanc et a la cintura de l'artisana de l'ôtro, ceti outil pèrmèt una connexion entima avouéc l'ôvra.\n\n## Gèometria Sacrâ\nLos brocats et les brouderies sont pas de simples ornements. Sont des glifes d'ora que represantont la fllora, la fôna et la cosmogonia du payis. Châque huipil est una carta d'identitât règionala.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl : Lo Batement que nos Definét",
+        "philosophy": "Dens lo mondo d'ôtro côp d'Anáhuac, lo côr ére pas lo soulament organ ; ére lo 'Yollotl', lo centro du savêr, du corâjo et de la crèativitât. Por los Mexica, lo côr est lo luio yô que sè trôve l'essence de la pèrsona.",
+        "culturalValue": "Casa Yolotl & Co. est nâda de ceti batement. Represantens pas soulament l'artisanat ; presèrvens la valor culturala mèxicana en liyent la sapience ancestrala avouéc la deciplina d'entreprêsa d'ora[cite: 3, 4]."
+    }
+}

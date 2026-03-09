@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "La Nuesa Esencia",
+        "catalog": "Catálogu",
+        "contacto": "Contautu"
+    },
+    "Hero": {
+        "badge": "Cultura y Disciplina",
+        "title1": "Méxicu pal ",
+        "title_italic": "Mundu",
+        "title2": " con Identidá",
+        "description": "Representamos la cultura mexicana con disciplina empresarial y elegancia sobria.",
+        "btn_catalog": "Esplorar el Catálogu",
+        "aria_catalog": "Esplorar el catálogu completu de pieces premium",
+        "btn_history": "La Nuesa Historia",
+        "scroll": "Baxa"
+    },
+    "Esencia": {
+        "title": "Yollotl: El Llatíu que nos Define",
+        "subtitle": "La Nuesa Esencia",
+        "button": "Esplorar la Coleición"
+    },
+    "Contact": {
+        "title": "Contautu y Distribución",
+        "presence": "Presencia Global",
+        "mexico": "Méxicu (Showroom)",
+        "europe": "Europa (Distribución)",
+        "consultations": "Consultes Direutes",
+        "form": {
+            "heading": "Escríbenos",
+            "name": "Nome Completu",
+            "email": "Corréu Electrónicu",
+            "country": "País",
+            "message": "Mensaxe / Consulta",
+            "submitting": "Unviando...",
+            "submit": "Unviar Mensaxe",
+            "success_title": "Unviáu con Ésitu",
+            "success_msg": "Gracies por contautar con nòs. El nuesu concierge va revisar la so consulta y va ponese en contautu con usté n'un intre.",
+            "send_another": "Unviar otru mensaxe"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Representamos cultura con disciplina empresarial. Una ponte ente l'arte ancestral y el comerciu global.",
+        "trust": "Enfotu y Autenticidá",
+        "exploration": "Esploración",
+        "catalog": "Catálogu",
+        "essence": "La Nuesa Esencia",
+        "stories": "Hestories d'Orixe",
+        "special_projects": "Proyeutos Especiales",
+        "sustainability": "Sostenibilidat",
+        "support": "Soporte",
+        "shipping": "Política d'Unvíu (3PL)",
+        "returns": "Devoluciones (SLA)",
+        "terms": "Términos de Serviciu",
+        "authenticity": "Autenticidat",
+        "contact": "Contautu Global",
+        "concierge": "Concierge Dixital",
+        "newsletter_desc": "Suscríbite pa recibir invitaciones esclusives a llanzamientos y cróniques culturales.",
+        "newsletter_placeholder": "EL TO CORRÉU",
+        "newsletter_btn": "Suscribise",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERACIONES GLOBALES.",
+        "systems_active": "Sistemes Activos (MFA Activáu)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar por llingua o familia...",
+        "empty": "Nun s'atoparon resultaos"
+    },
+    "Marketplace": {
+        "title": "La Nuesa Curaduría",
+        "subtitle": "Pieces con Alma y Propósitu",
+        "crisis_cta": "Reservar con Concierge",
+        "categories": {
+            "mezcales": "Mezcales",
+            "artesanias": "Artesanía",
+            "decoracion": "Decoración"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Destiláu n'olles de folla, honrando la tradición milenaria de los maestros mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Texíu en telar de cintura con filos de seda, una obra mestra que narra la cosmogonía llocal."
+            },
+            "decor-01": {
+                "title": "Xarru de Folla Negro Bruñíu",
+                "desc": "Elegancia orgánica moldeada a mano en San Bartolo Coyotepec, con un acabáu metálicu natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Selvaxe",
+                "desc": "La xoya de la corona, destiláu a partir d'agaves selvaxes atopaos nes altes montes."
+            },
+            "textil-02": {
+                "title": "Alfombra de Teotitlán del Valle",
+                "desc": "Llana virxe tiñida con pigmentos naturales de cochinilla y índigo, diseñu xeométricu ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Xaguar de l'Alma'",
+                "desc": "Esculpíu en madera de copal, pintáu con meticulosidat onírica polos artesanos d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura y Orixe",
+        "subtitle": "Cróniques de Sabiduría Ancestral",
+        "badge": "Relatos y Heriedu",
+        "description": "Onramos el procesu artesanal y el significáu fondu tres de cada creación. Porque cada oxetu ye un fragmentu de la hestoria de Méxicu.",
+        "read_more": "LLEER LA CRÓNICA COMPLETA",
+        "read_more_aria": "Lleer la crónica completa sobre {title}",
+        "seal": "CASA YOLOTL & CO. • SELLO D'AUTENTICIDÁ •",
+        "related_pieces": "Pieces Rellacionaes",
+        "back_to_gallery": "Tornar a la Galería",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Alma de la Folla Negro",
+                "excerpt": "Descubre'l procesu ancestral de San Bartolo Coyotepec, onde la tierra tórnase obsidiana nes manes de los artesanos.",
+                "content": "# L'Alma de la Folla Negro\n\nLa folla negro ye más qu'una téunica; ye un heriedu que llate nel corazón d'Oaxaca. En San Bartolo Coyotepec, los maestros artesanos tresformen l'archila llocal en pieces d'una elegancia fonda y metálica.\n\n## El Procesu\nEl secretu mora nel **bruñíu** y la **cocción**. Por aciu d'una piedra de cuarzu, l'artesanu pule la pieza antes qu'ente nel fornu de dos boques. El fumu atrapáu mientres la cocción ye lo que da esi negro intensu y místicu.\n\n## Heriedu Vivo\nCada curva y cada furacu cuenta una hestoria de paciencia. Nun hai priesa nel taller; la tierra dicta'l tiempu, y l'artesanu puramente escucha.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Heriedu Líquidu",
+                "excerpt": "Más qu'un destiláu, el mezcal ye'l sangre de la tierra...",
+                "content": "# Heriedu Líquidu\n\nEl mezcal ye l'espíritu de Méxicu embotelláu. Nos palenques tradicionales, el procesu empieza cola busca del agave maduru, qu'absorbió'l sol y los minerales de la tierra mientres años.\n\n## El Fornu de Piedra\nLos corazones (piñas) cuécense baxo tierra en fornos de piedra volcánica calentaos con lleña de carbayu. Esti pasu apurre'l perfil afumáu carauterísticu que distingue a los meyores mezcales del mundu.\n\n## Destilación Ancestral\nPor aciu d'olles de folla, la destilación faise gota a gota. Ye una alquimia sagrada que rique l'ollo espertu del maestru mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Filos que Narren el Cosmos",
+                "excerpt": "El telar de cintura ye una estensión del cuerpu de l'artesana...",
+                "content": "# Filos que Narren el Cosmos\n\nEl telar de cintura ye una de les teunoloxíes téxtiles más antigües y sofisticaes de la Mesoamérica. Lligáu a un árbol o poste por un estremu y a la cintura de l'artesana pol otru, esti preséu dexa una conexón íntima cola obra.\n\n## Xeometría Sagrada\nLos brocaos y bordaos nun son namái ornamientos. Son glifos contemporáneos que representen la flora, la fauna y la cosmogonía de la comunidá. Cada huipil ye un mapa d'identidá rexonal.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: El Llatíu que nos Define",
+        "philosophy": "Nel mundu antiguu de l'Anáhuac, el corazón nun yera namái un órganu; yera'l 'Yollotl', el centru de la conocencia, del valir y de la creatividat. Pa los mexiques, el corazón ye onde mora la esencia de la persona.",
+        "culturalValue": "Casa Yolotl & Co. naz d'esti corazón. Non representamos namái artesanía; preservamos el valir cultural mexicanu conectando la sabiduría ancestral cola disciplina empresarial contemporánea."
+    }
+}

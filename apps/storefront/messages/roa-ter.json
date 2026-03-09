@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "A Sustanza Nostra",
+        "catalog": "Cataleghe",
+        "contacto": "Cundatte"
+    },
+    "Hero": {
+        "badge": "Cultura e Deciplina",
+        "title1": "U Messiche p'u ",
+        "title_italic": "Munne",
+        "title2": " cu Identità",
+        "description": "Rappresentame 'a cultura messicana cu deciplina d'impresa e n'eleganza sobria.",
+        "btn_catalog": "Esplore 'o Cataleghe",
+        "aria_catalog": "Esplore 'o cataleghe cumplete de li pìzze de lusso",
+        "btn_history": "A Storia Nostra",
+        "scroll": "Scunne"
+    },
+    "Esencia": {
+        "title": "Yollotl: U Battite ca ne Definisce",
+        "subtitle": "A Sustanza Nostra",
+        "button": "Esplore 'a Cullezziune"
+    },
+    "Contact": {
+        "title": "Cundatte e Distribuzzionne",
+        "presence": "Presenza Globale",
+        "mexico": "Messiche (Showroom)",
+        "europe": "Europa (Distribuzzionne)",
+        "consultations": "Cunsulenze Dirette",
+        "form": {
+            "heading": "Scrivitece",
+            "name": "Nomme Cumplete",
+            "email": "Indirizze E-mail",
+            "country": "Paese",
+            "message": "Messaggie / Dumanda",
+            "submitting": "Invia amminze...",
+            "submit": "Invia 'o Messaggie",
+            "success_title": "Inviate cu Successe",
+            "success_msg": "Grazzie pe n'avé cundattate. 'O concierge nuostre verà 'a dumanda vosta e v'arrispunne fite.",
+            "send_another": "Invia n'ate messaggie"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Rappresentame 'a cultura cu deciplina d'impresa. Nu punde ntra l'arte antica e 'o commercie globale.",
+        "trust": "Fiducia e Autenticità",
+        "exploration": "Esplurazzionne",
+        "catalog": "Cataleghe",
+        "essence": "A Sustanza Nostra",
+        "stories": "Storie d'Origgene",
+        "special_projects": "Prugette Speziale",
+        "sustainability": "Sustenibilità",
+        "support": "Suppurte",
+        "shipping": "Pulitica 'e Spedizzionne (3PL)",
+        "returns": "Riese (SLA)",
+        "terms": "Termine 'e Servizzie",
+        "authenticity": "Autenticità",
+        "contact": "Cundatte Globale",
+        "concierge": "Concierge Digitale",
+        "newsletter_desc": "Abbuonete pe' riceve mmitte esclusive e cronache culturale.",
+        "newsletter_placeholder": "A VOSTRA E-MAIL",
+        "newsletter_btn": "Abbuonete",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERAZZIONNE GLOBALE.",
+        "systems_active": "Sisteme Attive (MFA Abilitate)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtre pe' lengua o famiglia...",
+        "empty": "Nisciune risurtate truvate"
+    },
+    "Marketplace": {
+        "title": "A Selezzionne Nostra",
+        "subtitle": "Pìzze cu Anema e Scupe",
+        "crisis_cta": "Prenote cu 'o Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artiggianate",
+            "decoracion": "Decurazzionne"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestrale Espadín",
+                "desc": "Distillate dind'â pignate 'e terra, onranne 'a tradizione millenaria de li maste mezcaleros 'e Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil 'e Gala San Juan K",
+                "desc": "Tessute ô telare 'e cintura cu file 'e seta, nu capolavorre ca cunte 'a cosmogonia d'o poste."
+            },
+            "decor-01": {
+                "title": "Vase 'e Terra Nera Lustrate",
+                "desc": "Eleganza organica mudellata a mmane a San Bartolo Coyotepec, cu nu fuste mettalleche naturale."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Selvateche",
+                "desc": "U gioiell d'a corona, distillate d'agave salvateche truvate ncopp'â mundagne."
+            },
+            "textil-02": {
+                "title": "Tappete 'e Teotitlán del Valle",
+                "desc": "Lana vergine tinta cu pigmende naturale 'e cocciniglia e indaco, cu nu disegne geometriche antiche."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Giaguare d'Anema'",
+                "desc": "Scurpite dind'ô lignamme 'e copal, pinte cu masteria onirica de li maste 'e Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura e Origgene",
+        "subtitle": "Cronache 'e Sapienza Antica",
+        "badge": "Cunde e Redità",
+        "description": "Onrame 'o faticà 'e l'artiggiane e 'o sense profunne rrete a ogni criazzionne. Pecché ogni oggette è nu pìzze d'a storia d'o Messiche.",
+        "read_more": "LEGGE 'A CRONACA CUMPLETA",
+        "read_more_aria": "Legge 'a cronaca cumpleta ncopp'â {title}",
+        "seal": "CASA YOLOTL & CO. • SIGILLE D'AUTENTICITÀ •",
+        "related_pieces": "Pìzze Cundesse",
+        "back_to_gallery": "Turne â Galleria",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Anema d'a Terra Nera",
+                "excerpt": "Scuopre 'o prucedimende antiche 'e San Bartolo Coyotepec, addó 'a terra deventa ossidiana dind'â mmane de li maste.",
+                "content": "# L'Anema d'a Terra Nera\n\nA terra nera è cchiù 'e na tecnica; è na redità ca batte dind'ô core 'e Oaxaca. A San Bartolo Coyotepec, li maste artiggiane trasfòrmene 'a creta d'o poste dind'a pìzze d'n'eleganza profunna.\n\n## U Prucedimende\n'O segrete sta dind'ô **lustrà** e dind'â **cottura**. Cu na preta 'e quarze, l'artiggiane lustre 'o pìzze primma 'e trasì dind'ô furne. 'O fumme nchiuse mmienz'â cottura è chello ca dà chello nire forte e mistiche.\n\n## Redità Viva\nOgni curva cunte na storia 'e pazienza. Nun ce sta fure dind'ô laboratorio; 'a terra decide 'o tiempe e l'artiggiane aspette 'o core.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Patrimonie Liquide",
+                "excerpt": "Cchiù 'e nu distillate, 'o mezcal è 'o sango d'a terra...",
+                "content": "# Patrimonie Liquide\n\n'O mezcal è 'o spirite d'o Messiche dind'â bbuttiglia. Dind'ê palenques tradizzionale, 'o prucedimende accumenzia cu 'a ricerca d'agave matura, ca s'ha bevute 'o sole e li minerale d'a terra pe' tant'anne.\n\n## U Furne 'e Preta\nLi core (piñas) vènene cuotte sotta terra dind'ê furne 'e preta vulcanica scarfate cu lignamme 'e quercia. Stu passe dà 'o sapore 'e fumme ca distingue li mègghie mezcal d'o munne.\n\n## Distillazzionne Ancestrale\nCu 'a pignate 'e terra, 'a distillazzionne se fa goccia pe' goccia. È n'alchimia sacra ca vò l'uocchie esperte d'o mastro mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "File ca Cundene 'o Cosmos",
+                "excerpt": "U telare 'e cintura è n'estenzionne d'o cuorpe d'a masta...",
+                "content": "# File ca Cundene 'o Cosmos\n\n'O telare 'e cintura è una de li tecnologie tessile cchiù antiche d'a Mesoamerica. Attaccate a n'arvule o a nu pale, stu strumende permette nu ligamme forte cu l'opera.\n\n## Geometria Sacra\nLi ricame nun so' sulo deccurazzionne. So' signe de mo' ca rappresentene 'a flora, 'a fauna e 'a cosmogonia d'a cumunità. Ogni huipil è na carta d'identità d'o poste.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: U Battite ca ne Definisce",
+        "philosophy": "Dind'ô munne antiche d'Anáhuac, 'o core nun era sulo n'organne; era 'o 'Yollotl', 'o centre d'o sapé, d'o coraggie e d'a criatività. Pe' li Mexica, dind'ô core ce sta 'a sustanza d'a persona.",
+        "culturalValue": "Casa Yolotl & Co. nasce da stu battite. Nun rappresentame sulo artiggianate; onrame 'o valore culturale messicano liganne 'a sapienza antica cu 'a deciplina d'impresa moderna."
+    }
+}
