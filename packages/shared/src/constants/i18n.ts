@@ -1,10 +1,12 @@
 export enum Locale {
     ES = "es",
     EN = "en",
-    FR = "fr"
+    FR = "fr",
+    IT = "it",
+    PT = "pt"
 }
 
-export const SUPPORTED_LOCALES: Locale[] = [Locale.ES, Locale.EN, Locale.FR];
+export const SUPPORTED_LOCALES: Locale[] = [Locale.ES, Locale.EN, Locale.FR, Locale.IT, Locale.PT];
 
 export const I18N_CONFIG = {
     defaultLocale: Locale.ES,

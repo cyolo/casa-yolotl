@@ -61,17 +61,21 @@ export async function middleware(request: NextRequest) {
     // 5. Anti-Stacking Logic: Check if path starts with what looks like a locale (2 letters)
     const segments = pathname.split('/').filter(Boolean);
     const looksLikeLocale = segments.length > 0 && segments[0].length === 2;
-    const isSupportedLocale = looksLikeLocale && locales.includes(segments[0] as any);
+    const isSupportedLocale = looksLikeLocale && (locales as readonly string[]).includes(segments[0]);
 
     const url = request.nextUrl.clone()
 
     if (looksLikeLocale && !isSupportedLocale) {
-        // Scenario: Path starts with unsupported locale (e.g., /it/...) -> REPLACE with default
-        segments[0] = locale;
+        // Scenario: Path starts with UNSUPPORTED locale (e.g., /ru/...) -> REPLACE with defaultLocale (/es)
+        // User Requirement: "Cualquier otro no soportado Redirige limpiamente a /es sin stacking"
+        segments[0] = defaultLocale;
         url.pathname = `/${segments.join('/')}`
-    } else {
-        // Scenario: Path is bare (e.g., /cultura) -> PREPEND default
+    } else if (!looksLikeLocale) {
+        // Scenario: Path is bare (e.g., /cultura) -> PREPEND detected locale
         url.pathname = `/${locale}${pathname}`
+    } else {
+        // Supported locale already present: This case is handled by pathnameHasLocale early return
+        return NextResponse.next()
     }
 
     return NextResponse.redirect(url)
