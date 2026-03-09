@@ -55,23 +55,13 @@ export async function middleware(request: NextRequest) {
     if (pathnameHasLocale) return NextResponse.next()
 
     // 4. Internationalization Intelligence: Detect Locale
+    // Priority: 1. Cookie, 2. Accept-Language (skipped for now), 3. Default
     const cookieLocale = request.cookies.get(cookieName)?.value
     const locale = (cookieLocale && (locales as readonly string[]).includes(cookieLocale)) ? cookieLocale : defaultLocale
 
-    // 5. Robust Redirection: Check if the first segment is an UNIDENTIFIED locale (e.g., /it)
-    const segments = pathname.split('/').filter(Boolean);
-    const unidentifiedLocale = segments.length > 0 && segments[0].length === 2 && !locales.includes(segments[0] as any);
-
+    // Redirect to the detected locale
     const url = request.nextUrl.clone()
-
-    if (unidentifiedLocale) {
-        // Replace unidentified locale with default to prevent stacking (e.g., /it -> /es)
-        segments[0] = locale;
-        url.pathname = `/${segments.join('/')}`
-    } else {
-        // Prepend locale for routes without prefix (e.g., /cultura -> /es/cultura)
-        url.pathname = `/${locale}${pathname}`
-    }
+    url.pathname = `/${locale}${pathname}`
 
     return NextResponse.redirect(url)
 }
