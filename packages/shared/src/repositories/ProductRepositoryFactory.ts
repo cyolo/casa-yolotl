@@ -7,13 +7,20 @@ export type DataSource = "static" | "supabase" | "cloud-sql";
 
 export class ProductRepositoryFactory {
     static getRepository(): IProductRepository {
-        const env = process.env.APP_ENV || 'local';
+        const env = (process.env.APP_ENV || 'local').toLowerCase();
         let source = (process.env.DATA_SOURCE || "static") as DataSource;
 
-        // Requirement: "strictly enforces the use of StaticProductRepository when APP_ENV=local"
+        // STRATEGIC LOCKDOWN: "the factory MUST return StaticProductRepository when APP_ENV=local"
         if (env === 'local') {
-            console.log("[ARCHITECTURE]: Enforcing StaticProductRepository (Embedded Mode)");
-            source = "static";
+            if (source !== 'static') {
+                console.warn("[EMBEDDED MODE]: Detected DATA_SOURCE override in local. Overriding to 'static' for 12-Factor compliance.");
+            }
+            return new StaticProductRepository();
+        }
+
+        // Production Lockdown: Production always uses Supabase (unless CloudSQL is ready)
+        if (env === 'production') {
+            source = 'supabase';
         }
 
         switch (source) {

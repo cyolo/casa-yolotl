@@ -31,37 +31,56 @@ export const MARKETPLACE_CONFIG = {
 } as const;
 
 /**
- * Environment-specific overrides for Phase 4.
+ * Environment-specific overrides for Phase 5 (Parametric Lockdown).
  */
 export const ENVIRONMENT_CONFIG = {
     local: {
         apiEndpoint: "http://localhost:3000",
         enableAnalytics: false,
         trustHost: true,
+        dataSource: 'static' as const, // Forced for 12-Factor Embedded Mode
+        gcpProjectId: "casa-yolotl-local",
     },
     development: {
         apiEndpoint: "https://dev-api.casayolotl.com",
         enableAnalytics: true,
         trustHost: true,
+        dataSource: (process.env.DATA_SOURCE || 'supabase') as 'static' | 'supabase',
+        gcpProjectId: process.env.GCP_PROJECT_ID || "casa-yolotl-dev",
     },
     production: {
         apiEndpoint: "https://api.casayolotl.com",
         enableAnalytics: true,
         trustHost: false, // Strict for PRD
+        dataSource: 'supabase' as const, // Forced for Prod
+        gcpProjectId: process.env.GCP_PROJECT_ID || "casa-yolotl-prd",
     }
-};
+} as const;
 
 export const getEnvironment = () => {
     return (process.env.APP_ENV as keyof typeof ENVIRONMENT_CONFIG) || 'local';
 };
 
+/**
+ * Resolves the configuration based on the current environment.
+ * Enforces 12-Factor App principles and data sovereignty.
+ */
 export const getActiveConfig = () => {
     const env = getEnvironment();
-    return {
+    const config = ENVIRONMENT_CONFIG[env];
+
+    // ROI and Currency targets are immutable across environments as per Map of Governance
+    const activeConfig = {
         ...MARKETPLACE_CONFIG,
-        ...ENVIRONMENT_CONFIG[env],
-        env
+        ...config,
+        env,
+        metrics: {
+            roiTarget: 0.25, // 25% ROI Target
+            growthFloor: 0.20, // 20% Growth Floor
+        }
     };
+
+    return activeConfig;
 };
 
-export type MarketplaceConfig = typeof MARKETPLACE_CONFIG;
+export type MarketplaceConfig = ReturnType<typeof getActiveConfig>;
