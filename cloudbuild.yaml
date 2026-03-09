@@ -1,0 +1,56 @@
+# Cloud Build Configuration for Casa Yolotl (GCP)
+# Automates Containerization and Cloud Run Deployment
+
+steps:
+  # 1. Install & Build Storefront
+  - name: 'gcr.io/cloud-builders/docker'
+    args: 
+      - 'build'
+      - '--build-arg', 'APP_NAME=storefront'
+      - '-t', 'gcr.io/${PROJECT_ID}/casayolotl-storefront:${SHORT_SHA}'
+      - '.'
+  
+  # 2. Install & Build Admin
+  - name: 'gcr.io/cloud-builders/docker'
+    args: 
+      - 'build'
+      - '--build-arg', 'APP_NAME=admin'
+      - '-t', 'gcr.io/${PROJECT_ID}/casayolotl-admin:${SHORT_SHA}'
+      - '.'
+
+  # 3. Push Images
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/${PROJECT_ID}/casayolotl-storefront:${SHORT_SHA}']
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/${PROJECT_ID}/casayolotl-admin:${SHORT_SHA}']
+
+  # 4. Deploy Storefront to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'casayolotl-storefront'
+      - '--image', 'gcr.io/${PROJECT_ID}/casayolotl-storefront:${SHORT_SHA}'
+      - '--region', 'us-central1'
+      - '--platform', 'managed'
+      - '--allow-unauthenticated'
+
+  # 5. Deploy Admin to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'casayolotl-admin'
+      - '--image', 'gcr.io/${PROJECT_ID}/casayolotl-admin:${SHORT_SHA}'
+      - '--region', 'us-central1'
+      - '--platform', 'managed'
+
+images:
+  - 'gcr.io/${PROJECT_ID}/casayolotl-storefront:${SHORT_SHA}'
+  - 'gcr.io/${PROJECT_ID}/casayolotl-admin:${SHORT_SHA}'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

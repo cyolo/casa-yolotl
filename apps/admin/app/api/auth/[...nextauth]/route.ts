@@ -63,6 +63,7 @@ export const authOptions: NextAuthOptions = {
         signIn: "/auth/signin",
         error: "/auth/signin",
     },
+    useSecureCookies: process.env.APP_ENV !== "local",
 };
 
 const handler = NextAuth(authOptions);

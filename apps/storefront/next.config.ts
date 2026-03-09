@@ -15,6 +15,7 @@ import type { NextConfig } from "next";
 })();
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   transpilePackages: ["@casa-yolotl/shared"],
   images: {
     formats: ['image/avif', 'image/webp'],

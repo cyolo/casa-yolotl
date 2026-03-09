@@ -30,4 +30,38 @@ export const MARKETPLACE_CONFIG = {
     }
 } as const;
 
+/**
+ * Environment-specific overrides for Phase 4.
+ */
+export const ENVIRONMENT_CONFIG = {
+    local: {
+        apiEndpoint: "http://localhost:3000",
+        enableAnalytics: false,
+        trustHost: true,
+    },
+    development: {
+        apiEndpoint: "https://dev-api.casayolotl.com",
+        enableAnalytics: true,
+        trustHost: true,
+    },
+    production: {
+        apiEndpoint: "https://api.casayolotl.com",
+        enableAnalytics: true,
+        trustHost: false, // Strict for PRD
+    }
+};
+
+export const getEnvironment = () => {
+    return (process.env.APP_ENV as keyof typeof ENVIRONMENT_CONFIG) || 'local';
+};
+
+export const getActiveConfig = () => {
+    const env = getEnvironment();
+    return {
+        ...MARKETPLACE_CONFIG,
+        ...ENVIRONMENT_CONFIG[env],
+        env
+    };
+};
+
 export type MarketplaceConfig = typeof MARKETPLACE_CONFIG;
