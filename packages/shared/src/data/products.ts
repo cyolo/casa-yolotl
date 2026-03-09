@@ -121,4 +121,20 @@ export const products: Product[] = [
         },
         dimensions: { weight: 1.5, width: 30, height: 20, depth: 40 }
     },
+    {
+        id: "montoya-01",
+        name: "Jarrón de Alta Temperatura Montoya",
+        description: "Obra maestra de la Familia Montoya en Metepec. Cerámica vidriada con minerales naturales mediante técnicas de alta temperatura, logrando un acabado vítreo eterno y una elegancia sobria que dialoga con la modernidad.",
+        category: "ceramica-montoya",
+        price: "680.00",
+        marketplaceUrl: "https://marketplace.example/jarron-montoya",
+        imageUrl: "/products/jarron-montoya.png",
+        stock: 3,
+        seo: {
+            title: "Jarrón de Alta Temperatura Montoya | Herencia de Metepec",
+            description: "Descubre la cerámica vidriada de alta temperatura de la Familia Montoya. Arte contemporáneo con alma ancestral.",
+            keywords: ["ceramica montoya", "metepec", "vidriado mineral", "artesania de lujo"]
+        },
+        dimensions: { weight: 2.5, width: 25, height: 45, depth: 25 }
+    },
 ];

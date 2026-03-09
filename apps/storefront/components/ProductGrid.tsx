@@ -5,7 +5,7 @@ import { Product, productService } from "@casa-yolotl/shared";
 import ProductCard from "./ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
-const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion"];
+const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion", "ceramica-montoya"];
 
 const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) => {
     const { t } = useLanguage();
@@ -82,7 +82,10 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
                         <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div className={`grid gap-12 lg:gap-16 ${activeCategory === 'ceramica-montoya'
+                        ? "grid-cols-1 md:grid-cols-2"
+                        : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                        }`}>
                         {products.map((product) => (
                             <ProductCard
                                 key={product.id}

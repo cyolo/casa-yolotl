@@ -72,7 +72,8 @@
         "categories": {
             "mezcales": "Mezcales",
             "artesanias": "Artesanías",
-            "decoracion": "Decoración"
+            "decoracion": "Decoración",
+            "ceramica-montoya": "Cerámica Montoya"
         },
         "items": {
             "mezcal-01": {
@@ -98,6 +99,10 @@
             "artesania-02": {
                 "title": "Alebrije 'Jaguar del Alma'",
                 "desc": "Talla en madera de copal, pintada con minuciosidad onírica por artesanos de Arrazola."
+            },
+            "montoya-01": {
+                "title": "Jarrón de Alta Temperatura Montoya",
+                "desc": "Pieza de lujo con vidriado mineral, herencia de la Familia Montoya en Metepec."
             }
         }
     },
@@ -129,6 +134,12 @@
                 "excerpt": "El telar de cintura es una extensión del cuerpo de la mujer artesana...",
                 "content": "# Hilos que Narran el Cosmos\n\nEl telar de cintura es una de las tecnologías textiles más antiguas y sofisticadas de Mesoamérica. Atada a un árbol o poste por un extremo y a la cintura de la artesana por el otro, esta herramienta permite una conexión íntima con la obra.\n\n## La Geometría Sagrada\nLos brocados y bordados no son simples adornos. Son glifos contemporáneos que representan la flora, la fauna y la cosmogonía de la comunidad. Cada huipil es un mapa de identidad regional.\n\n## Tintes Naturales\nLa búsqueda de la excelencia nos lleva a recuperar el uso de la grana cochinilla, el añil y el caracol púrpura, colorantes orgánicos que ofrecen una paleta de colores vibrantes y duraderos.",
                 "location": "Teotitlán del Valle, Oaxaca"
+            },
+            "story-metepec": {
+                "title": "Metepec: El Fuego de la Tierra",
+                "excerpt": "Explora la maestría de la cerámica de alta temperatura en Metepec, donde el barro se eleva a arte mineral.",
+                "content": "# Metepec: El Fuego de la Tierra\n\nEn el corazón del Estado de México, Metepec es el epicentro de la alfarería nacional. Sin embargo, la Familia Montoya ha llevado esta tradición a un nivel de excelencia técnica inigualable: la **Alta Temperatura**.\n\n## Vidriado Mineral\nA diferencia de la cerámica tradicional, las piezas Montoya utilizan minerales naturales seleccionados para un vidriado que se funde con el barro a temperaturas extremas. El resultado es una superficie vítrea, profunda y eterna que no teme al paso de los siglos.\n\n## Silencio Visual\nCada jarrón es un ejercicio de minimalismo y proporción. En Casa Yolotl, seleccionamos estas piezas porque representan la conjunción perfecta entre el rigor técnico y la sensibilidad artística de Metepec.",
+                "location": "Metepec, Estado de México"
             }
         }
     },
