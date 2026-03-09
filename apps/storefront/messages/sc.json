@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Sa Sustàntzia Nostra",
+        "catalog": "Catàlogu",
+        "contacto": "Contatu"
+    },
+    "Hero": {
+        "badge": "Cultura e Ditziplina",
+        "title1": "Su Mèssicu a su ",
+        "title_italic": "Mundu",
+        "title2": " cun Identidade",
+        "description": "Rapresentamus sa cultura messicana cun ditziplina de impresa e elegàntzia sòria.",
+        "btn_catalog": "Esplora su Catàlogu",
+        "aria_catalog": "Esplora su catàlogu cumpletu de pìtzos premium",
+        "btn_history": "S'Istòria Nostra",
+        "scroll": "Iscurre"
+    },
+    "Esencia": {
+        "title": "Yollotl: Su Coro chi nos Definit",
+        "subtitle": "Sa Sustàntzia Nostra",
+        "button": "Esplora sa Colletzione"
+    },
+    "Contact": {
+        "title": "Contatu e Distributzione",
+        "presence": "Presèntzia Globale",
+        "mexico": "Mèssicu (Showroom)",
+        "europe": "Europa (Distributzione)",
+        "consultations": "Cunsultas Diretas",
+        "form": {
+            "heading": "Iscrie-nos",
+            "name": "Nùmene Cumpletu",
+            "email": "Indiritzu E-mail",
+            "country": "Istadu",
+            "message": "Messàgiu / Pregonta",
+            "submitting": "Inviu in cursu...",
+            "submit": "Imbia Messàgiu",
+            "success_title": "Imbiadu cun Suchessu",
+            "success_msg": "Gràtzias pro nos àere cuntatadu. Su concierge nostru at a esaminare sa rechesta tua e t'at a rispùndere a prestu.",
+            "send_another": "Imbia un'àteru messàgiu"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Rapresentamus sa cultura cun ditziplina de impresa. Unu ponte de ligàmene intra s'arte de sos antigos e su cummèrtziu globale.",
+        "trust": "Fidùtzia e Autentitzidade",
+        "exploration": "Esploratzione",
+        "catalog": "Catàlogu",
+        "essence": "Sa Sustàntzia Nostra",
+        "stories": "Istòrias de Oritzi",
+        "special_projects": "Progetos Ispetziales",
+        "sustainability": "Sustenibilidade",
+        "support": "Suportu",
+        "shipping": "Polìtica de Ispeditzione (3PL)",
+        "returns": "Resos (SLA)",
+        "terms": "Tèrmines de Servìtziu",
+        "authenticity": "Autentitzidade",
+        "contact": "Contatos Globales",
+        "concierge": "Concierge Digitale",
+        "newsletter_desc": "Iscrie-tì pro retzire imbitos isclussivos a sos lantzamentos e crònacas culturales.",
+        "newsletter_placeholder": "S'E-MAIL TUA",
+        "newsletter_btn": "Iscrie-tì",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERATZIONES GLOBALES.",
+        "systems_active": "Sistemas Ativos (MFA Ativadu)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtra pro limba o famìllia...",
+        "empty": "Nisunu resurtadu agatadu"
+    },
+    "Marketplace": {
+        "title": "Sa Curadoria Nostra",
+        "subtitle": "Pìtzos cun Ànima e Intentu",
+        "crisis_cta": "Reserva cun su Concierge",
+        "categories": {
+            "mezcales": "Mezcales",
+            "artesanias": "Artesania",
+            "decoracion": "Adornu"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestrale Espadín",
+                "desc": "Distilladu in crovone de fanga, onorende sa traditzione millenària de sos Mastros Mezcaleros de Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Tessidu in telàrgiu de chintura cun filos de seda, una de sas prus bellas òperas chi contat sa cosmogonia locale."
+            },
+            "decor-01": {
+                "title": "Vasu de Fanga Niedda Allughiada",
+                "desc": "Elegàntzia orgànica traballada a manu in San Bartolo Coyotepec, cun un'acabu metàllicu naturale."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Selvàticu",
+                "desc": "Sa gioia de sa corona, distilladu dae agaves selvàticos agatados in sos montes artos."
+            },
+            "textil-02": {
+                "title": "Istore de Teotitlán del Valle",
+                "desc": "Lana vìrgine colorada cun tintas naturales de cocunilla e indacu, cun disinnu geomètricu de sos antigos."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Giaguaru de s'Ànima'",
+                "desc": "Intagliadu in linna de copal, pintadu cun cura onìrica dae sos artesanos de Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura e Oritzi",
+        "subtitle": "Crònacas de Sabiduria Antiga",
+        "badge": "Contos e Erèntzia",
+        "description": "Onoramus su traballu de s'artesanu e su significadu prus profundu de ogni produtzione. Ogni ogetu est unu cantu de s'istòria de su Mèssicu.",
+        "read_more": "LEGHE SA CRÒNACA CUMPLETA",
+        "read_more_aria": "Leghe sa crònaca cumpleta subra {title}",
+        "seal": "CASA YOLOTL & CO. • SEGLIU DE AUTENTITZIDADE •",
+        "related_pieces": "Pìtzos Acapiados",
+        "back_to_gallery": "Torra a sa Galleria",
+        "items": {
+            "story-barro-negro": {
+                "title": "S'Ànima de sa Fanga Niedda",
+                "excerpt": "Iscoberi su traballu antigu de San Bartolo Coyotepec, in ue sa terra si faghet ossidiana in sas manos de sos artesanos.",
+                "content": "# S'Ànima de sa Fanga Niedda\n\nSa fanga niedda est prus de una tècnica; est un'erèntzia chi vìvitat su coro de Oaxaca. In San Bartolo Coyotepec, sos mastros artesanos trasformant sa fanga locale in pìtzos de un'elegàntzia profunda.\n\n## Su Traballu\nSu segretu est in s'**allughiamentu** e in sa **coghidura**. Impreende una pedra de cuartzu, s'artesanu pùlit s'ogetu prima de lu pònnere in su furru. Su fumu de sa coghidura est su chi dat cussu colore nieddu intensu e mìsticu.\n\n## Erèntzia Viva\nOgni curba e ogni pertusu contat un'istòria de passièntzia. In sa butega non b'at fura; sa terra detzit su tempus e s'artesanu ascurtat ebbia.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Erèntzia Lìchida",
+                "excerpt": "Prus de unu distilladu, su mezcal est su sàmbene de sa terra...",
+                "content": "# Erèntzia Lìchida\n\nSu mezcal est s'ispìritu de su Mèssicu postu in ampulla. In sos palenques traditzionales, su traballu cumintzat chirchende s'agave maduru, chi at assurbidu su sole e sos minerales de sa terra pro annos.\n\n## Su Furru de Pedra\nSos coros (piñas) si coghent suta terra in furros de pedra volcànica iscaldados cun linna de chercu. Custu passàgiu dat su sabore de fumu chi caraterizat sos mègius mezcales de su mundu.\n\n## Distillatzione Antiga\nImpreende crovones de fanga, sa distillatzione si faghet gota a gota. Est un'alchimia sagrada chi rechedet s'ogru espertu de su mastro mezcalero pro separare sas 'testas' dae sas 'colas'.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Filos chi Contant su Cosmos",
+                "excerpt": "Su telàrgiu de chintura est una continuatzione de su corpu de s'artesana...",
+                "content": "# Filos chi Contant su Cosmos\n\nSu telàrgiu de chintura est una de sas prus anticas tecnològias de sa Mesoamèrica. Acapiadu a un'àrbore o a unu palu, custu istrumentu permitet unu ligàmene forte cun s'òpera.\n\n## Geometria Sagrada\nSos recamos non sunt decòrum ebbia. Sunt signos chi rapresentant sa flora, sa fàuna e sa cosmogonia de sa comunidade. Ogni huipil est una carta de identidade de su logu.\n\n## Tintas Naturales\nChirchemus s'etzellèntzia recuperende s'impreu de sa cocunilla, de s'indacu e de su pùrpura, colorantes orgànicos chi donant tintas bivas e chi durant in su tempus.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: Su Coro chi nos Definit",
+        "philosophy": "In su mundu antigu de Anáhuac, su coro non fiat un'òrganu ebbia; fiat su 'Yollotl', su tzentru de sa sabiduria, de s'ànimu e de sa creatividade. Pro sos Mexica, su coro est in ue bivet sa sustàntzia de sa persone.",
+        "culturalValue": "Casa Yolotl & Co. naschet dae custu corfu de coro. Non rapresentamus s'artesania ebbia; mantenimus su balore culturale messicanu lighende sa sabiduria antiga cun sa ditziplina de impresa moderna, assigurende chi ogni pìtzu siat unu ponte intra su passadu e su futuru."
+    }
+}

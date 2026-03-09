@@ -23,7 +23,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const pathname = usePathname();
 
     const [currentLanguage, setCurrentLanguageState] = useState<Language>(
-        allLanguages.find(l => l.code === "es") || allLanguages[0]
+        allLanguages.find(l => l.code === "en") || allLanguages[0]
     );
     const [translations, setTranslations] = useState<TranslationStrings>({});
     const [fallbackTranslations, setFallbackTranslations] = useState<TranslationStrings>({});

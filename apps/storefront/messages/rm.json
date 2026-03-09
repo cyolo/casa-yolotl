@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Nossa Essenza",
+        "catalog": "伸Catalog",
+        "contacto": "Contact"
+    },
+    "Hero": {
+        "badge": "Cultura e Disciplina",
+        "title1": "Il Mexico al ",
+        "title_italic": "Mund",
+        "title2": " cun Identitad",
+        "description": "Nus representain la cultura mexicana cun disciplina d'interpresa ed eleganza soberna.",
+        "btn_catalog": "Explorar il Catalog",
+        "aria_catalog": "Explorar il catalog cumplain da pèzzas premium",
+        "btn_history": "Nossa Istorgia",
+        "scroll": "Scuntrar"
+    },
+    "Esencia": {
+        "title": "Yollotl: Il Battid dal Cor che nus Definescha",
+        "subtitle": "Nossa Essenza",
+        "button": "Explorar la Collecziun"
+    },
+    "Contact": {
+        "title": "Contact e Distribuziun",
+        "presence": "Presenza Globala",
+        "mexico": "Mexico (Showroom)",
+        "europe": "Europa (Distribuziun)",
+        "consultations": "Consultaziuns Directas",
+        "form": {
+            "heading": "Scrivai a nus",
+            "name": "Num Cumplain",
+            "email": "Adressa d'E-mail",
+            "country": "Pajais",
+            "message": "Messadi / Dumonda",
+            "submitting": "Trametter...",
+            "submit": "Trametter il Messadi",
+            "success_title": "Tramess cun Success",
+            "success_msg": "Grazia fitg per Voss contact. Noss concierge vegn a consultar Vossa dumonda e prender contact baud pussaivel.",
+            "send_another": "Trametter in auter messadi"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Nus representain cultura cun disciplina d'interpresa. In punt tranter art ancestral e commerzi global.",
+        "trust": "Confidanza ed Autenticitad",
+        "exploration": "Exploraziun",
+        "catalog": "Catalog",
+        "essence": "Nossa Essenza",
+        "stories": "Istorgias d'Origin",
+        "special_projects": "Projects Spezials",
+        "sustainability": "Sustegnibilitad",
+        "support": "Support",
+        "shipping": "Directivas d'Expediziun (3PL)",
+        "returns": "Returns (SLA)",
+        "terms": "Cundiziuns da Servetsch",
+        "authenticity": "Autenticitad",
+        "contact": "Contact Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Abunai per retschaver invitaziuns exclusivas e cronicas culturalas.",
+        "newsletter_placeholder": "VOSS E-MAIL",
+        "newsletter_btn": "Abunar",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERAZIUNS GLOBALAS.",
+        "systems_active": "Sistems Activs (MFA Activà)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar tenor lingua u famiglia...",
+        "empty": "Nagins resultats chattads"
+    },
+    "Marketplace": {
+        "title": "Nossa Curatela",
+        "subtitle": "Pèzzas cun Olma e Finamira",
+        "crisis_cta": "Reserchar via Concierge",
+        "categories": {
+            "mezcales": "Mezcales",
+            "artesanias": "Artisunadi",
+            "decoracion": "Decoraziun"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Distillà en vaschs da terra, onurond la tradiziun millenara dals magisters mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil da Gala San Juan K",
+                "desc": "Tessì sin in teler da tschinta cun fils da seda, ina masterpiece che raquinta la cosmogonia locala."
+            },
+            "decor-01": {
+                "title": "Vasa da Terra Naira Pulida",
+                "desc": "Eleganza organica furmada a maun a San Bartolo Coyotepec, cun in finisch metallic natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Selvadi",
+                "desc": "La gemma da la curuna, distillà ord agaves selvadis chattads en las autas muntognas."
+            },
+            "textil-02": {
+                "title": "Tappitg da Teotitlán del Valle",
+                "desc": "Launa vergina tintscha cun pigments naturals da cochinilla ed indigo, design geomagnetic ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar da l'Olma'",
+                "desc": "Sculpì en lain da copal, picturà cun ina precision onirica dals artisuns d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura ed Origin",
+        "subtitle": "Cronicas da Sabientscha Ancestrala",
+        "badge": "Racquints ed Irtatg",
+        "description": "Nus onurain il process artisanal ed il senn profund davos mintga creaziun. Mintga ogget è in fragment da l'istorgia dal Mexico.",
+        "read_more": "LIGER LA CRONICA CUMPLAINA",
+        "read_more_aria": "Liger la cronica cumplaina davart {title}",
+        "seal": "CASA YOLOTL & CO. • SIGIL D'AUTENTICITAD •",
+        "related_pieces": "Pèzzas Relatadas",
+        "back_to_gallery": "Enavos a la Galaria",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Olma da la Terra Naira",
+                "excerpt": "Scuvri il process ancestral da San Bartolo Coyotepec, nua che la terra daventa obsidiana en ils mauns dals artisuns.",
+                "content": "# L'Olma da la Terra Naira\n\nLa terra naira è dapli che mo ina tecnica; quai è in irtatg che batta en il cor d'Oaxaca. A San Bartolo Coyotepec transfurman ils magisters artisuns l'argilla locala en pèzzas d'ina eleganza profunda e metallica.\n\n## Il Process\nIl secret sa chatta en il **pulir** ed en il **arder**. Cun ina crappa da quars pulescha l'artisun la pèzza avant ch'ella entria en il furn. Il fim ch'arresta durant l'arder dat quel nair intensiv e mistic.\n\n## Irtatg Viv\nMintga runda e mintga perforaziun raquinta ina istorgia da pazienza. I n'ha nagina prescha en l'atun; la terra dictescha il temp.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Irtatg Liquis",
+                "excerpt": "Dapli che mo in distillà, il mezcal è il sang da la terra...",
+                "content": "# Irtatg Liquid\n\nIl mezcal è il purnent dal Mexico en buttiglia. En ils palenques tradiziunals entschaiva il process cun la tschertga da l'agave madira che ha absorbà il sulegl durant onns.\n\n## Il Furn da Crappa\nIls cors (piñas) vegnan dads en furns sutterrans da crappa vulcanica. Quel passatg dat il profil fumi che caraterisescha ils megliers mezcales dal mund.\n\n## Distillaziun Ancestrala\nCun vaschs da terra vegn la distillaziun fada gutta per gutta. Ina alchimia sacrala che basegna l'egl expert dal magister mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fils che Raquintan il Cosmos",
+                "excerpt": "Il teler da tschinta è ina extensiun dal corp da l'artisuna...",
+                "content": "# Fils che Raquintan il Cosmos\n\nIl teler da tschinta è ina da las pli veglias tecnologias texturalas da la Mesoamerica. Lià vi d'ina planta ed enturn la tschinta da l'artisuna, permetta quel utensil ina connexiun intima cun l'ovra.\n\n## Geometria Sacrala\nIls brocats n'èn betg mo ornaments. Els èn glifs contemporans che representan la flora, la fauna e la cosmogonia. Mintga huipil è ina carta d'identitad regionala.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: Il Battid dal Cor che nus Definescha",
+        "philosophy": "En il mund vegl d'Anáhuac n'era il cor betg mo in organ; era il 'Yollotl', il center da la sabientscha, dal curaschi e da la creativitad. Per ils Mexica sa chatta en il cor l'essenza da la persuna.",
+        "culturalValue": "Casa Yolotl & Co. nascha ord quel battid dal cor. Nus preservain il valur cultural messican cun colliar la sabientscha ancestrala cun la disciplina d'interpresa contemporana[cite: 3, 4]."
+    }
+}

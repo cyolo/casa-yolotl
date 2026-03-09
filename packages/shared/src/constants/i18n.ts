@@ -9,7 +9,7 @@ export enum Locale {
 export const SUPPORTED_LOCALES: Locale[] = [Locale.ES, Locale.EN, Locale.FR, Locale.IT, Locale.PT];
 
 export const I18N_CONFIG = {
-    defaultLocale: Locale.ES,
+    defaultLocale: Locale.EN,
     locales: SUPPORTED_LOCALES,
     cookieName: "NEXT_LOCALE",
     maxAge: 31536000 // 1 year
