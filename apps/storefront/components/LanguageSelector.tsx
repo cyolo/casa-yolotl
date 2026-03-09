@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { allLanguages, languageCategories } from "@/data/languages";
+import { I18N_CONFIG } from "@casa-yolotl/shared";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -26,11 +27,14 @@ const LanguageSelector = () => {
     }, []);
 
     const filteredLanguages = useMemo(() => {
-        return allLanguages.filter(lang =>
-            lang.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            lang.nativeName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            lang.code.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+        const supportedLocaleCodes = I18N_CONFIG.locales.map(l => l.toString());
+        return allLanguages
+            .filter(lang => supportedLocaleCodes.includes(lang.code))
+            .filter(lang =>
+                lang.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                lang.nativeName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                lang.code.toLowerCase().includes(searchQuery.toLowerCase())
+            );
     }, [searchQuery]);
 
     const groupedLanguages = useMemo(() => {
