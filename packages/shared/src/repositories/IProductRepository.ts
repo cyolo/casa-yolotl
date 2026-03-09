@@ -19,15 +19,15 @@ export interface IProductRepository {
     /**
      * Get all products with pagination
      */
-    getAll(page?: number, limit?: number): Promise<PaginatedResult<Product>>;
+    getAll(page?: number, limit?: number, locale?: string): Promise<PaginatedResult<Product>>;
 
     /**
      * Find single product by ID
      */
-    getById(id: string): Promise<Product | undefined>;
+    getById(id: string, locale?: string): Promise<Product | undefined>;
 
     /**
      * Search products with filters and pagination
      */
-    find(filters: ProductFilters, page?: number, limit?: number): Promise<PaginatedResult<Product>>;
+    find(filters: ProductFilters, page?: number, limit?: number, locale?: string): Promise<PaginatedResult<Product>>;
 }
