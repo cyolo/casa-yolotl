@@ -5,11 +5,11 @@ import type { NextConfig } from "next";
   const required = [
     'NEXTAUTH_SECRET',
     'DATA_SOURCE',
-    ...(process.env.DATA_SOURCE === 'supabase' ? ['SUPABASE_URL', 'SUPABASE_SERVICE_ROLE_KEY'] : [])
+    ...(process.env.DATA_SOURCE === 'supabase' ? ['SUPABASE_URL', 'SUPABASE_ANON_KEY'] : [])
   ];
   const missing = required.filter(key => !process.env[key]);
 
-  if (missing.length > 0 && process.env.NODE_ENV === 'production') {
+  if (missing.length > 0) {
     throw new Error(`[CRITICAL] Missing required environment variables: ${missing.join(', ')}`);
   }
 })();

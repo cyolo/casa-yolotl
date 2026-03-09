@@ -19,6 +19,7 @@ export interface Product {
     price: string;
     marketplaceUrl: string;
     imageUrl: string;
+    stock: number;
     seo: ProductSEO;
     dimensions: ProductDimensions;
 }
@@ -32,6 +33,7 @@ export const products: Product[] = [
         price: "120.00",
         marketplaceUrl: "https://marketplace.example/mezcal-ancestral",
         imageUrl: "/products/mezcal-ancestral.png",
+        stock: 24,
         seo: {
             title: "Mezcal Ancestral Espadín | Casa Yolotl",
             description: "Descubre la esencia de Oaxaca con nuestro Mezcal Ancestral destilado en barro.",
@@ -47,6 +49,7 @@ export const products: Product[] = [
         price: "450.00",
         marketplaceUrl: "https://marketplace.example/huipil-gala",
         imageUrl: "/products/huipil-gala.png",
+        stock: 8,
         seo: {
             title: "Huipil de Gala Istmeño Bordado a Mano",
             description: "Elegancia y tradición en cada hilo. Huipil istmeño auténtico.",
@@ -62,6 +65,7 @@ export const products: Product[] = [
         price: "85.00",
         marketplaceUrl: "https://marketplace.example/barro-negro",
         imageUrl: "/products/barro-negro.png",
+        stock: 15,
         seo: {
             title: "Jarrón de Barro Negro Calado | Decoración Oaxaqueña",
             description: "Arte en barro negro para espacios contemporáneos con alma mexicana.",
@@ -77,6 +81,7 @@ export const products: Product[] = [
         price: "180.00",
         marketplaceUrl: "https://marketplace.example/mezcal-tobala",
         imageUrl: "/products/mezcal-tobala.png",
+        stock: 12,
         seo: {
             title: "Mezcal Tobalá Silvestre | Edición Limitada",
             description: "Sabor terroso y dulce. Una joya para conocedores del mezcal.",
@@ -92,6 +97,7 @@ export const products: Product[] = [
         price: "320.00",
         marketplaceUrl: "https://marketplace.example/tapete-teotitlan",
         imageUrl: "/products/tapete-teotitlan.png",
+        stock: 5,
         seo: {
             title: "Tapete de Lana Mixteco | Tintes Naturales",
             description: "Arte textil bajo tus pies. Tradición de Teotitlán en cada diseño.",
@@ -107,6 +113,7 @@ export const products: Product[] = [
         price: "550.00",
         marketplaceUrl: "https://marketplace.example/alebrije-jaguar",
         imageUrl: "/products/alebrije-jaguar.png",
+        stock: 3,
         seo: {
             title: "Alebrije Jaguar Tallado en Copal | Arte Zapoteca",
             description: "Guardián espiritual tallado por manos expertas en Arrazola.",
