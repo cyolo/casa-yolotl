@@ -141,7 +141,7 @@ export class SupabaseProductRepository implements IProductRepository {
             description: row[`description_${locale}`] || row.description_es,
             category: row.categories?.slug || 'general',
             price: row.price.toString(),
-            marketplaceUrl: '', // This will be dynamic in the future or extracted from a specific field
+            marketplaceUrl: row.marketplace_url || '',
             imageUrl: mainImage?.url || '/placeholder.png',
             seo: {
                 title: row[`name_${locale}`] || row.name_es,

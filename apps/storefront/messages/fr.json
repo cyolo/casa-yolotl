@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Notre Essence",
+        "catalog": "Catalogue",
+        "contacto": "Contactez-nous"
+    },
+    "Hero": {
+        "badge": "Culture et Discipline",
+        "title1": "Le Mexique au ",
+        "title_italic": "Monde",
+        "title2": " avec Identité",
+        "description": "Nous représentons la culture mexicaine avec une discipline d'entreprise et une élégance sobre.",
+        "btn_catalog": "Explorer le Catalogue",
+        "aria_catalog": "Explorer le catalogue complet des pièces premium",
+        "btn_history": "Notre Histoire",
+        "scroll": "Défiler"
+    },
+    "Esencia": {
+        "title": "Yollotl : Le Battement qui nous Définit",
+        "subtitle": "Notre Essence",
+        "button": "Explorer la Collection"
+    },
+    "Contact": {
+        "title": "Contact & Distribution",
+        "presence": "Présence Globale",
+        "mexico": "Mexique (Showroom)",
+        "europe": "Europe (Distribution)",
+        "consultations": "Demandes Directes",
+        "form": {
+            "heading": "Écrivez-nous",
+            "name": "Nom Complet",
+            "email": "Courrier Électronique",
+            "country": "Pays",
+            "message": "Message / Demande",
+            "submitting": "Envoi en cours...",
+            "submit": "Envoyer le Message",
+            "success_title": "Envoyé avec Succès",
+            "success_msg": "Merci de nous avoir contactés. Notre concierge examinera votre demande et vous contactera sous peu.",
+            "send_another": "Envoyer un autre message"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Nous représentons la culture avec une discipline d'entreprise. Un pont entre l'art ancestral et le marché mondial.",
+        "trust": "Confiance & Authenticité",
+        "exploration": "Exploration",
+        "catalog": "Catalogue",
+        "essence": "Notre Essence",
+        "stories": "Histoires d'Origine",
+        "special_projects": "Projets Spéciaux",
+        "sustainability": "Durabilité",
+        "support": "Support",
+        "shipping": "Politique d'Expédition (3PL)",
+        "returns": "Retours (SLA)",
+        "terms": "Conditions de Service",
+        "authenticity": "Authenticité",
+        "contact": "Contact Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Abonnez-vous pour recevoir des invitations exclusives aux lancements et des chroniques culturelles.",
+        "newsletter_placeholder": "VOTRE COURRIEL",
+        "newsletter_btn": "S'abonner",
+        "copyright": "© 2026 CASA YOLOTL & CO. GLOBAL OPERATIONS.",
+        "systems_active": "Systèmes Actifs (MFA Activé)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrer par langue ou famille...",
+        "empty": "Aucun résultat trouvé"
+    },
+    "Marketplace": {
+        "title": "Notre Curatèle",
+        "subtitle": "Pièces avec Âme et Sens",
+        "crisis_cta": "Réserver via Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artisanat",
+            "decoracion": "Décoration"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Distillé dans des pots en terre cuite, honorant la tradition millénaire des maîtres mezcaliers d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Tissé sur un métier à ceinture avec des fils de soie, un chef-d'œuvre narrant la cosmogonie locale."
+            },
+            "decor-01": {
+                "title": "Vase en Terre Noire Polie",
+                "desc": "Élégance organique moulée à la main à San Bartolo Coyotepec, avec une finition métallique naturelle."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Sauvage",
+                "desc": "Le joyau de la couronne, distillé à partir d'agaves sauvages trouvés dans les hautes montagnes."
+            },
+            "textil-02": {
+                "title": "Tapis de Teotitlán del Valle",
+                "desc": "Laine vierge teinte avec des colorants naturels de cochenille et d'indigo, design géométrique ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar de l'Âme'",
+                "desc": "Sculpture en bois de copal, peinte avec une minutie onirique par des artisans d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Culture & Origine",
+        "subtitle": "Chroniques de Sagesse Ancestrale",
+        "badge": "Récits & Héritage",
+        "description": "Nous honorons le processus artisanal et la signification profonde derrière chaque création. Car chaque objet est un fragment de l'histoire du Mexique.",
+        "read_more": "LIRE LA CHRONIQUE COMPLÈTE",
+        "read_more_aria": "Lire la chronique complète sur {title}",
+        "seal": "CASA YOLOTL & CO. • SCEAU D'AUTHENTICITÉ •",
+        "related_pieces": "Pièces Associées",
+        "back_to_gallery": "Retour à la Galerie",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Âme de la Terre Noire",
+                "excerpt": "Découvrez le processus ancestral de San Bartolo Coyotepec, où la terre devient obsidienne entre les mains des artisans.",
+                "content": "# L'Âme de la Terre Noire\n\nLa terre noire est plus qu'une technique ; c'est un héritage qui palpite au cœur d'Oaxaca. À San Bartolo Coyotepec, les maîtres artisans transforment l'argile locale en pièces d'une élégance profonde et métallique.\n\n## Le Processus\nLe secret réside dans le **polissage** et la **cuisson**. À l'aide d'une pierre de quartz, l'artisan polit la pièce avant qu'elle n'entre dans le four à deux bouches. La fumée piégée pendant la cuisson est ce qui confère ce noir intense et mystique, sans besoin de vernis.\n\n## Héritage Vivant\nChaque courbe et chaque ajourage raconte une histoire de patience. Il n'y a pas d'urgence dans l'atelier ; la terre dicte le temps, et l'artisan se contente d'écouter.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Le Patrimoine Liquide",
+                "excerpt": "Plus qu'un distillat, le mezcal est le sang de la terre...",
+                "content": "# Le Patrimoine Liquide\n\nLe mezcal est l'esprit du Mexique en bouteille. Dans les palenques traditionnels, le processus commence par la recherche de l'agave mûr, qui a absorbé le soleil et les minéraux de la terre pendant des années.\n\n## Le Four de Pierre\nLes cœurs d'agave (piñas) sont cuits sous terre, dans des fours en pierre volcanique chauffés au bois de chêne. Cette étape confère le profil fumé caractéristique qui distingue les meilleurs mezcals au monde.\n\n## La Distillation Ancestrale\nEn utilisant des pots en terre cuite, la distillation se fait goutte à goutte. C'est une alchimie sacrée qui exige l'œil expert du maître mezcalier pour séparer les 'têtes' des 'queues' et capturer l'essence parfaite.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Des Fils qui Narrent le Cosmos",
+                "excerpt": "Le métier à ceinture est une extension du corps de l'artisan...",
+                "content": "# Des Fils qui Narrent le Cosmos\n\nLe métier à ceinture est l'une des technologies textiles les plus anciennes et les plus sophistiquées de Méso-Amérique. Attaché à un arbre ou à un poteau d'un côté et à la taille de l'artisan de l'autre, cet outil permet une connexion intime avec l'œuvre.\n\n## La Géométrie Sacrée\nLes brocarts et les broderies ne sont pas de simples ornements. Ce sont des glyphes contemporains représentant la flore, la faune et la cosmogonie de la communauté. Chaque huipil est une carte d'identité régionale.\n\n## Teintures Naturelles\nLa quête de l'excellence nous amène à récupérer l'usage de la cochenille, de l'indigo et du pourpre, des colorants organiques qui offrent une palette de couleurs vibrantes et durables.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl : Le Battement qui nous Définit",
+        "philosophy": "Dans l'ancien monde d'Anahuac, le cœur n'était pas seulement un organe ; c'était le 'Yollotl', le centre de la connaissance, du courage et de la créativité. Pour les Mexicas, le cœur est le lieu où réside l'essence de la personne et la force qui donne vie aux mains de l'artisan.",
+        "culturalValue": "Casa Yolotl & Co. est née de ce battement. Nous ne représentons pas seulement l'artisanat ; nous préservons la valeur culturelle mexicaine en reliant la sagesse ancestrale à la discipline d'entreprise contemporaine, garantissant que chaque pièce soit un pont entre un passé glorieux et un avenir porteur de sens."
+    }
+}

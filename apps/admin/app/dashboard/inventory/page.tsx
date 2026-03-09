@@ -1,19 +1,82 @@
-import { getServerSession } from "next-auth";
+"use client";
+
+import { useState, useEffect } from "react";
+import { signOut, useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import AdminNavbar from "@/components/AdminNavbar";
-import { ProductService } from "@casa-yolotl/shared";
-import { Package, DollarSign, TrendingUp, Edit3, ArrowLeft } from "lucide-react";
+import { ProductService, Product } from "@casa-yolotl/shared";
+import { Package, DollarSign, TrendingUp, Edit3, ArrowLeft, Save, X, Loader2, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
-export default async function InventoryPage() {
-    const session = await getServerSession();
+export default function InventoryPage() {
+    const { data: session, status } = useSession();
+    const [products, setProducts] = useState<Product[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [editingProduct, setEditingProduct] = useState<{ id: string, type: 'price' | 'stock', value: string } | null>(null);
+    const [isUpdating, setIsUpdating] = useState(false);
+    const [message, setMessage] = useState<{ text: string, type: 'success' | 'error' } | null>(null);
 
-    // Strict Security: Only CEO can manage inventory
-    if (session?.user?.email !== "cesar.vargas.alanis@gmail.com") {
-        redirect("/403");
+    useEffect(() => {
+        if (status === "unauthenticated") {
+            redirect("/auth/signin");
+        }
+
+        // Strict Security: Only CEO can manage inventory
+        if (status === "authenticated" && session?.user?.email !== "cesar.vargas.alanis@gmail.com") {
+            redirect("/403");
+        }
+
+        if (status === "authenticated") {
+            fetchProducts();
+        }
+    }, [status, session]);
+
+    const fetchProducts = async () => {
+        setIsLoading(true);
+        try {
+            const { items } = await ProductService.getInstance().getProducts(1, 50, 'es');
+            setProducts(items);
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleUpdate = async () => {
+        if (!editingProduct) return;
+        setIsUpdating(true);
+        setMessage(null);
+
+        try {
+            const service = ProductService.getInstance();
+            if (editingProduct.type === 'price') {
+                await service.updatePrice(editingProduct.id, parseFloat(editingProduct.value));
+            } else {
+                await service.updateStock(editingProduct.id, parseInt(editingProduct.value));
+            }
+
+            setMessage({ text: "Cambio aplicado exitosamente.", type: 'success' });
+            setTimeout(() => {
+                setEditingProduct(null);
+                setMessage(null);
+                fetchProducts(); // Refresh data
+            }, 1000);
+        } catch (error) {
+            setMessage({ text: "Error al actualizar. Intente de nuevo.", type: 'error' });
+        } finally {
+            setIsUpdating(false);
+        }
+    };
+
+    if (status === "loading" || isLoading) {
+        return (
+            <div className="min-h-screen bg-stone-950 flex flex-col items-center justify-center gap-4">
+                <Loader2 className="w-8 h-8 text-brand-gold animate-spin" />
+                <span className="text-[10px] uppercase tracking-[0.4em] text-stone-500">Cargando Inventario...</span>
+            </div>
+        );
     }
-
-    const { items: products } = await ProductService.getInstance().getProducts(1, 50, 'es');
 
     return (
         <div className="min-h-screen bg-stone-950">
@@ -33,7 +96,7 @@ export default async function InventoryPage() {
                     </div>
 
                     <div className="flex gap-4">
-                        <div className="bg-stone-900 border border-stone-800 p-4 flex items-center gap-6">
+                        <div className="bg-stone-900 border border-stone-800 p-4 flex items-center gap-6 shadow-2xl">
                             <div>
                                 <span className="text-[8px] uppercase tracking-widest text-stone-500 block mb-1">Total SKU</span>
                                 <span className="text-xl font-serif text-white">{products.length}</span>
@@ -50,7 +113,7 @@ export default async function InventoryPage() {
                 </div>
 
                 {/* Inventory Table */}
-                <div className="bg-stone-900 border border-stone-800 shadow-2xl overflow-hidden">
+                <div className="bg-stone-900 border border-stone-800 shadow-2xl overflow-hidden mb-12">
                     <table className="w-full text-left border-collapse">
                         <thead>
                             <tr className="border-b border-stone-800 bg-stone-950">
@@ -66,7 +129,7 @@ export default async function InventoryPage() {
                                 <tr key={product.id} className="hover:bg-stone-800/30 transition-colors group">
                                     <td className="p-6">
                                         <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 bg-stone-950 border border-stone-800 overflow-hidden">
+                                            <div className="w-12 h-12 bg-stone-950 border border-stone-800 overflow-hidden relative">
                                                 <img src={product.imageUrl} alt={product.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                                             </div>
                                             <div>
@@ -83,7 +146,7 @@ export default async function InventoryPage() {
                                     <td className="p-6 text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <span className={`text-sm font-sans ${parseInt(product.price) > 0 ? "text-white" : "text-amber-500"}`}>
-                                                {/* In a real app we'd fetch actual stock, here it's a simulation based on static logic */}
+                                                {/* In a real app we'd fetch actual stock from DB */}
                                                 {Math.floor(Math.random() * 50) + 5}
                                             </span>
                                             <Package className="w-3 h-3 text-stone-600" />
@@ -98,20 +161,18 @@ export default async function InventoryPage() {
                                     <td className="p-6 text-right">
                                         <div className="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <button
-                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all flex items-center gap-2"
-                                                onClick={() => console.log(`[UI-ACTION]: Open Edit Price Modal for ${product.id}`)}
+                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
+                                                onClick={() => setEditingProduct({ id: product.id, type: 'price', value: product.price })}
                                                 title="Editar Precio"
                                             >
                                                 <Edit3 className="w-3 h-3" />
-                                                <span className="text-[8px] uppercase tracking-widest hidden lg:inline">Editar Precio</span>
                                             </button>
                                             <button
-                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all flex items-center gap-2"
-                                                onClick={() => console.log(`[UI-ACTION]: Open Edit Stock Modal for ${product.id}`)}
+                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
+                                                onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: '10' })}
                                                 title="Ajustar Stock"
                                             >
                                                 <Package className="w-3 h-3" />
-                                                <span className="text-[8px] uppercase tracking-widest hidden lg:inline">Ajustar Stock</span>
                                             </button>
                                         </div>
                                     </td>
@@ -123,7 +184,7 @@ export default async function InventoryPage() {
 
                 {/* ROI / Stock Legend */}
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-stone-900/50 border border-stone-800 p-8">
+                    <div className="bg-stone-900 border border-stone-800 p-8 shadow-xl">
                         <h4 className="text-[10px] uppercase tracking-widest text-brand-gold font-bold mb-4 flex items-center gap-2">
                             <TrendingUp className="w-3 h-3" /> Nota del CEO IA
                         </h4>
@@ -133,6 +194,68 @@ export default async function InventoryPage() {
                     </div>
                 </div>
             </main>
+
+            {/* Quick Edit Modal */}
+            {editingProduct && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-950/90 backdrop-blur-sm animate-fade-in">
+                    <div className="bg-stone-900 border border-stone-800 p-10 max-w-md w-full shadow-[0_0_50px_rgba(197,160,89,0.1)] relative overflow-hidden">
+                        <button
+                            onClick={() => setEditingProduct(null)}
+                            className="absolute top-6 right-6 text-stone-500 hover:text-white transition-colors"
+                        >
+                            <X className="w-4 h-4" />
+                        </button>
+
+                        <h3 className="text-xl font-serif text-white mb-2">
+                            {editingProduct.type === 'price' ? 'Ajustar Precio' : 'Actualizar Inventario'}
+                        </h3>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-8">
+                            Admin Identity: {session?.user?.email}
+                        </p>
+
+                        <div className="space-y-6">
+                            <div className="space-y-2">
+                                <label className="text-[9px] uppercase tracking-widest text-stone-500 font-bold">
+                                    {editingProduct.type === 'price' ? 'Nuevo Valor (MXN)' : 'Cantidad Disponible'}
+                                </label>
+                                <div className="relative">
+                                    {editingProduct.type === 'price' && <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-gold" />}
+                                    <input
+                                        type="number"
+                                        value={editingProduct.value}
+                                        onChange={(e) => setEditingProduct({ ...editingProduct, value: e.target.value })}
+                                        className={`w-full bg-stone-950 border border-stone-800 p-4 text-white focus:border-brand-gold outline-none transition-colors ${editingProduct.type === 'price' ? 'pl-10' : ''}`}
+                                        autoFocus
+                                    />
+                                </div>
+                            </div>
+
+                            {message && (
+                                <div className={`flex items-center gap-3 p-4 border ${message.type === 'success' ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' : 'bg-red-500/10 border-red-500/20 text-red-500'}`}>
+                                    {message.type === 'success' ? <CheckCircle2 className="w-4 h-4" /> : <X className="w-4 h-4" />}
+                                    <span className="text-[10px] uppercase font-bold tracking-widest">{message.text}</span>
+                                </div>
+                            )}
+
+                            <button
+                                onClick={handleUpdate}
+                                disabled={isUpdating}
+                                className="w-full bg-brand-gold text-stone-900 py-4 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-white transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50"
+                            >
+                                {isUpdating ? (
+                                    <>
+                                        <Loader2 className="w-3 h-3 animate-spin" /> Procesando Cambios...
+                                    </>
+                                ) : (
+                                    <>
+                                        <Save className="w-3 h-3" /> Aplicar Actualización
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
