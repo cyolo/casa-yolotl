@@ -58,10 +58,17 @@ export async function middleware(request: NextRequest) {
     const cookieLocale = request.cookies.get(cookieName)?.value
     const locale = (cookieLocale && (locales as readonly string[]).includes(cookieLocale)) ? cookieLocale : defaultLocale
 
-    // 5. Anti-Stacking Logic: Check if path starts with what looks like a locale (2 letters)
+    // 5. Anti-Stacking Logic: Detect if path starts with a locale (Supported or Potential)
     const segments = pathname.split('/').filter(Boolean);
-    const looksLikeLocale = segments.length > 0 && segments[0].length === 2;
-    const isSupportedLocale = looksLikeLocale && (locales as readonly string[]).includes(segments[0]);
+    const potentialLocale = segments.length > 0 ? segments[0] : null;
+    const isSupportedLocale = potentialLocale ? (locales as readonly string[]).includes(potentialLocale) : false;
+
+    // Detection heuristic: 2-3 letters OR contains a dash (like roa-ter)
+    const looksLikeLocale = potentialLocale ? (
+        potentialLocale.length === 2 ||
+        potentialLocale.length === 3 ||
+        (potentialLocale.includes('-') && potentialLocale.length < 10)
+    ) : false;
 
     const url = request.nextUrl.clone()
 
@@ -74,7 +81,8 @@ export async function middleware(request: NextRequest) {
         // Scenario: Path is bare (e.g., /cultura) -> PREPEND detected locale
         url.pathname = `/${locale}${pathname}`
     } else {
-        // Supported locale already present: This case is handled by pathnameHasLocale early return
+        // Supported locale already present: Handled by pathnameHasLocale early return, 
+        // but adding safety return here if reached.
         return NextResponse.next()
     }
 
