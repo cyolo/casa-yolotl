@@ -2,7 +2,11 @@ import type { NextConfig } from "next";
 
 // Fail-fast environment validation
 (function validateEnv() {
-  const required = ['DATABASE_URL', 'NEXTAUTH_SECRET', 'DATA_SOURCE'];
+  const required = [
+    'NEXTAUTH_SECRET',
+    'DATA_SOURCE',
+    ...(process.env.DATA_SOURCE === 'supabase' ? ['SUPABASE_URL', 'SUPABASE_SERVICE_ROLE_KEY'] : [])
+  ];
   const missing = required.filter(key => !process.env[key]);
 
   if (missing.length > 0 && process.env.NODE_ENV === 'production') {

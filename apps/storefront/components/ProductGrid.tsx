@@ -7,11 +7,11 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion"];
 
-const ProductGrid = () => {
+const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) => {
     const { t } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("todos");
-    const [products, setProducts] = useState<Product[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [products, setProducts] = useState<Product[]>(initialProducts);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -63,8 +63,8 @@ const ProductGrid = () => {
                                 key={catKey}
                                 onClick={() => setActiveCategory(catKey)}
                                 className={`text-[10px] uppercase tracking-[0.3em] transition-all duration-300 relative pb-1 ${activeCategory === catKey
-                                        ? "text-[#C5A059] font-bold"
-                                        : "text-[#1A1A1A]/40 hover:text-[#1A1A1A]"
+                                    ? "text-[#C5A059] font-bold"
+                                    : "text-[#1A1A1A]/40 hover:text-[#1A1A1A]"
                                     }`}
                             >
                                 {catLabel}

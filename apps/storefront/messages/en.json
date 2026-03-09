@@ -5,14 +5,14 @@
         "contacto": "Contact Us"
     },
     "Hero": {
-        "badge": "Culture and Business Discipline",
+        "badge": "Culture and Discipline",
         "title1": "Mexico to the ",
         "title_italic": "World",
         "title2": " with Identity",
-        "description": "We represent Mexican culture through business discipline and sober elegance.",
+        "description": "We represent Mexican culture with corporate discipline and understated elegance.",
         "btn_catalog": "Explore Catalog",
         "aria_catalog": "Explore the full catalog of premium pieces",
-        "btn_history": "Our History",
+        "btn_history": "Our Story",
         "scroll": "Scroll"
     },
     "Esencia": {
@@ -21,26 +21,26 @@
         "button": "Explore the Collection"
     },
     "Contact": {
-        "title": "Contact & Global Distribution",
-        "presence": "Global Footprint",
+        "title": "Contact & Distribution",
+        "presence": "Global Presence",
         "mexico": "Mexico (Showroom)",
         "europe": "Europe (Distribution)",
-        "consultations": "Direct Consultations",
+        "consultations": "Direct Inquiries",
         "form": {
-            "heading": "Get in Touch",
+            "heading": "Write to Us",
             "name": "Full Name",
             "email": "Email Address",
             "country": "Country",
             "message": "Message / Inquiry",
             "submitting": "Sending...",
             "submit": "Send Message",
-            "success_title": "Successfully Sent",
-            "success_msg": "Thank you for reaching out. Our concierge will review your inquiry and contact you shortly.",
-            "send_another": "Send another inquiry"
+            "success_title": "Sent Successfully",
+            "success_msg": "Thank you for contacting us. Our concierge will review your inquiry and get in touch shortly.",
+            "send_another": "Send another message"
         }
     },
     "Footer": {
-        "brand_desc": "We represent culture through business discipline. A bridge connecting ancestral craftsmanship with the global market.",
+        "brand_desc": "Representing culture with corporate discipline. A bridge between ancestral art and the global market.",
         "trust": "Trust & Authenticity",
         "exploration": "Exploration",
         "catalog": "Catalog",
@@ -52,10 +52,10 @@
         "shipping": "Shipping Policy (3PL)",
         "returns": "Returns (SLA)",
         "terms": "Terms of Service",
-        "authenticity": "Certificate of Authenticity",
+        "authenticity": "Authenticity",
         "contact": "Global Contact",
         "concierge": "Digital Concierge",
-        "newsletter_desc": "Subscribe for exclusive event invitations and cultural chronicles.",
+        "newsletter_desc": "Subscribe to receive exclusive invitations to launches and cultural chronicles.",
         "newsletter_placeholder": "YOUR EMAIL",
         "newsletter_btn": "Subscribe",
         "copyright": "© 2026 CASA YOLOTL & CO. GLOBAL OPERATIONS.",
@@ -63,78 +63,78 @@
     },
     "LanguageSelector": {
         "placeholder": "Filter by language or family...",
-        "empty": "Exploration yielded no results"
+        "empty": "No results found"
     },
     "Marketplace": {
-        "title": "Strategic Curatorship",
+        "title": "Our Curation",
         "subtitle": "Pieces with Soul and Purpose",
         "crisis_cta": "Reserve with Concierge",
         "categories": {
-            "mezcales": "Mezcal",
-            "artesanias": "Craftsmanship",
-            "decoracion": "Interior Decor"
+            "mezcales": "Mezcales",
+            "artesanias": "Handicrafts",
+            "decoracion": "Decor"
         },
         "items": {
             "mezcal-01": {
                 "title": "Ancestral Espadín Mezcal",
-                "desc": "Distilled in clay pots, honoring the millennial tradition of Oaxaca's master mezcaleros."
+                "desc": "Distilled in clay pots, honoring the millenary tradition of the master mezcaleros of Oaxaca."
             },
             "textil-01": {
                 "title": "San Juan K Gala Huipil",
-                "desc": "Woven on a backstrap loom with silk threads, a masterpiece narrating local cosmogony."
+                "desc": "Woven on a backstrap loom with silk threads, a masterpiece narrating the local cosmogony."
             },
             "decor-01": {
-                "title": "Burnished Black Clay Vessel",
-                "desc": "Organic elegance hand-molded in San Bartolo Coyotepec, boasting a natural metallic finish."
+                "title": "Burnished Black Clay Vase",
+                "desc": "Organic elegance hand-molded in San Bartolo Coyotepec, featuring a natural metallic finish."
             },
             "mezcal-02": {
                 "title": "Wild Tobalá Mezcal",
-                "desc": "The crown jewel, distilled from wild agaves foraged in high-altitude mountains."
+                "desc": "The crown jewel, distilled from wild agaves found in the high mountains."
             },
             "textil-02": {
                 "title": "Teotitlán del Valle Rug",
-                "desc": "Virgin wool dyed with natural cochineal and indigo, featuring ancestral geometric artistry."
+                "desc": "Virgin wool dyed with natural pigments from cochineal and indigo, featuring an ancestral geometric design."
             },
             "artesania-02": {
-                "title": "'Jaguar of the Soul' Alebrije",
-                "desc": "Copal wood carving, meticulously painted with dreamlike precision by Arrazola artisans."
+                "title": "'Soul Jaguar' Alebrije",
+                "desc": "Carved in copal wood, painted with dreamlike meticulousness by artisans from Arrazola."
             }
         }
     },
     "Stories": {
         "title": "Culture & Origin",
         "subtitle": "Chronicles of Ancestral Wisdom",
-        "badge": "Stories & Heritage",
-        "description": "We honor the artisanal process and the deep meaning behind each creation. Because every object is a fragment of Mexico's history.",
-        "read_more": "READ FULL STORY",
-        "read_more_aria": "Read the full story about {title}",
-        "seal": "CASA YOLOTL & CO. • AUTHENTICITY SEAL •",
+        "badge": "Tales & Heritage",
+        "description": "We honor the artisanal process and the deep meaning behind every creation. Because every object is a fragment of Mexico's history.",
+        "read_more": "READ FULL CHRONICLE",
+        "read_more_aria": "Read the full chronicle about {title}",
+        "seal": "CASA YOLOTL & CO. • SEAL OF AUTHENTICITY •",
         "related_pieces": "Related Pieces",
         "back_to_gallery": "Back to Gallery",
         "items": {
             "story-barro-negro": {
                 "title": "The Soul of Black Clay",
-                "excerpt": "Discover the ancient process of San Bartolo Coyotepec, where the earth transforms into obsidian by the hands of artisans.",
-                "content": "# The Soul of Black Clay\n\nBlack clay is more than a technique; it is a heritage pulsating in the heart of Oaxaca. In San Bartolo Coyotepec, master artisans transform local clay into pieces of profound, metallic elegance.\n\n## The Process\nThe secret lies in the **burnishing** and **baking**. Using a quartz stone, the artisan polishes the piece before it enters the two-mouth kiln. The smoke trapped during firing imparts that intense and mystical black hue, requiring no glazes.\n\n## Living Heritage\nEvery curve and fretwork tells a story of patience. There is no rush in the workshop; the earth dictates the timing, and the artisan simply listens.",
+                "excerpt": "Discover the ancestral process of San Bartolo Coyotepec, where earth becomes obsidian in the hands of artisans.",
+                "content": "# The Soul of Black Clay\n\nBlack clay is more than a technique; it is a heritage that pulses in the heart of Oaxaca. In San Bartolo Coyotepec, master artisans transform local clay into pieces of deep, metallic elegance.\n\n## The Process\nThe secret lies in the **burnishing** and **firing**. Using a quartz stone, the artisan polishes the piece before it enters the two-mouthed kiln. The smoke trapped during firing is what grants that intense, mystical black without the need for glazes.\n\n## Living Heritage\nEvery curve and every perforation tells a story of patience. There is no rush in the workshop; the earth dictates the time, and the artisan simply listens.",
                 "location": "San Bartolo Coyotepec, Oaxaca"
             },
             "story-mezcal-tradition": {
                 "title": "Liquid Heritage",
-                "excerpt": "More than a distilled spirit, mezcal is the blood of the earth...",
-                "content": "# Liquid Heritage\n\nMezcal is the spirit of Mexico bottled...",
+                "excerpt": "More than a spirit, mezcal is the blood of the land...",
+                "content": "# Liquid Heritage\n\nMezcal is the spirit of Mexico bottled. In traditional palenques, the process begins with the search for mature agave, which has absorbed the sun and minerals of the earth for years.\n\n## The Stone Oven\nThe hearts (piñas) are cooked underground in volcanic stone ovens heated with oak wood. This step provides the characteristic smoky profile that distinguishes the world's finest mezcales.\n\n## Ancestral Distillation\nUsing clay pots, distillation is carried out drop by drop. It is a sacred alchemy that requires the expert eye of the master mezcalero to separate the 'heads' from the 'tails' and capture the perfect essence.",
                 "location": "Central Valleys, Oaxaca"
             },
             "story-telar-cintura": {
-                "title": "Threads Narrating the Cosmos",
-                "excerpt": "The backstrap loom is a physical extension of the artisan woman's body...",
-                "content": "# Threads Narrating the Cosmos\n\nThe backstrap loom is one of the most ancient textile technologies...",
+                "title": "Threads That Narrate the Cosmos",
+                "excerpt": "The backstrap loom is an extension of the artisan woman's body...",
+                "content": "# Threads That Narrate the Cosmos\n\nThe backstrap loom is one of Mesoamerica's oldest and most sophisticated textile technologies. Tied to a tree or post at one end and to the artisan's waist at the other, this tool allows for an intimate connection with the work.\n\n## Sacred Geometry\nThe brocades and embroidery are not mere ornaments. They are contemporary glyphs representing the flora, fauna, and cosmogony of the community. Each huipil is a map of regional identity.\n\n## Natural Dyes\nThe pursuit of excellence leads us to reclaim the use of cochineal, indigo, and Tyrian purple—organic dyes that offer a palette of vibrant and enduring colors.",
                 "location": "Teotitlán del Valle, Oaxaca"
             }
         }
     },
     "Heritage": {
         "title": "Yollotl: The Heartbeat That Defines Us",
-        "philosophy": "In the ancient world of Anáhuac, the heart was not merely an organ; it was the 'Yollotl', the epicenter of knowledge, bravery, and creativity. For the Mexica, the heart is where a person's essence resides, providing the force that brings life to an artisan's hands.",
-        "culturalValue": "Casa Yolotl & Co. is born from this heartbeat. We do not merely offer craftsmanship; we preserve Mexican cultural value by bridging ancestral wisdom with contemporary business discipline, ensuring every piece bridges a glorious past and a purposeful future."
+        "philosophy": "In the ancient world of Anahuac, the heart was not just an organ; it was 'Yollotl,' the center of knowledge, courage, and creativity. For the Mexica, the heart is where a person's essence resides and the force that gives life to the artisan's hands.",
+        "culturalValue": "Casa Yolotl & Co. is born from this heartbeat. We do not just represent craftsmanship; we preserve Mexican cultural value by connecting ancestral wisdom with contemporary corporate discipline, ensuring that every piece serves as a bridge between a glorious past and a purposeful future."
     }
 }

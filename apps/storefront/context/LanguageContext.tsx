@@ -75,17 +75,25 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             // Persist choice in cookie for Middleware (1 year)
             document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
 
-            // Hard redirect to the new locale URL
-            const pathParts = pathname.split('/').filter(Boolean);
-            const hasLocalePrefix = allLanguages.some(l => l.code === pathParts[0]);
+            // 1. Capture current status from window to include Hash and correct segments
+            const currentPathname = window.location.pathname;
+            const currentHash = window.location.hash;
 
-            if (hasLocalePrefix) {
-                pathParts[0] = code;
+            // 2. Logic: Centralized Path Transformation
+            const segments = currentPathname.split('/').filter(Boolean);
+            const allLocaleCodes = allLanguages.map(l => l.code);
+
+            if (segments.length > 0 && allLocaleCodes.includes(segments[0])) {
+                // Replace existing locale segment
+                segments[0] = code;
             } else {
-                pathParts.unshift(code);
+                // Prepend new locale segment
+                segments.unshift(code);
             }
 
-            const newPath = '/' + pathParts.join('/');
+            const newPath = '/' + segments.join('/') + currentHash;
+
+            // 3. Execution: Unified hard redirect to ensure Middleware and Server Components sync
             window.location.href = newPath;
         }
     };
