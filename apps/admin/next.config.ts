@@ -6,7 +6,8 @@ import type { NextConfig } from "next";
         'NEXTAUTH_SECRET',
         'ALLOWED_ADMIN_EMAILS',
         'GOOGLE_CLIENT_ID',
-        'GOOGLE_CLIENT_SECRET'
+        'GOOGLE_CLIENT_SECRET',
+        ...(process.env.DATA_SOURCE === 'supabase' ? ['SUPABASE_URL', 'SUPABASE_SERVICE_ROLE_KEY'] : [])
     ];
     const missing = required.filter(key => !process.env[key]);
 

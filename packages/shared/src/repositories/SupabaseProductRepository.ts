@@ -106,6 +106,32 @@ export class SupabaseProductRepository implements IProductRepository {
         };
     }
 
+    async updateStock(id: string, newStock: number): Promise<void> {
+        const { error } = await this.supabase
+            .from('products')
+            .update({ stock: newStock })
+            .eq('id', id);
+
+        if (error) {
+            console.error(`[SUPABASE]: Error updating stock for product ${id}`, error);
+            throw error;
+        }
+        console.log(`[AUTH-AUDIT]: Stock updated for product ${id}. New stock: ${newStock}`);
+    }
+
+    async updatePrice(id: string, newPrice: number): Promise<void> {
+        const { error } = await this.supabase
+            .from('products')
+            .update({ price: newPrice })
+            .eq('id', id);
+
+        if (error) {
+            console.error(`[SUPABASE]: Error updating price for product ${id}`, error);
+            throw error;
+        }
+        console.log(`[AUTH-AUDIT]: Price updated for product ${id}. New price: ${newPrice}`);
+    }
+
     private mapRowToProduct(row: any, locale: string): Product {
         const mainImage = row.product_images?.find((img: any) => img.is_main) || row.product_images?.[0];
 

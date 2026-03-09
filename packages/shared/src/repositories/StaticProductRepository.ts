@@ -37,6 +37,14 @@ export class StaticProductRepository implements IProductRepository {
         return this.paginate(filtered, page, limit);
     }
 
+    async updateStock(id: string, newStock: number): Promise<void> {
+        console.log(`[AUTH-AUDIT]: Price change requested for product ${id}. New price: ${newStock}`);
+    }
+
+    async updatePrice(id: string, newPrice: number): Promise<void> {
+        console.log(`[AUTH-AUDIT]: Price change requested for product ${id}. New price: ${newPrice}`);
+    }
+
     private paginate(items: Product[], page: number, limit: number): PaginatedResult<Product> {
         const total = items.length;
         const totalPages = Math.ceil(total / limit);

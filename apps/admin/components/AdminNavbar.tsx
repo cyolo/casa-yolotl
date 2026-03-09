@@ -29,6 +29,9 @@ export default function AdminNavbar() {
                         <Link href="/dashboard?tab=devops" className="text-[10px] uppercase tracking-[0.2em] text-stone-400 hover:text-brand-gold transition-colors flex items-center gap-2">
                             <ShieldCheck className="w-3 h-3" /> DevOps
                         </Link>
+                        <Link href="/dashboard/inventory" className="text-[10px] uppercase tracking-[0.2em] text-brand-gold hover:text-white transition-colors bg-brand-gold/10 px-3 py-1 border border-brand-gold/20 flex items-center gap-2">
+                            <BarChart3 className="w-3 h-3" /> Inventario
+                        </Link>
                     </div>
                 </div>
 
