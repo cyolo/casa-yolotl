@@ -71,22 +71,36 @@ export async function middleware(request: NextRequest) {
     ) : false;
 
     const url = request.nextUrl.clone()
+    let response = NextResponse.next();
 
     if (looksLikeLocale && !isSupportedLocale) {
-        // Scenario: Path starts with UNSUPPORTED locale (e.g., /ru/...) -> REPLACE with defaultLocale (/en)
-        // User Requirement: "Cualquier otro no soportado Redirige limpiamente a /en sin stacking"
         segments[0] = defaultLocale;
         url.pathname = `/${segments.join('/')}`
+        response = NextResponse.redirect(url);
     } else if (!looksLikeLocale) {
-        // Scenario: Path is bare (e.g., /cultura) -> PREPEND detected locale
         url.pathname = `/${locale}${pathname}`
-    } else {
-        // Supported locale already present: Handled by pathnameHasLocale early return, 
-        // but adding safety return here if reached.
-        return NextResponse.next()
+        response = NextResponse.redirect(url);
     }
 
-    return NextResponse.redirect(url)
+    const cspHeader = `
+        default-src 'self';
+        script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' blob: data: https:;
+        font-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        frame-ancestors 'none';
+        connect-src 'self' https://region1.google-analytics.com https://www.google-analytics.com;
+    `.replace(/\s{2,}/g, ' ').trim();
+
+    response.headers.set('Content-Security-Policy', cspHeader);
+    response.headers.set('X-Frame-Options', 'DENY');
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+    response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+    return response;
 }
 
 export const config = {

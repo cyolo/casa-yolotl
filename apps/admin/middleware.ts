@@ -43,13 +43,31 @@ export default withAuth(
             return NextResponse.redirect(new URL("/auth/signin?error=AccessDenied", req.url));
         }
 
-        // Specific Roles Logic (CEO required for certain sensitive sub-paths)
         if (pathname.startsWith("/dashboard/finances") && role !== "CEO") {
             SecurityValidator.logSecurityEvent("SENSITIVE_DATA_ACCESS_DENIED", { email, role, path: pathname });
             return NextResponse.redirect(new URL("/dashboard", req.url));
         }
 
-        return NextResponse.next();
+        const cspHeader = `
+            default-src 'self';
+            script-src 'self' 'unsafe-eval' 'unsafe-inline';
+            style-src 'self' 'unsafe-inline';
+            img-src 'self' blob: data: https:;
+            font-src 'self';
+            object-src 'none';
+            base-uri 'self';
+            form-action 'self';
+            frame-ancestors 'none';
+            connect-src 'self';
+        `.replace(/\s{2,}/g, ' ').trim();
+
+        const response = NextResponse.next();
+        response.headers.set('Content-Security-Policy', cspHeader);
+        response.headers.set('X-Frame-Options', 'DENY');
+        response.headers.set('X-Content-Type-Options', 'nosniff');
+        response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+        return response;
     },
     {
         callbacks: {

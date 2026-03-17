@@ -16,6 +16,9 @@ export class SupabaseProductRepository implements IProductRepository {
         this.supabase = createClient(supabaseUrl, supabaseKey);
     }
 
+    /**
+     * @inheritdoc
+     */
     async getAll(page: number = 1, limit: number = 10, locale: string = 'es'): Promise<PaginatedResult<Product>> {
         const offset = (page - 1) * limit;
 
@@ -42,6 +45,9 @@ export class SupabaseProductRepository implements IProductRepository {
         };
     }
 
+    /**
+     * @inheritdoc
+     */
     async getById(id: string, locale: string = 'es'): Promise<Product | undefined> {
         const { data, error } = await this.supabase
             .from('products')
@@ -61,6 +67,9 @@ export class SupabaseProductRepository implements IProductRepository {
         return this.mapRowToProduct(data, locale);
     }
 
+    /**
+     * @inheritdoc
+     */
     async find(filters: ProductFilters, page: number = 1, limit: number = 10, locale: string = 'es'): Promise<PaginatedResult<Product>> {
         const offset = (page - 1) * limit;
 
@@ -106,6 +115,9 @@ export class SupabaseProductRepository implements IProductRepository {
         };
     }
 
+    /**
+     * @inheritdoc
+     */
     async updateStock(id: string, newStock: number): Promise<void> {
         const { error } = await this.supabase
             .from('products')
@@ -119,6 +131,9 @@ export class SupabaseProductRepository implements IProductRepository {
         console.log(`[AUTH-AUDIT]: Stock updated for product ${id}. New stock: ${newStock}`);
     }
 
+    /**
+     * @inheritdoc
+     */
     async updatePrice(id: string, newPrice: number): Promise<void> {
         const { error } = await this.supabase
             .from('products')
