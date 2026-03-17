@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "La Ore Essence",
+        "catalog": "Catalogo",
+        "contacto": "Contat"
+    },
+    "Hero": {
+        "badge": "Culture e Discipline",
+        "title1": "Il Messic al ",
+        "title_italic": "Mont",
+        "title2": " cun Identitât",
+        "description": "O rapresentìn la culture messicane cun dissipline di imprese e elegànce sobrie.",
+        "btn_catalog": "Esplore il Catalogo",
+        "aria_catalog": "Esplore il catalogo complet di pieçs premium",
+        "btn_history": "La Ore Storie",
+        "scroll": "Scori"
+    },
+    "Esencia": {
+        "title": "Yollotl: Il Batit che nus Definìs",
+        "subtitle": "La Ore Essence",
+        "button": "Esplore la Colezion"
+    },
+    "Contact": {
+        "title": "Contat e Distribuzion",
+        "presence": "Presince Globâl",
+        "mexico": "Messic (Showroom)",
+        "europe": "Europe (Distribuzion)",
+        "consultations": "Consultazions Diretise",
+        "form": {
+            "heading": "Scrivinus",
+            "name": "Non Complet",
+            "email": "Indiriz E-mail",
+            "country": "Paîs",
+            "message": "Messaç / Domande",
+            "submitting": "Inviament...",
+            "submit": "Invie Messaç",
+            "success_title": "Inviât cun Sucès",
+            "success_msg": "Ti ringraziìn par vênus contatât. Il nestri concierge al studiarà la tô domande e ti contatarà in curt.",
+            "send_another": "Invie un altri messaç"
+        }
+    },
+    "Footer": {
+        "brand_desc": "O rapresentìn la culture cun dissipline di imprese. Un puint tra l'art ancestrâl e il commerç globâl.",
+        "trust": "Fiducie e Autenticitât",
+        "exploration": "Esplorazion",
+        "catalog": "Catalogo",
+        "essence": "La Ore Essence",
+        "stories": "Storiis di Origjin",
+        "special_projects": "Progjets Speciâi",
+        "sustainability": "Sostenibilitât",
+        "support": "Supoart",
+        "shipping": "Politiche di Spedizion (3PL)",
+        "returns": "Resis (SLA)",
+        "terms": "Termins di Servizi",
+        "authenticity": "Autenticitât",
+        "contact": "Contats Globâi",
+        "concierge": "Concierge Digitâl",
+        "newsletter_desc": "Abone-ti par ricevi invidîs esclusîfs ai lantz e cronichis culturâls.",
+        "newsletter_placeholder": "LA TÔ E-MAIL",
+        "newsletter_btn": "Abone-ti",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERAZIONS GLOBÂLS.",
+        "systems_active": "Sistems Atîfs (MFA Abilitât)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtre par lenghe o famee...",
+        "empty": "Nissun risultât cjatât"
+    },
+    "Marketplace": {
+        "title": "La Ore Curatere",
+        "subtitle": "Pieçs cun Anime e Proposit",
+        "crisis_cta": "Prenote cun Concierge",
+        "categories": {
+            "mezcales": "Mezcals",
+            "artesanias": "Artigjanât",
+            "decoracion": "Decorazion"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestrâl Espadín",
+                "desc": "Distilât in vasis di tiere, onorant la tradizion milenarie dai maestris mezcaleros di Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil di Gale San Juan K",
+                "desc": "Tessût in telâr di cinture cun fîls di sede, un cjap d'ovre che al conte la cosmogonie locâl."
+            },
+            "decor-01": {
+                "title": "Vâs di Tiere Negre Lustrade",
+                "desc": "Elegànce organiche modelade a man a San Bartolo Coyotepec, cun une finidure metaliche naturâl."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salvadi",
+                "desc": "La gjemme de corone, distilât di agaves salvadis cjatadis inte alte montagne."
+            },
+            "textil-02": {
+                "title": "Tapêt di Teotitlán del Valle",
+                "desc": "Lane vergjine tintisade cun pigments naturâi di cochenille e indi, disen gjeometric ancestrâl."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar de Anime'",
+                "desc": "Scolpît in len di copal, piturât cun une cure oniriche dai artigjans di Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Culture e Origjin",
+        "subtitle": "Cronichis di Sapience Ancestrâl",
+        "badge": "Contis e Eritage",
+        "description": "O onorìn il procès artigjanâl e il significât profont daûr di ogni creazion. Parcè che ogni ogjet al è un frament de storie dal Messic.",
+        "read_more": "LEI LA CRONICHE COMPLETE",
+        "read_more_aria": "Lei la croniche complete su {title}",
+        "seal": "CASA YOLOTL & CO. • SIGHÈL DI AUTENTICITÂT •",
+        "related_pieces": "Pieçs Corelâts",
+        "back_to_gallery": "Torne ae Galerie",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Anime de Tiere Negre",
+                "excerpt": "Scuvri il procès ancestrâl di San Bartolo Coyotepec, dulà che la tiere e devente ossidiane intes mans dai artigjans.",
+                "content": "# L'Anime de Tiere Negre\n\nLa tiere negre e je plui che une tecniche; e je une ereditât che e bat tal cûr di Oaxaca. A San Bartolo Coyotepec, i maestris artigjans a trasfôrman la argjile locâl in pieçs di une elegànce profonde e metaliche.\n\n## Il Procès\nIl segret al sta tal **lustrâ** e inte **coture**. Cun une piere di cuarç, l'artigjan al polìs il pieç prime che al jentri tal fôr. Il fum cjapât intant de coture al è chel che al dà chel neri intens e mistic, cence bisugne di vernîs.\n\n## Eritage Vîf\nOgni curve e ogni buse e conte une storie di pacience. No je presse inte fucine; la tiere e dete il timp, e l'artigjan si limite a scoltâ.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Patrimoni Licuido",
+                "excerpt": "Plui che un distilât, il mezcal al è il sanc de tiere...",
+                "content": "# Patrimoni Licuido\n\nIl mezcal al è il spirit dal Messic in botele. In tai palenques tradiziunâi, il procès al scomence cun la ricercje de agave madure, che e à assorbît il soreli e i minerâi de tiere par agns.\n\n## Il Fôr di Piere\nI cûrs (piñas) a vegnin cuezûts sot tiere in fôrs di piere vulcaniche scaldâts cun len di rôl. Chest pas al dà il profil fumi carateristic che al dinstingue i miôr mezcals dal mont.\n\n## Distilazion Ancestrâl\nCun vasis di tiere, la distilazion si fâs jote par jote. E je une alchimie sacre che e domande l'oli espert dal maestri mezcalero par separâ i 'cjâfs' des 'codis' e cjapâ la essence perfete.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fîls che a Contin il Cosmos",
+                "excerpt": "Il telâr di cinture al è une estension dal cuarp de artigjane...",
+                "content": "# Fîls che a Contin il Cosmos\n\nIl telâr di cinture al è une des tecnologies tessilis plui antighis e sofisticadis de Mesoameriche. Leât a un arbul o a un pâl di une bande e ae cinture de artigjane di chê altre, chest imprest al permet une conession intime cun la ovre.\n\n## Gjeometrie Sacre\nI brocâts e i ricams no son dome ornaments. A son glifs contemporanis che a rapresentin la flore, la faune e la cosmogonie de comunitât. Ogni huipil al è une mape di identitât regjonâl.\n\n## Tintis Naturâls\nLa ricercje de ecelence nus puarte a recuperâ l'ûs de cochenille, dal indi e dal purpur, colorants organics che a ofrin une palete di colôrs vibrants e de lunge durade.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: Il Batit che nus Definìs",
+        "philosophy": "Tal mont antic dal Anáhuac, il cûr nol jere dome un organ; al jere il 'Yollotl', il centri de sapience, dal coragjo e de creativitât. Pai Mexica, il cûr al è dulà che e sta la essence de persone e la fuarce che e dà vite aes mans dal artigjan.",
+        "culturalValue": "Casa Yolotl & Co. e nas di chest batit. No rapresentìn dome artigjanât; o preservìn il balôr culturâl messican conetint la sapience ancestrâl cun la dissipline di imprese contemporanie, sigurantsi che ogni pieç al sedi un puint tra un passât gloriôs e un futûr cun proposit."
+    }
+}

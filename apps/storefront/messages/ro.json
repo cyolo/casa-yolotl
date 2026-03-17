@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Esența Noastră",
+        "catalog": "Catalog",
+        "contacto": "Contact"
+    },
+    "Hero": {
+        "badge": "Cultură și Disciplină",
+        "title1": "Mexicul către ",
+        "title_italic": "Lume",
+        "title2": " cu Identitate",
+        "description": "Reprezentăm cultura mexicană cu disciplină corporativă și eleganță sobră.",
+        "btn_catalog": "Explorează Catalogul",
+        "aria_catalog": "Explorează catalogul complet de piese premium",
+        "btn_history": "Istoria Noastră",
+        "scroll": "Navighează"
+    },
+    "Esencia": {
+        "title": "Yollotl: Bătăia inimii care ne definește",
+        "subtitle": "Esența Noastră",
+        "button": "Explorează Colecția"
+    },
+    "Contact": {
+        "title": "Contact și Distribuție",
+        "presence": "Prezență Globală",
+        "mexico": "Mexic (Showroom)",
+        "europe": "Europa (Distribuție)",
+        "consultations": "Consultanță Directă",
+        "form": {
+            "heading": "Scrie-ne",
+            "name": "Nume Complet",
+            "email": "E-mail",
+            "country": "Țară",
+            "message": "Mesaj / Solicitare",
+            "submitting": "Se trimite...",
+            "submit": "Trimite Mesajul",
+            "success_title": "Trimis cu Succes",
+            "success_msg": "Vă mulțumim că ne-ați contactat. Concierge-ul nostru va analiza solicitarea dumneavoastră și vă va contacta în curând.",
+            "send_another": "Trimite un alt mesaj"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Reprezentăm cultura cu disciplină corporativă. Un pod între arta ancestrală și comerțul global.",
+        "trust": "Încredere și Autenticitate",
+        "exploration": "Explorare",
+        "catalog": "Catalog",
+        "essence": "Esența Noastră",
+        "stories": "Povești de Origine",
+        "special_projects": "Proiecte Speciale",
+        "sustainability": "Sustenabilitate",
+        "support": "Suport",
+        "shipping": "Politică de Expediere (3PL)",
+        "returns": "Retururi (SLA)",
+        "terms": "Termeni și Condiții",
+        "authenticity": "Autenticitate",
+        "contact": "Contact Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Abonează-te pentru a primi invitații exclusive la lansări și cronici culturale.",
+        "newsletter_placeholder": "E-MAILUL TĂU",
+        "newsletter_btn": "Abonează-te",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERAȚIUNI GLOBALE.",
+        "systems_active": "Sisteme Active (MFA Activat)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrează după limbă sau familie...",
+        "empty": "Niciun rezultat găsit"
+    },
+    "Marketplace": {
+        "title": "Curatoria Noastră",
+        "subtitle": "Piese cu Suflet și Scop",
+        "crisis_cta": "Rezervă prin Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artizanat",
+            "decoracion": "Decorațiuni"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Distilat în vase de lut, onorând tradiția milenară a maeștrilor mezcaleros din Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gală San Juan K",
+                "desc": "Țesut la războiul de brâu cu fire de mătase, o capodoperă ce descrie cosmogonia locală."
+            },
+            "decor-01": {
+                "title": "Vază din Lut Negru Lustruit",
+                "desc": "Eleganță organică modelată manual în San Bartolo Coyotepec, cu un finisaj metalic natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Sălbatic",
+                "desc": "Bijuteria coroanei, distilat din agave sălbatice găsite în munții înalți."
+            },
+            "textil-02": {
+                "title": "Covor de Teotitlán del Valle",
+                "desc": "Lână virgină vopsită cu pigmenți naturali din coșenilă și indigo, design geometric ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguarul Sufletului'",
+                "desc": "Sculptat în lemn de copal, pictat cu o meticulozitate onirică de către artizanii din Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultură și Origine",
+        "subtitle": "Cronici de Înțelepciune Ancestrală",
+        "badge": "Povești și Moștenire",
+        "description": "Onorăm procesul artizanal și semnificația profundă din spatele fiecărei creații. Fiecare obiect este un fragment din istoria Mexicului.",
+        "read_more": "CITEȘTE CRONICA COMPLETĂ",
+        "read_more_aria": "Citește cronica completă despre {title}",
+        "seal": "CASA YOLOTL & CO. • SIGILIUL AUTENTICITĂȚII •",
+        "related_pieces": "Piese Similare",
+        "back_to_gallery": "Înapoi la Galerie",
+        "items": {
+            "story-barro-negro": {
+                "title": "Sufletul Lutului Negru",
+                "excerpt": "Descoperă procesul ancestral din San Bartolo Coyotepec, unde pământul devine obsidian în mâinile artizanilor.",
+                "content": "# Sufletul Lutului Negru\n\nLutul negru este mai mult decât o tehnică; este o moștenire care pulsează în inima Oaxaca. În San Bartolo Coyotepec, maeștrii artizani transformă argila locală în piese de o eleganță profundă și metalică.\n\n## Procesul\nSecretul constă în **lustruire** și **ardere**. Folosind o piatră de cuarț, artizanul lustruiește piesa înainte de a intra în cuptorul cu două guri. Fumul captat în timpul arderii este cel care conferă acel negru intens și mistic, fără a fi nevoie de smalț.\n\n## Moștenire Vie\nFiecare curbă și fiecare perforație spune o poveste de răbdare. În atelier nu există grabă; pământul dictează timpul, iar artizanul pur și simplu ascultă.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Moștenire Lichidă",
+                "excerpt": "Mai mult decât un distilat, mezcalul este sângele pământului...",
+                "content": "# Moștenire Lichidă\n\nMezcalul este spiritul Mexicului îmbuteliat. În palenques tradiționale, procesul începe cu căutarea agavei mature, care a absorbit soarele și mineralele pământului timp de ani de zile.\n\n## Cuptorul de Piatră\nInimile de agave (piñas) sunt coapte sub pământ în cuptoare de piatră vulcanică încălzite cu lemn de stejar. Acest pas oferă profilul afumat caracteristic care distinge cele mai fine mezcaluri din lume.\n\n## Distilarea Ancestrală\nFolosind vase de lut, distilarea se face picătură cu picătură. Este o alchimie sacră care necesită ochiul expert al maestrului mezcalero pentru a separa 'capul' de 'coadă' și a capta esența perfectă.",
+                "location": "Văile Centrale, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fire care Narrează Cosmosul",
+                "excerpt": "Războiul de brâu este o extensie a corpului artizanei...",
+                "content": "# Fire care Narrează Cosmosul\n\nRăzboiul de brâu este una dintre cele mai vechi și sofisticate tehnologii textile din Mesoamerica. Legat de un copac sau un stâlp la un capăt și de talia artizanei la celălalt, acest instrument permite o conexiune intimă cu opera.\n\n## Geometrie Sacră\nBrodăriile nu sunt simple ornamente. Sunt glife contemporane care reprezintă flora, fauna și cosmogonia comunității. Fiecare huipil este o hartă a identității regionale.\n\n## Coloranți Naturali\nCăutarea excelenței ne conduce la recuperarea utilizării coșenilei, indigo-ului și purpurei, coloranți organici care oferă o paletă de culori vibrante și durabile.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: Bătăia inimii care ne definește",
+        "philosophy": "În lumea antică Anáhuac, inima nu era doar un organ; era 'Yollotl', centrul cunoașterii, curajului și creativității. Pentru Mexica, inima este locul unde rezidă esența persoanei și forța care dă viață mâinilor artizanului.",
+        "culturalValue": "Casa Yolotl & Co. se naște din această bătaie de inimă. Nu doar reprezentăm artizanatul; păstrăm valoarea culturală mexicană conectând înțelepciunea ancestrală cu disciplina corporativă contemporană, asigurându-ne că fiecare piesă servește ca un pod între un trecut glorios și un viitor cu scop."
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "A Nuestra Esencia",
+        "catalog": "Catalogo",
+        "contacto": "Contacto"
+    },
+    "Hero": {
+        "badge": "Cultura y Disciplina",
+        "title1": "Mexico t'o ",
+        "title_italic": "Mundo",
+        "title2": " con Identidat",
+        "description": "Representamos a cultura mexicana con disciplina empresarial y elegancia sobria.",
+        "btn_catalog": "Explorar o Catalogo",
+        "aria_catalog": "Explorar o catalogo completo de piezas premium",
+        "btn_history": "A Nuestra Historia",
+        "scroll": "Baixa"
+    },
+    "Esencia": {
+        "title": "Yollotl: O Corazón que nos Define",
+        "subtitle": "A Nuestra Esencia",
+        "button": "Explorar a Colección"
+    },
+    "Contact": {
+        "title": "Contacto y Distribución",
+        "presence": "Presencia Global",
+        "mexico": "Mexico (Showroom)",
+        "europe": "Europa (Distribución)",
+        "consultations": "Consultas Directas",
+        "form": {
+            "heading": "Escribe-nos",
+            "name": "Nombre Completo",
+            "email": "Correu Electronico",
+            "country": "País",
+            "message": "Mensache / Consulta",
+            "submitting": "Ninviando...",
+            "submit": "Ninviar Mensache",
+            "success_title": "Ninviau con Esfuerzo",
+            "success_msg": "Gracias por contactar con nusatros. O nuestro concierge revisará a suya consulta y se meterá en contacto con vusté mientres d'un inte.",
+            "send_another": "Ninviar un atro mensache"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Representamos cultura con disciplina empresarial. Un puent entre l'arte ancestral y o comercio global.",
+        "trust": "Confianza y Autenticidat",
+        "exploration": "Exploración",
+        "catalog": "Catalogo",
+        "essence": "A Nuestra Esencia",
+        "stories": "Historias d'Orizhen",
+        "special_projects": "Prochectos Especiales",
+        "sustainability": "Sostenibilidat",
+        "support": "Suporte",
+        "shipping": "Politica d'Envío (3PL)",
+        "returns": "Devolucions (SLA)",
+        "terms": "Terminos de Servicio",
+        "authenticity": "Autenticidat",
+        "contact": "Contacto Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Subscribe-te pa recibir invitacions exclusivas a lanzamientos y cronicas culturals.",
+        "newsletter_placeholder": "O TUYO CORREU",
+        "newsletter_btn": "Subscribir-se",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERACIONS GLOBALS.",
+        "systems_active": "Sistemas Activos (MFA Activau)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar por luenga o familia...",
+        "empty": "No s'han trobau resultaus"
+    },
+    "Marketplace": {
+        "title": "A Nuestra Curaduría",
+        "subtitle": "Piezas con Alma y Propósito",
+        "crisis_cta": "Reservar con Concierge",
+        "categories": {
+            "mezcales": "Mezcals",
+            "artesanias": "Artesanía",
+            "decoracion": "Decoración"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Destilau en ollas de bardo, onrando a tradición milenaria d'os maestros mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Teixiu en telar de cintura con filos de seda, una obra mestra que narra a cosmogonía local."
+            },
+            "decor-01": {
+                "title": "Charro de Bardo Negro Bruñiu",
+                "desc": "Elegancia organica moldeada a man en San Bartolo Coyotepec, con un acabau metalico natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salvache",
+                "desc": "A choya d'a corona, destilau a partir d'agaves salvaches trobaus en as altas montanyas."
+            },
+            "textil-02": {
+                "title": "Alfombra de Teotitlán del Valle",
+                "desc": "Lana virchen tenyida con pigmentos naturals de cochinilla y indigo, diseño geometrico ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Chaguar de l'Alma'",
+                "desc": "Esculpiu en madera de copal, pintau con meticulosidat onirica por os artesanos d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura y Orizhen",
+        "subtitle": "Cronicas de Sabiduría Ancestral",
+        "badge": "Relatos y Herencio",
+        "description": "Onramos o proceso artesanal y o significau profundo dezaga de cada creción. Porque cada obchecto ye un fragmento d'a historia de Mexico.",
+        "read_more": "LIER A CRONICA COMPLETA",
+        "read_more_aria": "Lier a cronica completa sobre {title}",
+        "seal": "CASA YOLOTL & CO. • SELLO D'AUTENTICIDAT •",
+        "related_pieces": "Piezas Relacionadas",
+        "back_to_gallery": "Tornar t'a Galería",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Alma d'o Bardo Negro",
+                "excerpt": "Descubre o proceso ancestral de San Bartolo Coyotepec, an que a tierra se torna obsidiana en as mans d'os artesanos.",
+                "content": "# L'Alma d'o Bardo Negro\n\nO bardo negro ye mas que una tecnica; ye un herencio que bate en o corazón d'Oaxaca. En San Bartolo Coyotepec, os maestros artesanos transforman l'archila local en piezas d'una elegancia profunda y metalica.\n\n## O Proceso\nO secreto reside en o **bruñiu** y a **cocción**. Mediante una piedra de cuarzo, l'artesano pule a pieza antis que entre en o forno de dos bocas. O fumo atrapau mientres d'a cocción ye o que da ixe negro intenso y mistico.\n\n## Herencio Vivo\nCada curva y cada forau cuenta una historia de paciencia. No i hai priesa en o taller; a tierra dicta o tiempo, y l'artesano simplament escuita.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Herencio Liquido",
+                "excerpt": "Mas que un destilau, o mezcal ye a sangre d'a tierra...",
+                "content": "# Herencio Liquido\n\nO mezcal ye o esprito de Mexico embotellau. En os palenques tradicionals, o proceso prencipia con a busca de l'agave maduro, que ha absorbito o sol y os minerals d'a tierra mientres d'anyos.\n\n## O Forno de Piedra\nOs corazons (piñas) se cuecen baixo tierra en fornos de piedra volcanica calentaus con lenya de caixigo. Iste paso aporta o perfil afumau caracteristico que distingue a os millors mezcals d'o mundo.\n\n## Destilación Ancestral\nMediante ollas de bardo, a destilación se fa gota a gota. Ye una alquimia sagrada que requiere l'uello experto d'o maestro mezcalero.",
+                "location": "Valles Centrals, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Filos que Narran o Cosmos",
+                "excerpt": "O telar de cintura ye una extensión d'o cuerpo de l'artesana...",
+                "content": "# Filos que Narran o Cosmos\n\nO telar de cintura ye una d'as tecnolochías téxtils mas antigas y sofisticadas d'a Mesoamerica. Ligau a un árbol u poste por un cabo y a la cintura de l'artesana por l'atro, iste trastre permite una connexión intima con a obra.\n\n## Cheometría Sagrada\nOs brocaus y bordaus no son nomás ornamentos. Son glifos contemporanios que representan a flora, a fauna y a cosmogonía d'a comunidat. Cada huipil ye un mapa d'identidat rechional.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: O Corazón que nos Define",
+        "philosophy": "En o mundo antigo de l'Anáhuac, o corazón no yera nomás un organo; yera o 'Yollotl', o centro d'o conoiximiento, d'a valura y d'a creatividat. Pa os mexicas, o corazón ye an reside a esencia d'a persona.",
+        "culturalValue": "Casa Yolotl & Co. naixe d'iste corazón. No representamos nomás artesanía; preservamos a valura cultural mexicana conectando a sabiduría ancestral con a disciplina empresarial contemporania."
+    }
+}

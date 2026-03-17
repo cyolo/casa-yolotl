@@ -31,13 +31,13 @@ export const authOptions: NextAuthOptions = {
         async signIn({ user }) {
             const isAdmin = SecurityValidator.isAdmin(user.email);
 
-            if (isAdmin) {
-                SecurityValidator.logSecurityEvent("AUTH_LOGIN_SUCCESS", { email: user.email });
-                return true;
+            if (!isAdmin) {
+                SecurityValidator.logSecurityEvent("AUTH_LOGIN_REJECTED_STRICT", { email: user.email });
+                return false;
             }
 
-            SecurityValidator.logSecurityEvent("AUTH_LOGIN_DENIED", { email: user.email });
-            return false;
+            SecurityValidator.logSecurityEvent("AUTH_LOGIN_SUCCESS", { email: user.email });
+            return true;
         },
         async session({ session, token }) {
             if (session?.user) {
@@ -63,6 +63,7 @@ export const authOptions: NextAuthOptions = {
         signIn: "/auth/signin",
         error: "/auth/signin",
     },
+    useSecureCookies: process.env.APP_ENV !== "local",
 };
 
 const handler = NextAuth(authOptions);

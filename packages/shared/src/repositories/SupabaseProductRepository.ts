@@ -12,10 +12,13 @@ export class SupabaseProductRepository implements IProductRepository {
     constructor() {
         // These should be set in the environment where this is used
         const supabaseUrl = process.env.SUPABASE_URL || '';
-        const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+        const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY || '';
         this.supabase = createClient(supabaseUrl, supabaseKey);
     }
 
+    /**
+     * @inheritdoc
+     */
     async getAll(page: number = 1, limit: number = 10, locale: string = 'es'): Promise<PaginatedResult<Product>> {
         const offset = (page - 1) * limit;
 
@@ -42,6 +45,9 @@ export class SupabaseProductRepository implements IProductRepository {
         };
     }
 
+    /**
+     * @inheritdoc
+     */
     async getById(id: string, locale: string = 'es'): Promise<Product | undefined> {
         const { data, error } = await this.supabase
             .from('products')
@@ -61,6 +67,9 @@ export class SupabaseProductRepository implements IProductRepository {
         return this.mapRowToProduct(data, locale);
     }
 
+    /**
+     * @inheritdoc
+     */
     async find(filters: ProductFilters, page: number = 1, limit: number = 10, locale: string = 'es'): Promise<PaginatedResult<Product>> {
         const offset = (page - 1) * limit;
 
@@ -106,6 +115,9 @@ export class SupabaseProductRepository implements IProductRepository {
         };
     }
 
+    /**
+     * @inheritdoc
+     */
     async updateStock(id: string, newStock: number): Promise<void> {
         const { error } = await this.supabase
             .from('products')
@@ -119,6 +131,9 @@ export class SupabaseProductRepository implements IProductRepository {
         console.log(`[AUTH-AUDIT]: Stock updated for product ${id}. New stock: ${newStock}`);
     }
 
+    /**
+     * @inheritdoc
+     */
     async updatePrice(id: string, newPrice: number): Promise<void> {
         const { error } = await this.supabase
             .from('products')
@@ -143,6 +158,7 @@ export class SupabaseProductRepository implements IProductRepository {
             price: row.price.toString(),
             marketplaceUrl: row.marketplace_url || '',
             imageUrl: mainImage?.url || '/placeholder.png',
+            stock: row.stock || 0,
             seo: {
                 title: row[`name_${locale}`] || row.name_es,
                 description: (row[`description_${locale}`] || row.description_es)?.substring(0, 160),

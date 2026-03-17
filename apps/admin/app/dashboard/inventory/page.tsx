@@ -145,9 +145,8 @@ export default function InventoryPage() {
                                     </td>
                                     <td className="p-6 text-center">
                                         <div className="flex items-center justify-center gap-2">
-                                            <span className={`text-sm font-sans ${parseInt(product.price) > 0 ? "text-white" : "text-amber-500"}`}>
-                                                {/* In a real app we'd fetch actual stock from DB */}
-                                                {Math.floor(Math.random() * 50) + 5}
+                                            <span className={`text-sm font-sans ${product.stock > 0 ? "text-white" : "text-amber-500 font-bold"}`}>
+                                                {product.stock}
                                             </span>
                                             <Package className="w-3 h-3 text-stone-600" />
                                         </div>
@@ -169,7 +168,7 @@ export default function InventoryPage() {
                                             </button>
                                             <button
                                                 className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
-                                                onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: '10' })}
+                                                onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: product.stock.toString() })}
                                                 title="Ajustar Stock"
                                             >
                                                 <Package className="w-3 h-3" />

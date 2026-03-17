@@ -38,7 +38,7 @@ export class StaticProductRepository implements IProductRepository {
     }
 
     async updateStock(id: string, newStock: number): Promise<void> {
-        console.log(`[AUTH-AUDIT]: Price change requested for product ${id}. New price: ${newStock}`);
+        console.log(`[AUTH-AUDIT]: Stock change requested for product ${id}. New stock: ${newStock}`);
     }
 
     async updatePrice(id: string, newPrice: number): Promise<void> {

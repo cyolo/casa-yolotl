@@ -23,7 +23,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const pathname = usePathname();
 
     const [currentLanguage, setCurrentLanguageState] = useState<Language>(
-        allLanguages.find(l => l.code === "es") || allLanguages[0]
+        allLanguages.find(l => l.code === "en") || allLanguages[0]
     );
     const [translations, setTranslations] = useState<TranslationStrings>({});
     const [fallbackTranslations, setFallbackTranslations] = useState<TranslationStrings>({});
@@ -43,10 +43,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
     const loadDictionary = async (code: string) => {
         try {
-            // Load Base (Spanish) for fallbacks using dynamic import
+            // Load Base (English) for fallbacks using dynamic import
             if (Object.keys(fallbackTranslations).length === 0) {
-                const esFallback = await import(`../messages/es.json`);
-                setFallbackTranslations(esFallback.default || esFallback);
+                const enFallback = await import(`../messages/en.json`);
+                setFallbackTranslations(enFallback.default || enFallback);
             }
 
             // Attempt to load current language
@@ -75,26 +75,27 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             // Persist choice in cookie for Middleware (1 year)
             document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
 
-            // 1. Capture current status from window to include Hash and correct segments
-            const currentPathname = window.location.pathname;
-            const currentHash = window.location.hash;
+            // 1. Capture current status using native URL API (source of truth)
+            const url = new URL(window.location.href);
 
             // 2. Logic: Centralized Path Transformation
-            const segments = currentPathname.split('/').filter(Boolean);
+            const segments = url.pathname.split('/').filter(Boolean);
             const allLocaleCodes = allLanguages.map(l => l.code);
 
             if (segments.length > 0 && allLocaleCodes.includes(segments[0])) {
-                // Replace existing locale segment
+                // Scenario: Route starts with a known locale (e.g., /es/cultura) -> Replace it
                 segments[0] = code;
             } else {
-                // Prepend new locale segment
+                // Scenario: Route is root or has no locale (e.g., /cultura) -> Prepend it
                 segments.unshift(code);
             }
 
-            const newPath = '/' + segments.join('/') + currentHash;
+            // 3. Reconstruct and Execute
+            // The URL API preserves searchParams and hash automatically
+            url.pathname = '/' + segments.join('/');
 
-            // 3. Execution: Unified hard redirect to ensure Middleware and Server Components sync
-            window.location.href = newPath;
+            // Unified hard redirect to ensure Middleware and Server Components sync
+            window.location.href = url.toString();
         }
     };
 
@@ -123,7 +124,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         const fallback = resolve(fallbackTranslations as Record<string, unknown>, key);
         if (typeof fallback === 'string') {
             const result = interpolate(fallback, replacements);
-            if (currentLanguage.code !== 'es') {
+            if (currentLanguage.code !== 'en') {
                 return `[${currentLanguage.code.toUpperCase()}] ${result}`;
             }
             return result;

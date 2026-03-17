@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Nòstra Esséncia",
+        "catalog": "Catalòg",
+        "contacto": "Contacte"
+    },
+    "Hero": {
+        "badge": "Cultura e Disciplina",
+        "title1": "Mexic al ",
+        "title_italic": "Mond",
+        "title2": " amb Identitat",
+        "description": "Representam la cultura mexicana amb una disciplina d'entrepresa e una elegança sòbria.",
+        "btn_catalog": "Explorar lo Catalòg",
+        "aria_catalog": "Explorar lo catalòg complèt de pèças premium",
+        "btn_history": "Nòstra Istòria",
+        "scroll": "Desfilar"
+    },
+    "Esencia": {
+        "title": "Yollotl: Lo Batement que nos Definís",
+        "subtitle": "Nòstra Esséncia",
+        "button": "Explorar la Colleccion"
+    },
+    "Contact": {
+        "title": "Contacte e Distribucion",
+        "presence": "Preséncia Globala",
+        "mexico": "Mexic (Showroom)",
+        "europe": "Euròpa (Distribucion)",
+        "consultations": "Consultas Dirèctas",
+        "form": {
+            "heading": "Escrivètz-nos",
+            "name": "Nom Complèt",
+            "email": "Adreça Electronica",
+            "country": "País",
+            "message": "Messatge / Demanda",
+            "submitting": "Mandadís en cors...",
+            "submit": "Mandar lo Messatge",
+            "success_title": "Mandat amb Succès",
+            "success_msg": "Mercés de nos aver contactats. Nòstre concierge estudiarà vòstra demanda e vos contactarà d'aicí pauc.",
+            "send_another": "Mandar un autre messatge"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Representam la cultura amb disciplina d'entrepresa. Un pont entre l'art ancestral e lo comèrci global.",
+        "trust": "Confiança e Autenticitat",
+        "exploration": "Exploracion",
+        "catalog": "Catalòg",
+        "essence": "Nòstra Esséncia",
+        "stories": "Istòrias d'Origina",
+        "special_projects": "Projèctes Especiaus",
+        "sustainability": "Sostenibilitat",
+        "support": "Suport",
+        "shipping": "Politica de Mandadís (3PL)",
+        "returns": "Retorns (SLA)",
+        "terms": "Condicions de Servici",
+        "authenticity": "Autenticitat",
+        "contact": "Contacte Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "S'abonar per recebre d'invitacions exclusivas als lançaments e de cronicas culturalas.",
+        "newsletter_placeholder": "VÒSTRE CORRIÈL",
+        "newsletter_btn": "S'abonar",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERACIONS GLOBALAS.",
+        "systems_active": "Sistèmas Actius (MFA Activitat)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar per lenga o familha...",
+        "empty": "Cap de resultat trobat"
+    },
+    "Marketplace": {
+        "title": "Nòstra Curatèla",
+        "subtitle": "Pèças amb Ànima e Tòca",
+        "crisis_cta": "Reservar amb Concierge",
+        "categories": {
+            "mezcales": "Mezcals",
+            "artesanias": "Artesanat",
+            "decoracion": "Decoracion"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Distillat dins de olas de tèrra, onorant la tradicion millenària dels mèstres mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Teissit sus un mestièr de cintura amb de fials de seda, un cap d'òbra que conta la cosmogonia locala."
+            },
+            "decor-01": {
+                "title": "Vase de Tèrra Negra Lustrada",
+                "desc": "Elegança organica motlada a la man a San Bartolo Coyotepec, amb una finicion metallica naturala."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salvatge",
+                "desc": "La jòia de la corona, distillat a partir d'agaves salvatges trobats dins las nautas montanhas."
+            },
+            "textil-02": {
+                "title": "Tapís de Teotitlán del Valle",
+                "desc": "Lana verge tinturada amb de pigments naturaus de cochenilha e d'indi, design geometric ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar de l'Ànima'",
+                "desc": "Esculptat en fusta de copal, pintrat amb una meticulositat onirica pels artesans d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura e Origina",
+        "subtitle": "Cronicas de Sabença Ancestrala",
+        "badge": "Contes e Eretatge",
+        "description": "Onoram lo procès artesanal e lo sens prigond darrièr cada creacion. Car cada objècte es un tròç de l'istòria de Mexic.",
+        "read_more": "LEGIR LA CRONICA COMPLÈTA",
+        "read_more_aria": "Legir la cronica complèta sus {title}",
+        "seal": "CASA YOLOTL & CO. • SAGÈL D'AUTENTICITAT •",
+        "related_pieces": "Pèças Ligadas",
+        "back_to_gallery": "Tornar a la Galariá",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Ànima de la Tèrra Negra",
+                "excerpt": "Descobritz lo procès ancestral de San Bartolo Coyotepec, ont la tèrra ven obsidiana entre las mans dels artesans.",
+                "content": "# L'Ànima de la Tèrra Negra\n\nLa tèrra negra es mai qu'una tecnica; es un eretatge que bota al còr d'Oaxaca. A San Bartolo Coyotepec, los mèstres artesans transforman l'argila locala en pèças d'una elegança prigonda e metallica.\n\n## Lo Procès\nLo secret se tròba dins lo **lustratge** e la **cuecha**. Amb una pèira de qüars, l'artesan polís la pèça abans qu'entre dins lo forn de doas bocas. Lo fium atrapat pendent la cuecha es çò que dona aquel negre intens e mistic, sens besonh de vernís.\n\n## Eretatge Viu\nCada corba e cada trauc conta una istòria de paciéncia. I a pas de pressa dins lo talhièr; la tèrra dicta lo temps, e l'artesan se contenta d'escotar.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Eretatge Liquid",
+                "excerpt": "Mai qu'un alcolat, lo mezcal es lo sang de la tèrra...",
+                "content": "# Eretatge Liquid\n\nLo mezcal es l'esperit de Mexic en botelha. Dins los palenques tradicionaus, lo procès comença amb la recèrca de l'agave madur, qu'a absorbit lo solelh e los mineraus de la tèrra pendent d'annadas.\n\n## Lo Forn de Pèira\nLos còrs (piñas) son cuechs sota tèrra dins de forns de pèira volcanica caufats amb de fusta de casse. Aquela estapa dona lo perfil fiumat caracteristic que destria los milhors mezcals del mond.\n\n## Distillacion Ancestrala\nAmb de olas de tèrra, la distillacion se fa gota a gota. Es una alquimia sagrada que demanda l'uèlh expèrt del mèstre mezcalero per separar las 'tèstas' de las 'coas' e sasir l'esséncia perfiècha.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fials que contan lo Còsmos",
+                "excerpt": "Lo mestièr de cintura es una estension del còrs de l'artesana...",
+                "content": "# Fials que contan lo Còsmos\n\nLo mestièr de cintura es una de las tecnologias textilas mai ancianas e sofisticadas de Mesoamerica. Ligat a un arbre o a un pal d'un costat e a la cintura de l'artesana de l'autre, aquel espleit permet una connexion intima amb l'òbra.\n\n## Geometria Sagrada\nLos brocats e las brodariás son pas de simples ornaments. Son de glifes contemporanèus que representan la flòra, la fauna e la cosmogonia de la comunitat. Cada huipil es una carta d'identitat regionala.\n\n## Tinturas Naturalas\nLa recèrca de l'excelléncia nos mena a recuperar l'usatge de la cochenilha, de l'indi e del porpre, de colorants organics que prepausan una paleta de colors vibrantas e duradissas.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: Lo Batement que nos Definís",
+        "philosophy": "Dins lo mond ancian d'Anáhuac, lo còr èra pas solament un organ; èra lo 'Yollotl', lo centre de la sabença, del coratge e de la creativitat. Pel pòble Mexica, lo còr es lo luòc ont se tròba l'esséncia de la persona e la fòrça que dona vida a las mans de l'artesan.",
+        "culturalValue": "Casa Yolotl & Co. es nascuda d'aquel batement. Representam pas solament l'artesanat; preservam la valor culturala mexicana en ligant la sabença ancestrala amb la disciplina d'entrepresa contemporanèa, en segurant que cada pèça siá un pont entre un passat gloriós e un futur plen de sens."
+    }
+}

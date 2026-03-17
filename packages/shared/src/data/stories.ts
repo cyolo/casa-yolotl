@@ -20,4 +20,9 @@ export const stories: Story[] = [
         mainImage: "/stories/telar-process.png",
         relatedProductIds: ["textil-01"],
     },
+    {
+        id: "story-metepec",
+        mainImage: "/stories/metepec-ceramic.png",
+        relatedProductIds: ["montoya-01"],
+    },
 ];

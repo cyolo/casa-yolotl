@@ -4,80 +4,71 @@
 
 > **"Representando cultura con disciplina empresarial."**
 
-Casa Yolotl & Co. is not just a marketplace; it is a high-fidelity enterprise ecosystem designed for the internationalization of authentic Mexican artisanal products. Our strategic objective is to bridge ancestral cultural value with modern business excellence, targeting a **20-25% ROI** through operational optimization and global market penetration.
+Casa Yolotl & Co. is a high-fidelity enterprise ecosystem designed for the global internationalization of authentic Mexican ancestral products. Our mission is to bridge cultural heritage with modern business excellence, targeting a **20-25% ROI** through zero-trust security, operational optimization, and multi-market penetration.
 
 ---
 
-## 🏗️ Ecosystem Architecture
+## 🏗️ Ecosystem Architecture (12-Factor)
 
-This monorepo leverages a modern, scalable architecture to separate concerns while maintaining a unified business logic.
+This monorepo implements a **12-Factor App** architecture, ensuring strict isolation between environments and high delivery speed.
 
 | Component | Path | Description | Access Policy |
 | :--- | :--- | :--- | :--- |
-| **Admin Portal** | `apps/admin` | Direction & Operations Center. Managed performance, inventory, and strategic storytelling. | **Restricted (CEO Humano Only)** |
-| **Storefront** | `apps/storefront` | Global Cultural Showcase. Optimized for conversion and SEO in multiple languages (ES, EN, FR). | **Public** |
-| **Shared Core** | `packages/shared` | Centralized Business Logic, Role-Based Access Control (RBAC), and Repository Patterns. | **Internal Shared** |
+| **Admin Portal** | `apps/admin` | Operations & Inventory Command Center. Managed via SSO. | **Restricted (CEO Only)** |
+| **Storefront** | `apps/storefront` | Global Cultural Showcase. SEO-optimized for 26 languages. | **Public** |
+| **Shared Core** | `packages/shared` | Centralized Business Logic, i18n Constants, and Repository Factory. | **Internal Shared** |
 
 ### 🛠️ Tech Stack
 - **Framework**: Next.js 15+ (App Router & Turbopack)
-- **Library**: React 19
-- **Styling**: Tailwind CSS v4 (Premium Accessible Design System)
+- **Runtime**: Node.js 20+ (LTS)
+- **Data Layer**: Supabase (PostgreSQL) + Multi-Repository Patterns
 - **Auth**: NextAuth.js (Identity Governance)
-- **Language**: TypeScript (Type-Safe Enterprise Logic)
+- **Styling**: Tailwind CSS v4 (Premium Heritage Design)
+- **Internationalization**: 26 Romance-focused Locales (ES, EN, FR, IT, PT, RO, etc.)
 
 ---
 
-## 🔐 Security & Governance (Zero Trust)
+## 🔐 Parametric Lockdown & Security
 
-We implement a **Zero Trust Security Model** to protect the integrity of the Casa Yolotl brand and its data.
+We implement a **Zero Trust Security Model** with strict environmental boundaries:
 
-- **Identity Governance**: Authentication is strictly managed via Google and GitHub SSO providers.
-- **SSO Lockdown**: The Admin Portal (`apps/admin`) operates in a restricted mode. Access is granted exclusively to verified identities (authorized emails) defined in the security layer.
-- **Operational Policy**: All development and operations follow the **FOPPS (Framework of Operational Policies & Procedures)**, ensuring high standards in every cultural and commercial transaction.
-
----
-
-## 🚀 Development Workflow
-
-### Prerequisites
-- **Node.js**: 20+ (LTS)
-- **NPM**: Workspaces enabled
-
-### Core Commands
-Execute these from the root directory:
-
-```bash
-# Launch the entire ecosystem (Local Development)
-# Admin runs on :3001 | Storefront runs on :3000
-npm run dev
-
-# Industrial Build (Production Preparation)
-npm run build
-
-# Quality Enforcement
-npm run lint
-```
+- **Embedded Local Mode**: Development always runs in "Embedded Mode" (`DATA_SOURCE=static`). This guarantees a 100% offline-ready, isolated, and fast development experience.
+- **Fail-Fast Validation**: The system refuses to start if critical environment-specific variables (like `GCP_PROJECT_ID` or `NEXTAUTH_SECRET`) are missing.
+- **Identity Lockdown**: Admin access is strictly limited to verified CEO identities (`cesar.vargas.alanis@gmail.com`).
+- **Secret Sovereignty**: Credentials NEVER reside in source code. We use **GCP Secret Manager** to inject sensitive keys at runtime.
 
 ---
 
-## 🌐 Deployment & Infrastructure
+## 🌐 Globalization (Massive i18n)
 
-- **CI/CD**: Managed through automated pipelines (Refer to [DEPLOYMENT.md](DEPLOYMENT.md)).
-- **Environment Management**: Critical credentials and API keys are strictly managed via Environment Variables to ensure zero leakage of sensitive data.
-- **Scalability**: The architecture is designed for multi-region accessibility with high-availability targets.
+Casa Yolotl supports an advanced multi-locale routing system with **26 distinct Romance languages and dialects**, including regional varieties like Sicilian, Galician, and Neapolitan.
+
+- **Default Locale**: English (`en`) for global consistency.
+- **Safe Routing**: Intelligent middleware prevents "Path Stacking" and handles 2-letter, 3-letter, and composite locale codes (e.g., `roa-ter`).
 
 ---
 
-## 🗺️ Organizational Mapping
+## 🚀 DevOps & Infrastructure
 
-Management and development follow a structured organizational chart to ensure accountability and strategic alignment:
+### Deployment Lifecycle
+1. **Local**: Zero-dependency embedded development.
+2. **CI (Cloud Build)**: Multi-stage Docker builds triggered by branch commits.
+3. **Registry**: Versioned images stored in GCP Artifact Registry.
+4. **CD (Cloud Run)**: Automated deployment with Secret Manager injection.
 
-> [!NOTE]
-> **CEO Humano**: The final strategic and financial authority. Owns the brand vision and ROI targets.
-> 
-> **CEO IA**: Strategic Copilot and simulation engine. Analyzes market trends and optimizes operational efficiency.
-> 
-> **CIARO**: Governance and AI Resources. Ensures alignment with the FOPPS framework and technical stability.
+### Standalone Optimization
+Both apps are configured for `output: 'standalone'`, creating ultra-lightweight containers optimized for Cloud Run.
+
+---
+
+## 🗺️ Organizational & Governance Mapping
+
+Management follows the **Mapa de Gobierno v1.0**:
+
+> [!IMPORTANT]
+> **CEO Humano**: Final strategic authority. Owns the brand and ROI targets.
+> **CIARO**: Ensures technical governance, FOPPS compliance, and AI resource stability.
+> **Infrastructure Documentation**: Refer to [INFRASTRUCTURE.md](INFRASTRUCTURE.md) for technical deep-dives into our deployment flow.
 
 ---
 *© 2026 Casa Yolotl & Co. - Proprietary Enterprise Infrastructure.*

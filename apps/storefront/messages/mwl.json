@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "Nuossa Esséncia",
+        "catalog": "Catálogo",
+        "contacto": "Cuntato"
+    },
+    "Hero": {
+        "badge": "Cultura i Deciplina",
+        "title1": "Mébico pa l ",
+        "title_italic": "Mundo",
+        "title2": " cun Identidade",
+        "description": "Repersentamos la cultura mexicana cun deciplina ampresarial i eilegáncia sóbria.",
+        "btn_catalog": "Splorar l Catálogo",
+        "aria_catalog": "Splorar l catálogo cumpleto de pieças de luxo",
+        "btn_history": "Nuossa Stória",
+        "scroll": "Çanfana"
+    },
+    "Esencia": {
+        "title": "Yollotl: L Latido que ne ls Define",
+        "subtitle": "Nuossa Esséncia",
+        "button": "Splorar la Coleçon"
+    },
+    "Contact": {
+        "title": "Cuntato i Çtribuiçon",
+        "presence": "Presença Global",
+        "mexico": "Mébico (Showroom)",
+        "europe": "Ouropa (Çtribuiçon)",
+        "consultations": "Cunsultas Diretas",
+        "form": {
+            "heading": "Screba-mos",
+            "name": "Nome Cumpleto",
+            "email": "Correio eiletrónico",
+            "country": "Paíç",
+            "message": "Mensage / Cunsulta",
+            "submitting": "A ambiar...",
+            "submit": "Ambiar Mensage",
+            "success_title": "Ambiado cun Sucesso",
+            "success_msg": "Oubrigado por mos cuntatar. L nuosso concierge bai analisar la sue cunsulta i falará cun bós l mais depriessa possible.",
+            "send_another": "Ambiar outra mensage"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Repersentamos cultura cun deciplina ampresarial. Ua puonte antre l'arte ancestral i l comércio global.",
+        "trust": "Cunfiança i Outenticidade",
+        "exploration": "Sploraçon",
+        "catalog": "Catálogo",
+        "essence": "Nuossa Esséncia",
+        "stories": "Stórias d'Ouriç",
+        "special_projects": "Porjetos Speciales",
+        "sustainability": "Sustentabelidade",
+        "support": "Supuorte",
+        "shipping": "Politica d'Ambio (3PL)",
+        "returns": "Deboluçones (SLA)",
+        "terms": "Termos de Serbício",
+        "authenticity": "Outenticidade",
+        "contact": "Cuntato Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Assine para recebir cumbites sclusibos para lançamientos i crónicas culturales.",
+        "newsletter_placeholder": "L SUE CORREIO",
+        "newsletter_btn": "Assinar",
+        "copyright": "© 2026 CASA YOLOTL & CO. OUPERAÇONES GLOBAIS.",
+        "systems_active": "Sistemas Atibos (MFA Atibado)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar por léngua ó família...",
+        "empty": "Nanhun resultado ancuntrado"
+    },
+    "Marketplace": {
+        "title": "Nuossa Curadoria",
+        "subtitle": "Pieças cun Alma i Perpuosto",
+        "crisis_cta": "Reserbar cun Concierge",
+        "categories": {
+            "mezcales": "Mezcales",
+            "artesanias": "Artesanato",
+            "decoracion": "Decoraçon"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Destilado an pote de barro, dándole honra a la tradiçon milenar de ls mestres mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Texido an telar de cintura cun filos de seda, ua obra-prima que cunta la cosmogonia lhocal."
+            },
+            "decor-01": {
+                "title": "Baso de Barro Negro Polido",
+                "desc": "Eilegáncia ourgánica moldada a la mano an San Bartolo Coyotepec, cun un acabamiento metálico natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salbaige",
+                "desc": "La jóia de la corona, destilado d'agabes salbaiges ancuntrados nas altas muntanhas."
+            },
+            "textil-02": {
+                "title": "Alcatifa de Teotitlán del Valle",
+                "desc": "Lhana birge tingida cun pigmientos naturales de cochinilla i índigo, zeinho geométrico ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar de l'Alma'",
+                "desc": "Sculpido an madeira de copal, pintado cun ua paciéncia de suonho puls artesanos d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura i Ouriç",
+        "subtitle": "Crónicas de Sabedorie Ancestral",
+        "badge": "Cuntos i Hardança",
+        "description": "Onramos l porcesso artesanal i l senficado perfundo por trás de cada criaçon. Porque cada oubjeto ye un pedaço de la stória de l Mébico.",
+        "read_more": "LHER CRÓNICA CUMPLETA",
+        "read_more_aria": "Lher la crónica cumpleta subre {title}",
+        "seal": "CASA YOLOTL & CO. • SELLO D'OUTENTICIDADE •",
+        "related_pieces": "Pieças Relacionadas",
+        "back_to_gallery": "Buoltar pa la Galerie",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Alma de l Barro Negro",
+                "excerpt": "Çcubra l porcesso ancestral de San Bartolo Coyotepec, adonde la tierra se torna ousidiana nas manos de ls artesanos.",
+                "content": "# L'Alma de l Barro Negro\n\nL barro negro ye mais de l qu'ua técnica; ye ua hardança que bate ne l coraçon d'Oaxaca. An San Bartolo Coyotepec, ls mestres artesanos trasforman la barroca lhocal an pieças d'ua eilegáncia perfunda i metálica.\n\n## L Porcesso\nL segredo stá ne l **polir** i ne l **queimar**. Cun ua piedra de quatzo, l'artesano pule la pieça antes d'antrar ne l forno de dues bocas. L fumo preso ne l tiempo de la burning ye l que dá aquel negro fuorte i místico.\n\n## Hardança Biba\nCada rebuolta i cada fura conta ua stória de paciéncia. Nun hai priessa ne l talher; la tierra dita l tiempo, i l'artesano solo scuita.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Hardança Lhíquida",
+                "excerpt": "Mais qu'un destilado, l mezcal ye l sangre de la tierra...",
+                "content": "# Hardança Lhíquida\n\nL mezcal ye l sprito de l Mébico angarrafado. Ne ls palenques tradicionales, l porcesso ampeça cula percura de l'agabe maduro, que chupou l sol i ls minerales de la tierra por anhos.\n\n## L Forno de Piedra\nLs coraçones (piñas) son cozidos ambaixo de la tierra an fornos de piedra bulcánica calecidos cun lhenha de carbalho. Este passo dá l sabor fumado que çtingue ls melhores mezcales de l mundo.\n\n## Çtilaçon Ancestral\nCun pote de barro, la çtilaçon ye feita gota a gota. Ye ua alquimia sagrada que pede l'uolho sperto de l mestre mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Filos que Cuntan l Cosmos",
+                "excerpt": "L telar de cintura ye ua stenson de l cuorpo de l'artesana...",
+                "content": "# Filos que Cuntan l Cosmos\n\nL telar de cintura ye ua de las tecnologies téxtiles mais bielhas de la Mesoamérica. Atado a ua arble ó poste por un cabo i a la cintura de l'artesana por outro, este strumiento permite ua lhigaçon íntima cula obra.\n\n## Geometrie Sagrada\nLs brocados i ls bordados nun son solo enfeites. Son glifos cuntemporáneos que repersentan la flora, la fauna i la cosmogonie de la quemunidade. Cada huipil ye un mapa d'identidade regional.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: L Latido que ne ls Define",
+        "philosophy": "Ne l mundo antigo d'Anáhuac, l coraçon nun era solo un uorgon; era l 'Yollotl', l centro de l coincimiento, de la coraige i de la criatibidade. Pa ls Mexica, ne l coraçon mora l'esséncia de la pessona.",
+        "culturalValue": "La Casa Yolotl & Co. nace deste latido. Nun repersentamos solo artesanato; preserbamos l balor cultural mexicano ligando la sabedorie ancestral cula deciplina ampresarial cuntemporánea."
+    }
+}

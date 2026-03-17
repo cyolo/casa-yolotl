@@ -72,7 +72,8 @@
         "categories": {
             "mezcales": "Mezcales",
             "artesanias": "Handicrafts",
-            "decoracion": "Decor"
+            "decoracion": "Decor",
+            "ceramica-montoya": "Montoya Ceramics"
         },
         "items": {
             "mezcal-01": {
@@ -98,6 +99,10 @@
             "artesania-02": {
                 "title": "'Soul Jaguar' Alebrije",
                 "desc": "Carved in copal wood, painted with dreamlike meticulousness by artisans from Arrazola."
+            },
+            "montoya-01": {
+                "title": "Montoya High-Temperature Vase",
+                "desc": "Luxury piece with mineral glazing, heritage of the Montoya Family in Metepec."
             }
         }
     },
@@ -129,6 +134,12 @@
                 "excerpt": "The backstrap loom is an extension of the artisan woman's body...",
                 "content": "# Threads That Narrate the Cosmos\n\nThe backstrap loom is one of Mesoamerica's oldest and most sophisticated textile technologies. Tied to a tree or post at one end and to the artisan's waist at the other, this tool allows for an intimate connection with the work.\n\n## Sacred Geometry\nThe brocades and embroidery are not mere ornaments. They are contemporary glyphs representing the flora, fauna, and cosmogony of the community. Each huipil is a map of regional identity.\n\n## Natural Dyes\nThe pursuit of excellence leads us to reclaim the use of cochineal, indigo, and Tyrian purple—organic dyes that offer a palette of vibrant and enduring colors.",
                 "location": "Teotitlán del Valle, Oaxaca"
+            },
+            "story-metepec": {
+                "title": "Metepec: The Fire of the Earth",
+                "excerpt": "Explore the mastery of high-temperature ceramics in Metepec, where clay rises to mineral art.",
+                "content": "# Metepec: The Fire of the Earth\n\nIn the heart of the State of Mexico, Metepec is the epicenter of national pottery. However, the Montoya Family has taken this tradition to an unparalleled level of technical excellence: **High Temperature**.\n\n## Mineral Glazing\nUnlike traditional ceramics, Montoya pieces use selected natural minerals for a glaze that merges with the clay at extreme temperatures. The result is a vitreous, deep, and eternal surface that does not fear the passage of centuries.\n\n## Visual Silence\nEach vase is an exercise in minimalism and proportion. At Casa Yolotl, we select these pieces because they represent the perfect conjunction between technical rigor and the artistic sensitivity of Metepec.",
+                "location": "Metepec, State of Mexico"
             }
         }
     },

@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "A Nòstra Esensa",
+        "catalog": "Catàlogo",
+        "contacto": "Contatto"
+    },
+    "Hero": {
+        "badge": "Coltûa e Deçiplina",
+        "title1": "O Mèscico a o ",
+        "title_italic": "Mondo",
+        "title2": " con Identitæ",
+        "description": "Rappresentemmo a coltûa mèscicana con deçiplina d'impreiza e un'elegança sòbria.",
+        "btn_catalog": "Esplorâ o Catàlogo",
+        "aria_catalog": "Esplorâ o catàlogo de pessi de lusso",
+        "btn_history": "A Nòstra Stòria",
+        "scroll": "Scori"
+    },
+    "Esencia": {
+        "title": "Yollotl: O Battito che ne Definisce",
+        "subtitle": "A Nòstra Esensa",
+        "button": "Esplorâ a Colleçión"
+    },
+    "Contact": {
+        "title": "Contatto e Distriboçión",
+        "presence": "Presensa Globâ",
+        "mexico": "Mèscico (Showroom)",
+        "europe": "Eoröpa (Distriboçión)",
+        "consultations": "Consulénse Dirètte",
+        "form": {
+            "heading": "Scrivéine",
+            "name": "Nómme Conplêto",
+            "email": "Indirìsso E-mail",
+            "country": "Paize",
+            "message": "Mesàggio / Domanda",
+            "submitting": "Invio in córso...",
+            "submit": "Inviâ o Mesàggio",
+            "success_title": "Inviòu con Suçèsso",
+            "success_msg": "Vi rimgraçiemmo d'aveine contattòu. O nòstro concierge o vederà a vòstra domandâ e o ve rispondiâ fîto.",
+            "send_another": "Inviâ n'âtro mesàggio"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Rappresentemmo a coltûa mèscicana con deçiplina d'impreiza. Un pònte tra l'arte d'antîgo e o commercio globâ.",
+        "trust": "Fidùçia e Outentiçitæ",
+        "exploration": "Esploraçión",
+        "catalog": "Catàlogo",
+        "essence": "A Nòstra Esensa",
+        "stories": "Stòrie d'Òrìgine",
+        "special_projects": "Progètti Speçiâli",
+        "sustainability": "Sostenibilitæ",
+        "support": "Sostêgno",
+        "shipping": "Politica de Spediçión (3PL)",
+        "returns": "Resi (SLA)",
+        "terms": "Tèrmini de Serviçio",
+        "authenticity": "Outentiçitæ",
+        "contact": "Contatti Globâli",
+        "concierge": "Concierge Digitâ",
+        "newsletter_desc": "Abónnite pe riçeve invîti escloxîvi e crònache coltûâli.",
+        "newsletter_placeholder": "A VÒSTRA E-MAIL",
+        "newsletter_btn": "Abónnite",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERAÇIOÌN GLOBÂLI.",
+        "systems_active": "Scistêmi Atîvi (MFA Abilitòu)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrâ pe léngoa ò famìggia...",
+        "empty": "Nisciùn rizultâto trovòu"
+    },
+    "Marketplace": {
+        "title": "A Nòstra Curatêa",
+        "subtitle": "Pessi con Ànima e Scòpo",
+        "crisis_cta": "Rizervâ con Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artexanâto",
+            "decoracion": "Decoraçión"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestrâ Espadín",
+                "desc": "Distillòu in pignate de tæra, onoràndo a tradiçión millenâia di maestri mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Tescioo a-o telâ de cinta con fî de sæda, un lou de d'art che o conta a cosmogonîa locâle."
+            },
+            "decor-01": {
+                "title": "Vâso de Tæra Neigra Lùscida",
+                "desc": "Elegança orgànica modellâ a màn a San Bartolo Coyotepec, con un'acabâura metàllica naturâ."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Sarvàtego",
+                "desc": "O zoiéllo da corónnâ, distillòu da agave sarvàteghe de l'âte montàgne."
+            },
+            "textil-02": {
+                "title": "Tappê de Teotitlán del Valle",
+                "desc": "Lann-a vèrgine tìnta con pigmenti naturâli de cocciniglia e ìndaco, dixégno geométrico d'antîgo."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Giaguâ de l'Ànima'",
+                "desc": "Scorpiò in légno de copal, pìnto con precixón onìrica da-i artexæn d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Coltûa e Òrìgine",
+        "subtitle": "Crònache de Sapiénsa d'Antîgo",
+        "badge": "Raconti e Ereditæ",
+        "description": "Onoremmo o travàggio de l'artexanâto e o fòndo sénso de ògni creaçión. Perché ògni ògètto o l'é un tòcco da stòria do Mèscico.",
+        "read_more": "LÉZE A CRÒNACA CONPLÊTA",
+        "read_more_aria": "Léze a crònaca conplêta in sciâ {title}",
+        "seal": "CASA YOLOTL & CO. • SÌGILLO D'OUTENTIÇITÆ •",
+        "related_pieces": "Pessi Correlæ",
+        "back_to_gallery": "Tórna a-a Galerîa",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Ànima da Tæra Neigra",
+                "excerpt": "Scòvri o procediménto d'antîgo de San Bartolo Coyotepec, dove a tæra a devénta oscidiàn-a inte màn di artexæn.",
+                "content": "# L'Ànima da Tæra Neigra\n\nA tæra neigra a l'é ciù de 'na técnica; a l'é un'ereditæ che a bàtte into cheu d'Oaxaca. A San Bartolo Coyotepec, i maestri artexæn trasfórman a créta locâle in pessi de n'elegança profónda e metàllica.\n\n## O Procediménto\nO segrêto o l'é into **lùscido** e into **chêuxe**. Co-ina prîa de quars, l'artexan o lùscida o pèsso primma d'intrâ into fórno. O fùmme intrappolòu o l'é quello che o dà quello neigro fòrte e mìstico.\n\n## Ereditæ Vîva\nÒgni cùrva a conta 'na stòria de paçiénsa. No gh'é fîtta into laboratöio; a tæra a dita o ténpo e l'artexan o l'ascolta o cheu.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Ereditæ Lìquida",
+                "excerpt": "Ciù che un distillòu, o mezcal o l'é o sàngue da tæra...",
+                "content": "# Ereditæ Lìquida\n\nO mezcal o l'é o spìrito do Mèscico in botìggia. Inte palenques tradiçionâli, se coménsa co-a riçèrca de l'agave matûa, che l'à assorbîo o sô e i minerâli da tæra pe ànni.\n\n## O Fórno de Prîa\nI cheu (piñas) végnan cheuti sótta tæra in fórni de prîa vulcànica scaudæ con légno de rure. Questo o dà o gùsto de fùmme caraterìstico di megio mezcal do mondo.\n\n## Distillaçión Ancestrâ\nCon pignate de tæra, a distillaçión se fâ goçia dòppo goçia. L'é n'alchimîa sacra che a vêu l'éuggio espèrto do maestro mezcalero.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fî che Cóntan o Còsmo",
+                "excerpt": "O telâ de cinta o l'é n'estensción do còrpo de l'artexan-a...",
+                "content": "# Fî che Cóntan o Còsmo\n\nO telâ de cinta o l'é unn-a de tecnolögîe tescili ciù antîghe da Mesoamerica. Ataccòu a n'àrbo ò a un pâlo, questo strumente o permette un ligàmme fòrte con l'òpera.\n\n## Geometrîa Sacra\nI broccæ no son sôlo de decoraçioìn. Son de figure de d'ancheu che rappresentan a flòra, a fàuna e a cosmogonîa da comunitæ. Ògni huipil o l'é 'na carta d'identitæ do pòsto.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: O Battito che ne Definisce",
+        "philosophy": "Into móndo d'antîgo de l'Anáhuac, o cheu o no l'êa sôlo n'òrgano; o l'êa o 'Yollotl', o céntro do savéi, do coràggio e da creativitæ. Pe-i Mexica, o cheu o l'é dove sta l'esensa da persónn-a.",
+        "culturalValue": "Casa Yolotl & Co. a nàsce da questo battito. No rappresentemmo sôlo l'artexanâto; mantegnemmo o balô coltûâle mèscicano coneténdo a sapiénsa d'antîgo co-a deçiplina d'impreiza moderna."
+    }
+}

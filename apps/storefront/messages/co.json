@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "A Nostra Essenza",
+        "catalog": "Catalogu",
+        "contacto": "Cuntattu"
+    },
+    "Hero": {
+        "badge": "Cultura è Disciplina",
+        "title1": "U Messicu à u ",
+        "title_italic": "Mondu",
+        "title2": " incù Identità",
+        "description": "Rapprisintemu a cultura messicana cù una disciplina d'impresa è un'eleganza sobria.",
+        "btn_catalog": "Esplorà u Catalogu",
+        "aria_catalog": "Esplorà u catalogu cumpletu di pezzi premium",
+        "btn_history": "A Nostra Storia",
+        "scroll": "Scorre"
+    },
+    "Esencia": {
+        "title": "Yollotl: U Battitu chì ci Definisce",
+        "subtitle": "A Nostra Essenza",
+        "button": "Esplorà a Cullezzione"
+    },
+    "Contact": {
+        "title": "Cuntattu è Distribuzione",
+        "presence": "Prisenza Glubale",
+        "mexico": "Messicu (Showroom)",
+        "europe": "Europa (Distribuzione)",
+        "consultations": "Cunsultazioni Dirette",
+        "form": {
+            "heading": "Scriviteci",
+            "name": "Nome Cumpletu",
+            "email": "Indirizzu E-mail",
+            "country": "Paese",
+            "message": "Messaghju / Dumanda",
+            "submitting": "Inviu in corsu...",
+            "submit": "Mandà u Messaghju",
+            "success_title": "Mandatu cù Successu",
+            "success_msg": "Vi ringraziemu d'avè ci cuntattatu. U nostru concierge esaminerà a vostra dumanda è vi cuntatterà prestu.",
+            "send_another": "Mandà un altru messaghju"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Rapprisintemu a cultura cù disciplina d'impresa. Un ponte trà l'arte ancestrale è u cummerciu glubale.",
+        "trust": "Fiducia è Autenticità",
+        "exploration": "Esplorazione",
+        "catalog": "Catalogu",
+        "essence": "A Nostra Essenza",
+        "stories": "Storii d'Orizine",
+        "special_projects": "Prugetti Speciali",
+        "sustainability": "Sustenibilità",
+        "support": "Supportu",
+        "shipping": "Pulitica di Spidizione (3PL)",
+        "returns": "Resi (SLA)",
+        "terms": "Termini di Serviziu",
+        "authenticity": "Autenticità",
+        "contact": "Cuntatti Glubali",
+        "concierge": "Concierge Digitale",
+        "newsletter_desc": "Abunà si per riceve inviti esclusivi à i lanci è cronache culturali.",
+        "newsletter_placeholder": "U VOSTRU E-MAIL",
+        "newsletter_btn": "Abunà si",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERAZIONI GLUBALI.",
+        "systems_active": "Sistemi Attivi (MFA Attivatu)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrà per lingua o famiglia...",
+        "empty": "Nisun risultatu truvatu"
+    },
+    "Marketplace": {
+        "title": "A Nostra Curatela",
+        "subtitle": "Pezzi cù Anima è Scopu",
+        "crisis_cta": "Riservà cù u Concierge",
+        "categories": {
+            "mezcales": "Mezcal",
+            "artesanias": "Artisgianatu",
+            "decoracion": "Dicurazione"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestrale Espadín",
+                "desc": "Distillatu in pignate di terra, unurendu a tradizione millenaria di i maestri mezcaleros d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil di Gala San Juan K",
+                "desc": "Tessutu nantu à un telaghju di cintura cù fili di seta, un capulavoru chì conta a cusmugunia lucale."
+            },
+            "decor-01": {
+                "title": "Vasu di Terra Nera Lucidatu",
+                "desc": "Eleganza urganica mudellata à a manu in San Bartolo Coyotepec, cù una finitura metallica naturale."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salvaticu",
+                "desc": "U ghjuvellu di a curona, distillatu da agavi salvatichi truvati in l'alte muntagne."
+            },
+            "textil-02": {
+                "title": "Tappitu di Teotitlán del Valle",
+                "desc": "Lana vergine tinta cù pigmenti naturali di cucciniglia è indacu, disignu geomitricu ancestrale."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Ghiagu di l'Anima'",
+                "desc": "Sculpitu in legnu di copal, pintu cù una primura onirica da l'artisgiani d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura è Orizine",
+        "subtitle": "Cronache di Sapienza Ancestrale",
+        "badge": "Conti è Redità",
+        "description": "Unuremu u prucessu artisgianale è u significatu prufondu daretu à ogni creazione. Perchè ogni oggettu hè un frammentu di a storia di u Messicu.",
+        "read_more": "LEGHJE A CRONACA CUMPLETA",
+        "read_more_aria": "Leghje a cronaca cumpleta nantu à {title}",
+        "seal": "CASA YOLOTL & CO. • SIGILLU D'AUTENTICITÀ •",
+        "related_pieces": "Pezzi Cunnessi",
+        "back_to_gallery": "Vultà à a Galleria",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Anima di a Terra Nera",
+                "excerpt": "Scuprite u prucessu ancestrale di San Bartolo Coyotepec, induve a terra diventa ossidiana in e mani di l'artisgiani.",
+                "content": "# L'Anima di a Terra Nera\n\nA terra nera hè più chè una tecnica; hè una redità chì batte in u core d'Oaxaca. In San Bartolo Coyotepec, i maestri artisgiani trasformanu a terra lucale in pezzi d'un'eleganza prufonda è metallica.\n\n## U Prucessu\nU sicretu stà in u **lucidamentu** è a **cottura**. Aduprendu una petra di quarzu, l'artisgianu lucida u pezzu prima ch'ellu entri in u fornu à duie bocche. U fume chjusu durante a cottura hè ciò chì dà quellu neru intensu è misticu, senza bisognu di vernici.\n\n## Redità Viva\nOgni curva è ogni bucu conta una storia di pacienza. Ùn ci hè micca fretta in l'attellu; a terra detta u tempu, è l'artisgianu si cuntenta d'ascoltà.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Redità Liquida",
+                "excerpt": "Più chè un distillatu, u mezcal hè u sangue di a terra...",
+                "content": "# Redità Liquida\n\nU mezcal hè u spiritu di u Messicu in buttiglia. In i palenques tradiziunali, u prucessu principia cù a ricerca di l'agave maturu, chì hà assurbitu u sole è i minerali di a terra per anni.\n\n## U Fornu di Petra\nI cori (piñas) sò cotti sottu terra in forni di petra vulcanica scaldata cù legnu di querciulu. Stu passu dà u prufilu fumicatu carattaristicu chì distingue i migliori mezcal di u mondu.\n\n## Distillazione Ancestrale\nAduprendu pignate di terra, a distillazione si face goccia à goccia. Hè un'alchimia sacra chì richiede l'ochju espertu di u maestru mezcalero per separà e 'teste' da e 'code' è catturà l'essenza parfetta.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fili chì Contanu u Cosmu",
+                "excerpt": "U telaghju di cintura hè un'estensione di u corpu di l'artisgiana...",
+                "content": "# Fili chì Contanu u Cosmu\n\nU telaghju di cintura hè una di e tecnulugie tessile più antiche è sufisticate di a Mesoamerica. Legatu à un arburu o à un palu da una parte è à a cintura di l'artisgiana da l'altra, stu strumentu permette una cunnessione intima cù l'opera.\n\n## Geumitria Sacra\nI ricami ùn sò micca solu ornamenti. Sò glifi cuntempuranei chì rapprisentanu a flora, a fauna è a cusmugunia di a cumunità. Ogni huipil hè una carta d'identità regiunale.\n\n## Tinte Naturali\nA ricerca di l'eccellenza ci porta à ricuperà l'usu di a cucciniglia, di l'indacu è di u purpurinu, tinte urganiche chì offrenu una paletta di culori vibranti è durevuli.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: U Battitu chì ci Definisce",
+        "philosophy": "In u mondu anticu di l'Anáhuac, u core ùn era micca solu un organu; era u 'Yollotl', u centru di a cunniscenza, di u curaghju è di a creatività. Per i Mexica, u core hè induve risiede l'essenza di a persona è a forza chì dà vita à e mani di l'artisgianu.",
+        "culturalValue": "Casa Yolotl & Co. nasce da stu battitu. Ùn rapprisintemu micca solu l'artisgianatu; priservemu u valore culturale messicanu cunnettu a sapienza ancestrale cù a disciplina d'impresa cuntempuranea, assicurendu chì ogni pezzu serva da ponte trà un passatu gluriosu è un futuru pienu di significatu[cite: 2, 3]."
+    }
+}

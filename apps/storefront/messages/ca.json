@@ -1,0 +1,140 @@
+{
+    "Navbar": {
+        "esencia": "La Nostra Essència",
+        "catalog": "Catàleg",
+        "contacto": "Contacte"
+    },
+    "Hero": {
+        "badge": "Cultura i Disciplina",
+        "title1": "Mèxic al ",
+        "title_italic": "Món",
+        "title2": " amb Identitat",
+        "description": "Representem la cultura mexicana amb disciplina empresarial i elegància sòbria.",
+        "btn_catalog": "Explorar el Catàleg",
+        "aria_catalog": "Explorar el catàleg complet de peces premium",
+        "btn_history": "La Nostra Història",
+        "scroll": "Desplaça"
+    },
+    "Esencia": {
+        "title": "Yollotl: El Batec que ens Defineix",
+        "subtitle": "La Nostra Essència",
+        "button": "Explorar la Col·lecció"
+    },
+    "Contact": {
+        "title": "Contacte i Distribució",
+        "presence": "Presència Global",
+        "mexico": "Mèxic (Showroom)",
+        "europe": "Europa (Distribució)",
+        "consultations": "Consultes Directes",
+        "form": {
+            "heading": "Escriu-nos",
+            "name": "Nom Complet",
+            "email": "Correu Electrònic",
+            "country": "País",
+            "message": "Missatge / Consulta",
+            "submitting": "Enviant...",
+            "submit": "Enviar Missatge",
+            "success_title": "Enviat amb Èxit",
+            "success_msg": "Gràcies per contactar amb nosaltres. El nostre concierge revisarà la teva consulta i es posarà en contacte amb tu properament.",
+            "send_another": "Enviar un altre missatge"
+        }
+    },
+    "Footer": {
+        "brand_desc": "Representem la cultura amb disciplina empresarial. Un pont entre l'art ancestral i el comerç global.",
+        "trust": "Confiança i Autenticitat",
+        "exploration": "Exploració",
+        "catalog": "Catàleg",
+        "essence": "La Nostra Essència",
+        "stories": "Històries d'Origen",
+        "special_projects": "Projectes Especials",
+        "sustainability": "Sostenibilitat",
+        "support": "Suport",
+        "shipping": "Política d'Enviament (3PL)",
+        "returns": "Devolucions (SLA)",
+        "terms": "Termes de Servei",
+        "authenticity": "Autenticitat",
+        "contact": "Contacte Global",
+        "concierge": "Concierge Digital",
+        "newsletter_desc": "Subscriu-te per rebre invitacions exclusives a llançaments i cròniques culturals.",
+        "newsletter_placeholder": "EL TEU CORREU",
+        "newsletter_btn": "Subscriure's",
+        "copyright": "© 2026 CASA YOLOTL & CO. OPERACIONS GLOBALS.",
+        "systems_active": "Sistemes Actius (MFA Activat)"
+    },
+    "LanguageSelector": {
+        "placeholder": "Filtrar per idioma o família...",
+        "empty": "No s'han trobat resultats"
+    },
+    "Marketplace": {
+        "title": "La Nostra Curadoria",
+        "subtitle": "Peces amb Ànima i Propòsit",
+        "crisis_cta": "Reservar amb Concierge",
+        "categories": {
+            "mezcales": "Mezcals",
+            "artesanias": "Artesania",
+            "decoracion": "Decoració"
+        },
+        "items": {
+            "mezcal-01": {
+                "title": "Mezcal Ancestral Espadín",
+                "desc": "Destil·lat en olles de fang, honrant la tradició mil·lenària dels mestres mezcalers d'Oaxaca."
+            },
+            "textil-01": {
+                "title": "Huipil de Gala San Juan K",
+                "desc": "Teixit en teler de cintura amb fils de seda, una obra mestra que narra la cosmogonia local."
+            },
+            "decor-01": {
+                "title": "Gerro de Fang Negre Brunyit",
+                "desc": "Elegància orgànica modelada a mà a San Bartolo Coyotepec, amb un acabat metàl·lic natural."
+            },
+            "mezcal-02": {
+                "title": "Mezcal Tobalá Salvatge",
+                "desc": "La joia de la corona, destil·lat a partir d'agaves salvatges trobats a les altes muntanyes."
+            },
+            "textil-02": {
+                "title": "Catifa de Teotitlán del Valle",
+                "desc": "Llana verge tenyida amb pigments naturals de cotxinilla i indi, disseny geomètric ancestral."
+            },
+            "artesania-02": {
+                "title": "Alebrije 'Jaguar de l'Ànima'",
+                "desc": "Esculpit en fusta de copal, pintat amb meticulositat onírica pels artesans d'Arrazola."
+            }
+        }
+    },
+    "Stories": {
+        "title": "Cultura i Origen",
+        "subtitle": "Cròniques de Saviesa Ancestral",
+        "badge": "Relats i Herència",
+        "description": "Honorem el procés artesanal i el significat profund que hi ha darrere de cada creació. Perquè cada objecte és un fragment de la història de Mèxic.",
+        "read_more": "LLEGIR LA CRÒNICA COMPLETA",
+        "read_more_aria": "Llegir la crònica completa sobre {title}",
+        "seal": "CASA YOLOTL & CO. • SEGELL D'AUTENTICITAT •",
+        "related_pieces": "Peces Relacionades",
+        "back_to_gallery": "Tornar a la Galeria",
+        "items": {
+            "story-barro-negro": {
+                "title": "L'Ànima del Fang Negre",
+                "excerpt": "Descobreix el procés ancestral de San Bartolo Coyotepec, on la terra esdevé obsidiana a les mans dels artesans.",
+                "content": "# L'Ànima del Fang Negre\n\nEl fang negre és més que una tècnica; és una herència que batega al cor d'Oaxaca. A San Bartolo Coyotepec, els mestres artesans transformen l'argila local en peces d'una elegància profunda i metàl·lica.\n\n## El Procés\nEl secret rau en el **brunyit** i la **cocció**. Mitjançant una pedra de quars, l'artesà poleix la peça abans que entri al forn de dues boques. El fum atrapat durant la cocció és el que confereix aquest negre intens i místic, sense necessitat d'esmalts.\n\n## Herència Viva\nCada corba i cada perforació explica una història de paciència. No hi ha pressa al taller; la terra dicta el temps, i l'artesà simplement escolta.",
+                "location": "San Bartolo Coyotepec, Oaxaca"
+            },
+            "story-mezcal-tradition": {
+                "title": "Herència Líquida",
+                "excerpt": "Més que un destil·lat, el mezcal és la sang de la terra...",
+                "content": "# Herència Líquida\n\nEl mezcal és l'esperit de Mèxic embotellat. En els palenques tradicionals, el procés comença amb la cerca de l'agave madur, que ha absorbit el sol i els minerals de la terra durant anys.\n\n## El Forn de Pedra\nEls cors (piñas) es couen sota terra en forns de pedra volcànica escalfats amb llenya de roure. Aquest pas proporciona el perfil fumat característic que distingeix els millors mezcals del món.\n\n## Destil·lació Ancestral\nMitjançant olles de fang, la destil·lació es fa gota a gota. És una alquímia sagrada que requereix l'ull expert del mestre mezcaler per separar els 'caps' de les 'cues' i capturar l'essència perfecta.",
+                "location": "Valles Centrales, Oaxaca"
+            },
+            "story-telar-cintura": {
+                "title": "Fils que Narren el Cosmos",
+                "excerpt": "El teler de cintura és una extensió del cos de l'artesana...",
+                "content": "# Fils que Narren el Cosmos\n\nEl teler de cintura és una de les tecnologies tèxtils més antigues i sofisticades de Mesoamèrica. Lligat a un arbre o a un pal per un extrem i a la cintura de l'artesana per l'altre, aquesta eina permet una connexió íntima amb l'obra.\n\n## Geometria Sagrada\nEls brocats i brodats no són simples ornaments. Són glifs contemporanis que representen la flora, la fauna i la cosmogonia de la comunitat. Cada huipil és un mapa d'identitat regional.\n\n## Tints Naturals\nLa recerca de l'excel·lència ens porta a recuperar l'ús de la cotxinilla, l'indi i el caragol porpra, colorants orgànics que ofereixen una paleta de colors vibrants i duradors.",
+                "location": "Teotitlán del Valle, Oaxaca"
+            }
+        }
+    },
+    "Heritage": {
+        "title": "Yollotl: El Batec que ens Defineix",
+        "philosophy": "En l'antic món d'Anáhuac, el cor no era només un òrgan; era el 'Yollotl', el centre del coneixement, el coratge i la creativitat. Per als mexiques, el cor és on resideix l'essència de la persona i la força que dona vida a les mans de l'artesà.",
+        "culturalValue": "Casa Yolotl & Co. neix d'aquest batec. No només representem l'artesania; preservem el valor cultural mexicà connectant la saviesa ancestral amb la disciplina empresarial contemporània, garantint que cada peça serveixi de pont entre un passat gloriós i un futur amb propòsit."
+    }
+}
