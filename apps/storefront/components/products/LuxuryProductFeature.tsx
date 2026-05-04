@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Product, MARKETPLACE_CONFIG, trackMarketplaceExit } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
+import ProductTraceabilityPanel from "./ProductTraceabilityPanel";
 
 interface LuxuryProductFeatureProps {
     product: Product;
@@ -66,6 +67,8 @@ const LuxuryProductFeature = ({ product, index }: LuxuryProductFeatureProps) => 
                 <p className="luxury-body text-brand-cream/60 text-sm md:text-base max-w-md italic leading-relaxed">
                     {description}
                 </p>
+
+                <ProductTraceabilityPanel product={product} />
 
                 {/* Price & CTA - Discreet Luxury Treatment */}
                 <div className="pt-8 lg:pt-12 border-t border-brand-cream/10 flex items-center justify-between">

@@ -74,7 +74,18 @@
             "cta": "Explore the piece",
             "badge": "Collection & Origin",
             "empty": "Soon, new pieces from this collection.",
-            "categoryNavAria": "Filter products by category"
+            "categoryNavAria": "Filter products by category",
+            "traceability": {
+                "title": "Traceability",
+                "origin": "Origin",
+                "region": "Region",
+                "material": "Material",
+                "technique": "Technique",
+                "artisan": "Artisan",
+                "workshop": "Workshop",
+                "collection": "Collection",
+                "code": "Traceability Code"
+            }
         },
         "crisis_cta": "Reserve with Concierge",
         "categories": {

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Product, MARKETPLACE_CONFIG, trackMarketplaceExit } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
+import ProductTraceabilityPanel from "./ProductTraceabilityPanel";
 
 interface LuxuryCompactCatalogProps {
     products: Product[];
@@ -175,6 +176,8 @@ const LuxuryCompactCatalog = ({ products }: LuxuryCompactCatalogProps) => {
                         <p className="luxury-body text-brand-cream/60 text-sm md:text-base max-w-md italic leading-relaxed">
                             {t(`Marketplace.items.${selectedProduct.id}.desc`)}
                         </p>
+
+                        <ProductTraceabilityPanel product={selectedProduct} />
 
                         <div className="pt-8 lg:pt-12 border-t border-brand-cream/10 flex items-center justify-between">
                             <span className="luxury-kicker text-brand-gold text-[12px] font-bold">

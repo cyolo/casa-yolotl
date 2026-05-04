@@ -5,4 +5,5 @@ export const DESIGN_FLAGS = {
   enableEditorialStorytellingLayout: true,
   enableLuxuryProductNarrative: true,
   enableCompactLuxuryCatalog: true,
+  enableArtisanTraceability: true,
 };

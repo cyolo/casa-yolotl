@@ -22,6 +22,15 @@ export interface Product {
     stock: number;
     seo: ProductSEO;
     dimensions: ProductDimensions;
+    artisan?: string;
+    artisanWorkshop?: string;
+    origin?: string;
+    region?: string;
+    material?: string;
+    technique?: string;
+    collection?: string;
+    culturalNote?: string;
+    traceabilityCode?: string;
 }
 
 export const products: Product[] = [
@@ -39,7 +48,12 @@ export const products: Product[] = [
             description: "Descubre la esencia de Oaxaca con nuestro Mezcal Ancestral destilado en barro.",
             keywords: ["mezcal", "ancestral", "espadin", "oaxaca"]
         },
-        dimensions: { weight: 1.2, width: 8, height: 30, depth: 8 }
+        dimensions: { weight: 1.2, width: 8, height: 30, depth: 8 },
+        origin: "Matatlán, Oaxaca",
+        material: "Agave Espadín (A. angustifolia)",
+        technique: "Destilado Ancestral en Barro",
+        collection: "Herencia Mezcalera",
+        traceabilityCode: "CY-OAX-M01"
     },
     {
         id: "textil-01",
@@ -55,7 +69,12 @@ export const products: Product[] = [
             description: "Elegancia y tradición en cada hilo. Huipil istmeño auténtico.",
             keywords: ["textil", "huipil", "artesania", "oaxaca"]
         },
-        dimensions: { weight: 0.5, width: 60, height: 50, depth: 2 }
+        dimensions: { weight: 0.5, width: 60, height: 50, depth: 2 },
+        origin: "Istmo de Tehuantepec, Oaxaca",
+        material: "Hilos de Seda y Algodón",
+        technique: "Bordado a Mano de Aguja",
+        collection: "Gala Istmeña",
+        traceabilityCode: "CY-OAX-T01"
     },
     {
         id: "decor-01",
@@ -135,6 +154,14 @@ export const products: Product[] = [
             description: "Descubre la cerámica vidriada de alta temperatura de la Familia Montoya. Arte contemporáneo con alma ancestral.",
             keywords: ["ceramica montoya", "metepec", "vidriado mineral", "artesania de lujo"]
         },
-        dimensions: { weight: 2.5, width: 25, height: 45, depth: 25 }
+        dimensions: { weight: 2.5, width: 25, height: 45, depth: 25 },
+        artisan: "Familia Montoya",
+        artisanWorkshop: "Taller Montoya",
+        origin: "Metepec, Estado de México",
+        material: "Arcilla y Minerales Naturales",
+        technique: "Cerámica de Alta Temperatura",
+        collection: "Línea Montoya",
+        traceabilityCode: "CY-MTY-C01",
+        culturalNote: "La Familia Montoya preserva técnicas de vidriado mineral únicas en Metepec."
     },
 ];

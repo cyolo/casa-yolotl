@@ -74,7 +74,18 @@
             "cta": "Descubrir la pieza",
             "badge": "Colección & Origen",
             "empty": "Próximamente nuevas piezas de esta colección.",
-            "categoryNavAria": "Filtrar productos por categoría"
+            "categoryNavAria": "Filtrar productos por categoría",
+            "traceability": {
+                "title": "Trazabilidad",
+                "origin": "Origen",
+                "region": "Región",
+                "material": "Material",
+                "technique": "Técnica",
+                "artisan": "Artesano",
+                "workshop": "Taller",
+                "collection": "Colección",
+                "code": "Código de trazabilidad"
+            }
         },
         "crisis_cta": "Reservar con Concierge",
         "categories": {
