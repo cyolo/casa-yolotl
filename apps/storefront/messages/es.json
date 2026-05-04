@@ -72,7 +72,9 @@
             "title": "Objetos Curados",
             "subtitle": "Piezas hechas a mano, seleccionadas por su origen, material y belleza silenciosa.",
             "cta": "Descubrir la pieza",
-            "badge": "Colección & Origen"
+            "badge": "Colección & Origen",
+            "empty": "Próximamente nuevas piezas de esta colección.",
+            "categoryNavAria": "Filtrar productos por categoría"
         },
         "crisis_cta": "Reservar con Concierge",
         "categories": {

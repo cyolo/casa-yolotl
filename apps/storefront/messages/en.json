@@ -72,7 +72,9 @@
             "title": "Curated Objects",
             "subtitle": "Handmade pieces selected for their origin, material and quiet beauty.",
             "cta": "Explore the piece",
-            "badge": "Collection & Origin"
+            "badge": "Collection & Origin",
+            "empty": "Soon, new pieces from this collection.",
+            "categoryNavAria": "Filter products by category"
         },
         "crisis_cta": "Reserve with Concierge",
         "categories": {
