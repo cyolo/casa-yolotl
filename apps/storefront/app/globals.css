@@ -87,13 +87,12 @@
 
 @layer components {
   .luxury-heading {
-    font-family: var(--font-serif);
-    letter-spacing: 0.12em;
+    @apply font-serif font-semibold uppercase;
+    letter-spacing: 0.15em;
     line-height: 1.05;
-    font-weight: 500;
   }
   .luxury-ampersand {
-    font-family: var(--font-serif);
+    @apply font-serif;
     color: var(--brand-gold);
     font-style: italic;
     font-weight: 400;
@@ -102,14 +101,13 @@
     transform: translateY(-0.02em);
   }
   .luxury-kicker {
-    font-family: var(--font-sans);
-    text-transform: uppercase;
+    @apply font-sans uppercase;
     letter-spacing: 0.45em;
     font-size: 0.65rem;
     color: var(--brand-gold);
   }
   .luxury-body {
-    font-family: var(--font-sans);
+    @apply font-sans;
     letter-spacing: 0.08em;
     line-height: 1.8;
   }
