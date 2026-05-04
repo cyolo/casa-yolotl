@@ -45,6 +45,8 @@ jobs:
           AUTHORIZED_ADMIN_EMAIL: ci@example.com
           GOOGLE_CLIENT_ID: ci-google-client-id
           GOOGLE_CLIENT_SECRET: ci-google-client-secret
+          GITHUB_ID: ci-github-id
+          GITHUB_SECRET: ci-github-secret
           DATA_SOURCE: static
           GCP_PROJECT_ID: ci-gcp-project
 
@@ -57,6 +59,8 @@ jobs:
             --build-arg AUTHORIZED_ADMIN_EMAIL=ci@example.com \
             --build-arg GOOGLE_CLIENT_ID=ci-google-client-id \
             --build-arg GOOGLE_CLIENT_SECRET=ci-google-client-secret \
+            --build-arg GITHUB_ID=ci-github-id \
+            --build-arg GITHUB_SECRET=ci-github-secret \
             --build-arg DATA_SOURCE=static \
             --build-arg GCP_PROJECT_ID=ci-gcp-project \
             --build-arg APP_ENV=ci \
@@ -71,6 +75,8 @@ jobs:
             --build-arg AUTHORIZED_ADMIN_EMAIL=ci@example.com \
             --build-arg GOOGLE_CLIENT_ID=ci-google-client-id \
             --build-arg GOOGLE_CLIENT_SECRET=ci-google-client-secret \
+            --build-arg GITHUB_ID=ci-github-id \
+            --build-arg GITHUB_SECRET=ci-github-secret \
             --build-arg DATA_SOURCE=static \
             --build-arg GCP_PROJECT_ID=ci-gcp-project \
             --build-arg APP_ENV=ci \
