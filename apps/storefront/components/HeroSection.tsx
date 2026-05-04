@@ -29,11 +29,11 @@ const HeroSection = () => {
             <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
                 <HeroBadge label={t("Hero.badge")} />
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-brand-cream leading-[1.05] mb-10 animate-fade-in-up tracking-tight">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl luxury-heading text-brand-cream mb-10 animate-fade-in-up tracking-tight">
                     {t("Hero.title1")}<span className="italic font-light">{t("Hero.title_italic")}</span><br />{t("Hero.title2")}
                 </h1>
 
-                <p className="text-xs md:text-sm text-brand-cream/60 font-sans max-w-xl mx-auto leading-relaxed mb-16 tracking-[0.25em] uppercase">
+                <p className="text-xs md:text-sm text-brand-cream/60 luxury-body max-w-xl mx-auto mb-16 uppercase">
                     {t("Hero.description")}
                 </p>
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
 const HeroBadge = ({ label }: { label: string }) => (
     <div className="mb-8 flex justify-center items-center">
         <div className="h-px w-8 bg-brand-gold/40"></div>
-        <span className="text-xs uppercase tracking-[0.4em] text-brand-gold font-sans mx-4">{label}</span>
+        <span className="luxury-kicker mx-4">{label}</span>
         <div className="h-px w-8 bg-brand-gold/40"></div>
     </div>
 );

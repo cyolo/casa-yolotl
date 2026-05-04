@@ -25,6 +25,8 @@ yarn.lock
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+job_log.txt
+*.log.txt
 
 # local env files
 .env*
