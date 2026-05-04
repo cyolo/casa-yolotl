@@ -24,9 +24,9 @@ const IsotypeYollotl = () => (
 export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "bone" }) {
     const { t, locale } = useLanguage();
     const isBone = theme === "bone";
-    const bgColor = isBone ? "bg-[#F5F5F1]" : "bg-[#1A1A1A]";
-    const textColor = isBone ? "text-brand-black" : "text-white";
-    const subTextColor = isBone ? "text-stone-600" : "text-stone-400";
+    const bgColor = isBone ? "bg-brand-cream" : "bg-brand-black";
+    const textColor = isBone ? "text-brand-black" : "text-brand-cream";
+    const subTextColor = isBone ? "text-brand-black/60" : "text-brand-cream/60";
 
     return (
         <article className={`relative ${bgColor} min-h-screen py-32 px-8 overflow-hidden`} id="esencia">
@@ -45,7 +45,7 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="text-[#C5A059] text-[10px] uppercase tracking-[0.6em] block mb-6 font-bold"
+                    className="luxury-kicker block mb-6 font-bold"
                 >
                     {t("Esencia.subtitle")}
                 </motion.span>
@@ -55,7 +55,7 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, delay: 0.5 }}
-                    className={`text-4xl md:text-6xl font-serif text-[#1A1A1A] mb-8 leading-tight max-w-3xl mx-auto`}
+                    className={`text-4xl md:text-6xl luxury-heading ${textColor} mb-8 max-w-3xl mx-auto`}
                 >
                     {t("Heritage.title")}
                 </motion.h2>
@@ -65,11 +65,11 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
                     initial={{ width: 0 }}
                     whileInView={{ width: "80px" }}
                     transition={{ duration: 1.5, delay: 0.8 }}
-                    className="h-px bg-[#C5A059]/40 mx-auto mb-12"
+                    className="h-px bg-brand-gold/40 mx-auto mb-12"
                 />
 
                 {/* Narrative Body */}
-                <div className={`space-y-10 text-[#1A1A1A] font-serif leading-loose tracking-wide text-lg md:text-xl max-w-2xl mx-auto`}>
+                <div className={`space-y-10 ${textColor} luxury-body text-lg md:text-xl max-w-2xl mx-auto`}>
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -77,9 +77,9 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
                     >
                         {(t("Heritage.philosophy") || "philosophy").split("'").map((part, i) => (
                             i % 2 !== 0 ? (
-                                <span key={i} className="group relative text-[#C5A059] font-bold italic cursor-help mx-1">
+                                <span key={i} className="group relative text-brand-gold font-bold italic cursor-help mx-1">
                                     &apos;{part}&apos;
-                                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 px-4 py-3 bg-stone-900 border border-stone-800 text-[9px] uppercase tracking-widest text-[#C5A059] w-48 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-2xl z-50 normal-case font-normal not-italic">
+                                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 px-4 py-3 bg-brand-black border border-brand-black/80 text-[9px] uppercase tracking-widest text-brand-gold w-48 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-2xl z-50 normal-case font-normal not-italic">
                                         {nahuatlGlossary.find(g => g.term === part)?.meaning || part}: {nahuatlGlossary.find(g => g.term === part)?.context || ""}
                                     </span>
                                 </span>
@@ -91,7 +91,7 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 1.3 }}
-                        className="text-[#C5A059]/80 italic font-serif text-xl md:text-2xl border-t border-b border-[#C5A059]/10 py-8 leading-loose"
+                        className="text-brand-gold/80 italic font-serif text-xl md:text-2xl border-t border-b border-brand-gold/10 py-8 leading-loose"
                     >
                         {t("Heritage.culturalValue")}
                     </motion.p>
