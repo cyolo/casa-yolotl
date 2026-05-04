@@ -1,4 +1,12 @@
 /**
+ * Placeholder script.
+ * This is not a real Lighthouse CI gate yet.
+ * Do not use as a production quality gate.
+ *
+ * TODO:
+ * Replace this with a real Lighthouse CI implementation in a later quality-gates phase.
+ */
+/**
  * Casa Yolotl - Technical Guardrail
  * Lighthouse CI Performance Lock
  */
