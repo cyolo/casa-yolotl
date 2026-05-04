@@ -9,6 +9,7 @@ const ConsentBanner = () => {
         // Check if consent has already been given or denied
         const consent = localStorage.getItem("cy-tracking-consent");
         if (!consent) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect -- Justificación técnica: Requerido para leer localStorage sólo en el cliente sin romper hidratación.
             setShowBanner(true);
         }
     }, []);
@@ -17,8 +18,8 @@ const ConsentBanner = () => {
         localStorage.setItem("cy-tracking-consent", "accepted");
         setShowBanner(false);
         // Here we would typically update GTM Consent Mode
-        if (typeof window !== "undefined" && (window as any).gtag) {
-            (window as any).gtag("consent", "update", {
+        if (typeof window !== "undefined" && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+            (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("consent", "update", {
                 analytics_storage: "granted",
                 ad_storage: "granted",
             });

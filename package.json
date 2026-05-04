@@ -10,6 +10,7 @@
     "dev": "npx concurrently \"npm run dev --workspace=casa-yolotl\" \"npm run dev --workspace=casa-yolotl-admin\"",
     "build": "npm run build --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
     "ci-verify": "node scripts/lh-check.js"
   }
 }

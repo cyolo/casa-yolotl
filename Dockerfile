@@ -1,38 +1,41 @@
-# Multi-stage Dockerfile for Next.js Monorepo (Casa Yolotl)
-# Optimized for GCP Cloud Run
+# Multi-stage Dockerfile for Casa Yolotl Next.js Monorepo
+# Target: Google Cloud Run compatible images
+# Package manager: npm workspaces
 
-# 1. Base image with pnpm
-FROM node:20-slim AS base
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
-COPY . /app
+FROM node:20-slim AS deps
 WORKDIR /app
 
-# 2. Dependency Installer
-FROM base AS deps
-RUN pnpm install --frozen-lockfile
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# 3. Builder
-FROM base AS builder
-COPY --from=deps /app/node_modules /app/node_modules
-# ENV variables for build time (if needed, otherwise pass via Cloud Build)
-ENV NEXT_TELEMETRY_DISABLED 1
-RUN pnpm build
+COPY package.json package-lock.json ./
+COPY apps/storefront/package.json apps/storefront/package.json
+COPY apps/admin/package.json apps/admin/package.json
+COPY packages/shared/package.json packages/shared/package.json
 
-# 4. Runner
+RUN npm ci
+
+FROM node:20-slim AS builder
+WORKDIR /app
+
+ENV NEXT_TELEMETRY_DISABLED=1
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+RUN npm run build --workspaces --if-present
+
 FROM node:20-slim AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
 
-# Create non-root user
+ARG APP_NAME
+
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy standalone builds (assuming monorepo layout)
-# Note: Cloud Build will handle injecting the correct app via args or multiple images
 COPY --from=builder /app/apps/${APP_NAME}/.next/standalone ./
 COPY --from=builder /app/apps/${APP_NAME}/.next/static ./apps/${APP_NAME}/.next/static
 COPY --from=builder /app/apps/${APP_NAME}/public ./apps/${APP_NAME}/public
@@ -40,6 +43,5 @@ COPY --from=builder /app/apps/${APP_NAME}/public ./apps/${APP_NAME}/public
 USER nextjs
 
 EXPOSE 3000
-ENV PORT 3000
-# Server command for standalone mode
-CMD ["node", "apps/server.js"]
+
+CMD ["node", "server.js"]

@@ -5,7 +5,7 @@ import { allLanguages, Language } from "@/data/languages";
 import { useRouter, usePathname } from "next/navigation";
 
 interface TranslationStrings {
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 interface LanguageContextType {

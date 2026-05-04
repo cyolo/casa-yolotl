@@ -14,13 +14,12 @@ interface StoryModalProps {
 }
 
 const StoryModal = ({ story, isOpen, onClose }: StoryModalProps) => {
-    const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
     const { t } = useLanguage();
+
+    const relatedProducts = story ? products.filter(p => story.relatedProductIds.includes(p.id)) : [];
 
     useEffect(() => {
         if (story) {
-            const related = products.filter(p => story.relatedProductIds.includes(p.id));
-            setRelatedProducts(related);
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "unset";
@@ -71,10 +70,10 @@ const StoryModal = ({ story, isOpen, onClose }: StoryModalProps) => {
                         <div className="text-brand-black/80 font-sans leading-loose tracking-wide space-y-6">
                             <ReactMarkdown
                                 components={{
-                                    h1: ({ node, ...props }) => <h1 className="text-3xl font-serif text-brand-black mt-12 mb-6" {...props} />,
-                                    h2: ({ node, ...props }) => <h2 className="text-2xl font-serif text-brand-black mt-12 mb-6" {...props} />,
-                                    p: ({ node, ...props }) => <p className="mb-6 font-sans leading-loose tracking-wide" {...props} />,
-                                    strong: ({ node, ...props }) => <strong className="font-bold text-brand-black" {...props} />,
+                                    h1: ({ node: _node, ...props }) => <h1 className="text-3xl font-serif text-brand-black mt-12 mb-6" {...props} />,
+                                    h2: ({ node: _node, ...props }) => <h2 className="text-2xl font-serif text-brand-black mt-12 mb-6" {...props} />,
+                                    p: ({ node: _node, ...props }) => <p className="mb-6 font-sans leading-loose tracking-wide" {...props} />,
+                                    strong: ({ node: _node, ...props }) => <strong className="font-bold text-brand-black" {...props} />,
                                 }}
                             >
                                 {content}

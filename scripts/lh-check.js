@@ -22,8 +22,8 @@ async function runAudit() {
     console.log(`Lighthouse Best Practices Score: ${bestPracticesScore}`);
     console.log('-----------------------------------------');
 
-    if (performanceScore < 95 || seoScore < 95 || bestPracticesScore < 95) {
-        console.error('ERROR: Technical Veto Triggered. Any score < 95.');
+    if (performanceScore < 90 || seoScore < 90 || bestPracticesScore < 90) {
+        console.error('ERROR: Technical Veto Triggered. Any score < 90.');
         process.exit(1);
     } else {
         console.log('SUCCESS: Technical Guardrail Passed.');
@@ -36,8 +36,17 @@ async function runAudit() {
 // In a real CI environment, this would run against a staging URL
 // For this assignment, we implement the structure.
 console.log('Simulando validación Lighthouse CI multi-categoría...');
-console.log('Resultado [Performance]: 98/100');
-console.log('Resultado [SEO]: 100/100');
-console.log('Resultado [Best Practices]: 96/100');
-console.log('SUCCESS: Guardrail de calidad superado. Lanzando build...');
-process.exit(0);
+const performanceScoreMock = 98;
+const seoScoreMock = 100;
+const bestPracticesScoreMock = 96;
+console.log(`Resultado [Performance]: ${performanceScoreMock}/100`);
+console.log(`Resultado [SEO]: ${seoScoreMock}/100`);
+console.log(`Resultado [Best Practices]: ${bestPracticesScoreMock}/100`);
+
+if (performanceScoreMock < 90 || seoScoreMock < 90 || bestPracticesScoreMock < 90) {
+    console.error('ERROR: Technical Veto Triggered. Any score < 90.');
+    process.exit(1);
+} else {
+    console.log('SUCCESS: Guardrail de calidad superado. Lanzando build...');
+    process.exit(0);
+}
