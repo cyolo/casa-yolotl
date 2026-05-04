@@ -3,18 +3,22 @@
 import { motion } from "framer-motion";
 import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
-import Image from "next/image";
 
 const IsotypeYollotl = () => (
-    <div className="relative w-[120px] h-[100px] mx-auto mb-12">
-        <Image 
-            src="/logo-yollotl-heart.png"
-            alt="Casa Yolotl & Co Logo"
-            fill
-            className="object-contain"
-            priority
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto mb-8">
+        <path
+            d="M30 48C30 48 12 34 12 20C12 10 22 8 30 18"
+            stroke="#C5A059"
+            strokeWidth="1.2"
+            strokeLinecap="round"
         />
-    </div>
+        <path
+            d="M30 48C30 48 48 34 48 20C48 10 38 8 30 18"
+            stroke="#C5A059"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+        />
+    </svg>
 );
 
 export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "bone" }) {
