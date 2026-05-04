@@ -7,6 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
 import MobileMenu from "./navbar/MobileMenu";
 import { SITE_ROUTES } from "@casa-yolotl/shared";
+import { DESIGN_FLAGS } from "@/lib/design-flags";
 
 const Navbar = () => {
     const { t } = useLanguage();
@@ -44,7 +45,13 @@ const Navbar = () => {
                         aria-label="Volver al inicio de Casa Yolotl & Co"
                         className="text-xl md:text-2xl font-serif tracking-[0.15em] uppercase font-semibold text-brand-black group"
                     >
-                        CASA YOLOTL <span className="text-brand-gold group-hover:text-brand-black transition-colors">&</span> CO
+                        CASA YOLOTL{" "}
+                        {DESIGN_FLAGS.preserveGoldAmpersand ? (
+                            <span className="luxury-ampersand text-brand-gold group-hover:text-brand-black transition-colors">&amp;</span>
+                        ) : (
+                            <span className="text-brand-gold group-hover:text-brand-black transition-colors">&amp;</span>
+                        )}{" "}
+                        CO
                     </LocaleLink>
                 </div>
 

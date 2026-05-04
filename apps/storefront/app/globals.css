@@ -8,6 +8,8 @@
   --brand-cream: var(--color-ivory);
   --brand-black: var(--color-obsidian);
   --brand-gold: var(--color-gold-matte);
+  --brand-gold-muted: #a88745;
+  --brand-earth: #9b6b4a;
 
   --background: var(--brand-cream);
   --foreground: var(--brand-black);
@@ -80,6 +82,36 @@
   h6 {
     @apply font-serif font-medium;
     letter-spacing: 0.15em;
+  }
+}
+
+@layer components {
+  .luxury-heading {
+    font-family: var(--font-serif);
+    letter-spacing: 0.12em;
+    line-height: 1.05;
+    font-weight: 500;
+  }
+  .luxury-ampersand {
+    font-family: var(--font-serif);
+    color: var(--brand-gold);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    transform: translateY(-0.02em);
+  }
+  .luxury-kicker {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.45em;
+    font-size: 0.65rem;
+    color: var(--brand-gold);
+  }
+  .luxury-body {
+    font-family: var(--font-sans);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
   }
 }
 
