@@ -31,6 +31,8 @@ export interface Product {
     collection?: string;
     culturalNote?: string;
     traceabilityCode?: string;
+    availabilityStatus?: "available" | "limited" | "last_piece" | "sold_out" | "made_to_order";
+    editionSize?: number;
 }
 
 export const products: Product[] = [
@@ -63,7 +65,7 @@ export const products: Product[] = [
         price: "450.00",
         marketplaceUrl: "https://marketplace.example/huipil-gala",
         imageUrl: "/products/huipil-gala.png",
-        stock: 8,
+        stock: 1,
         seo: {
             title: "Huipil de Gala Istmeño Bordado a Mano",
             description: "Elegancia y tradición en cada hilo. Huipil istmeño auténtico.",
@@ -84,7 +86,7 @@ export const products: Product[] = [
         price: "85.00",
         marketplaceUrl: "https://marketplace.example/barro-negro",
         imageUrl: "/products/barro-negro.png",
-        stock: 15,
+        stock: 3,
         seo: {
             title: "Jarrón de Barro Negro Calado | Decoración Oaxaqueña",
             description: "Arte en barro negro para espacios contemporáneos con alma mexicana.",
@@ -100,7 +102,7 @@ export const products: Product[] = [
         price: "180.00",
         marketplaceUrl: "https://marketplace.example/mezcal-tobala",
         imageUrl: "/products/mezcal-tobala.png",
-        stock: 12,
+        stock: 0,
         seo: {
             title: "Mezcal Tobalá Silvestre | Edición Limitada",
             description: "Sabor terroso y dulce. Una joya para conocedores del mezcal.",
@@ -116,7 +118,8 @@ export const products: Product[] = [
         price: "320.00",
         marketplaceUrl: "https://marketplace.example/tapete-teotitlan",
         imageUrl: "/products/tapete-teotitlan.png",
-        stock: 5,
+        stock: 0,
+        availabilityStatus: "made_to_order",
         seo: {
             title: "Tapete de Lana Mixteco | Tintes Naturales",
             description: "Arte textil bajo tus pies. Tradición de Teotitlán en cada diseño.",

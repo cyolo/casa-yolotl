@@ -6,4 +6,5 @@ export const DESIGN_FLAGS = {
   enableLuxuryProductNarrative: true,
   enableCompactLuxuryCatalog: true,
   enableArtisanTraceability: true,
+  enableLuxuryInventoryStatus: true,
 };

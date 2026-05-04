@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Product, MARKETPLACE_CONFIG, trackMarketplaceExit } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
 import ProductTraceabilityPanel from "./ProductTraceabilityPanel";
+import ProductAvailabilityStatus from "./ProductAvailabilityStatus";
+import { getProductAvailability } from "@/lib/product-availability";
 
 interface LuxuryCompactCatalogProps {
     products: Product[];
@@ -85,6 +87,9 @@ const LuxuryCompactCatalog = ({ products }: LuxuryCompactCatalogProps) => {
                         {filteredProducts.map((product) => {
                             const isSelected = selectedProduct?.id === product.id;
                             const title = t(`Marketplace.items.${product.id}.title`);
+                            const availability = getProductAvailability(product);
+                            const isSoldOut = availability === "sold_out";
+                            const showIndicator = availability !== "available" && !isSoldOut;
                             
                             return (
                                 <button
@@ -94,7 +99,7 @@ const LuxuryCompactCatalog = ({ products }: LuxuryCompactCatalogProps) => {
                                     aria-label={`Select ${title}`}
                                     className={`group/item flex flex-col items-start transition-all duration-500 w-32 md:w-40 lg:w-48 ${
                                         isSelected ? "opacity-100" : "opacity-40 hover:opacity-100"
-                                    }`}
+                                    } ${isSoldOut ? "grayscale opacity-25" : ""}`}
                                 >
                                     {/* Thumbnail with selection indicator */}
                                     <div className={`relative aspect-square w-full mb-4 overflow-hidden border transition-all duration-700 ${
@@ -109,6 +114,9 @@ const LuxuryCompactCatalog = ({ products }: LuxuryCompactCatalogProps) => {
                                         />
                                         {isSelected && (
                                             <div className="absolute inset-0 border-2 border-brand-gold/20 pointer-events-none"></div>
+                                        )}
+                                        {showIndicator && (
+                                            <div className="absolute top-2 right-2 h-1.5 w-1.5 rounded-full bg-brand-gold/70 shadow-[0_0_8px_rgba(212,175,55,0.4)] animate-pulse"></div>
                                         )}
                                     </div>
                                     
@@ -162,10 +170,11 @@ const LuxuryCompactCatalog = ({ products }: LuxuryCompactCatalogProps) => {
 
                     {/* Editorial Information Block */}
                     <div className="lg:col-span-5 flex flex-col justify-center space-y-8 lg:space-y-12 py-8 lg:py-0">
-                        <div className="flex flex-col space-y-4">
+                        <div className="flex flex-col space-y-6">
                             <span className="luxury-kicker text-brand-gold">
                                 {t("Marketplace.editorial.badge")} — {t(`Marketplace.categories.${selectedProduct.category}`).toUpperCase()}
                             </span>
+                            <ProductAvailabilityStatus product={selectedProduct} />
                             <div className="h-px w-16 bg-brand-gold/30"></div>
                         </div>
 
@@ -191,7 +200,9 @@ const LuxuryCompactCatalog = ({ products }: LuxuryCompactCatalogProps) => {
                                 onClick={() => handleTrackClick(selectedProduct)}
                                 className="text-[10px] uppercase tracking-[0.3em] font-sans font-bold border-b border-brand-gold/40 pb-2 text-brand-cream/80 hover:text-brand-gold hover:border-brand-gold transition-all duration-500 group/cta"
                             >
-                                {t("Marketplace.editorial.cta")}
+                                {getProductAvailability(selectedProduct) === "sold_out" 
+                                    ? t("Marketplace.availability.requestInfo")
+                                    : t("Marketplace.editorial.cta")}
                             </a>
                         </div>
                     </div>

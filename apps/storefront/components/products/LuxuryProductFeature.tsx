@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Product, MARKETPLACE_CONFIG, trackMarketplaceExit } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
 import ProductTraceabilityPanel from "./ProductTraceabilityPanel";
+import ProductAvailabilityStatus from "./ProductAvailabilityStatus";
+import { getProductAvailability } from "@/lib/product-availability";
 
 interface LuxuryProductFeatureProps {
     product: Product;
@@ -55,6 +57,7 @@ const LuxuryProductFeature = ({ product, index }: LuxuryProductFeatureProps) => 
                     <span className="luxury-kicker text-brand-gold">
                         {t("Marketplace.editorial.badge")} — {categoryName.toUpperCase()}
                     </span>
+                    <ProductAvailabilityStatus product={product} />
                     <div className="h-px w-16 bg-brand-gold/30"></div>
                 </div>
 
@@ -83,7 +86,9 @@ const LuxuryProductFeature = ({ product, index }: LuxuryProductFeatureProps) => 
                         onClick={handleClick}
                         className="text-[10px] uppercase tracking-[0.3em] font-sans font-bold border-b border-brand-gold/40 pb-2 text-brand-cream/80 hover:text-brand-gold hover:border-brand-gold transition-all duration-500"
                     >
-                        {t("Marketplace.editorial.cta")}
+                        {getProductAvailability(product) === "sold_out" 
+                            ? t("Marketplace.availability.requestInfo")
+                            : t("Marketplace.editorial.cta")}
                     </a>
                 </div>
             </div>

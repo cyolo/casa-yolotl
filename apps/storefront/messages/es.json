@@ -85,6 +85,14 @@
                 "workshop": "Taller",
                 "collection": "Colección",
                 "code": "Código de trazabilidad"
+            },
+            "availability": {
+                "available": "Disponible",
+                "limited": "Disponibilidad limitada",
+                "last_piece": "Una pieza disponible",
+                "sold_out": "Agotado",
+                "made_to_order": "Disponible bajo solicitud",
+                "requestInfo": "Solicitar información"
             }
         },
         "crisis_cta": "Reservar con Concierge",
