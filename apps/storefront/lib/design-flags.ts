@@ -3,4 +3,5 @@ export const DESIGN_FLAGS = {
   preserveOriginalTypography: true,
   preserveGoldAmpersand: true,
   enableEditorialStorytellingLayout: true,
+  enableLuxuryProductNarrative: true,
 };

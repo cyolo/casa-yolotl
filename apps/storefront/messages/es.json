@@ -68,6 +68,12 @@
     "Marketplace": {
         "title": "Nuestra Curaduría",
         "subtitle": "Piezas con Alma y Propósito",
+        "editorial": {
+            "title": "Objetos Curados",
+            "subtitle": "Piezas hechas a mano, seleccionadas por su origen, material y belleza silenciosa.",
+            "cta": "Descubrir la pieza",
+            "badge": "Colección & Origen"
+        },
         "crisis_cta": "Reservar con Concierge",
         "categories": {
             "mezcales": "Mezcales",

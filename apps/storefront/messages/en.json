@@ -68,6 +68,12 @@
     "Marketplace": {
         "title": "Our Curation",
         "subtitle": "Pieces with Soul and Purpose",
+        "editorial": {
+            "title": "Curated Objects",
+            "subtitle": "Handmade pieces selected for their origin, material and quiet beauty.",
+            "cta": "Explore the piece",
+            "badge": "Collection & Origin"
+        },
         "crisis_cta": "Reserve with Concierge",
         "categories": {
             "mezcales": "Mezcales",
