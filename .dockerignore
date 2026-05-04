@@ -1,0 +1,16 @@
+.git
+node_modules
+**/node_modules
+.next
+**/.next
+coverage
+**/coverage
+dist
+**/dist
+.env
+.env.*
+*.log
+npm-debug.log*
+.DS_Store
+.vscode
+.idea

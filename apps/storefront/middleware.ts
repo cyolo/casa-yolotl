@@ -30,7 +30,7 @@ export async function middleware(request: NextRequest) {
             SecurityValidator.logSecurityEvent("STOREFRONT_UNAUTHORIZED_ADMIN_ACCESS", {
                 email,
                 path: pathname,
-                ip: (request as any).ip || request.headers.get("x-forwarded-for") || "unknown"
+                ip: (request as unknown as { ip?: string }).ip || request.headers.get("x-forwarded-for") || "unknown"
             });
 
             const redirectUrl = request.nextUrl.clone();

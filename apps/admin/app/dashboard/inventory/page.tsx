@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import AdminNavbar from "@/components/AdminNavbar";
 import { ProductService, Product } from "@casa-yolotl/shared";
@@ -62,7 +62,7 @@ export default function InventoryPage() {
                 setMessage(null);
                 fetchProducts(); // Refresh data
             }, 1000);
-        } catch (error) {
+        } catch {
             setMessage({ text: "Error al actualizar. Intente de nuevo.", type: 'error' });
         } finally {
             setIsUpdating(false);
@@ -188,7 +188,7 @@ export default function InventoryPage() {
                             <TrendingUp className="w-3 h-3" /> Nota del CEO IA
                         </h4>
                         <p className="text-xs text-stone-500 italic leading-relaxed">
-                            "Los niveles de stock en Mezcales están un 15% por debajo del umbral óptimo para la temporada de Q2. Sugiero revisión de precios para mantener el margen de ROI proyectado (22.4%)."
+                            &quot;Los niveles de stock en Mezcales están un 15% por debajo del umbral óptimo para la temporada de Q2. Sugiero revisión de precios para mantener el margen de ROI proyectado (22.4%).&quot;
                         </p>
                     </div>
                 </div>

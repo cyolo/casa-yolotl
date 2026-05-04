@@ -4,29 +4,29 @@ import { motion } from "framer-motion";
 import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
 import { useLanguage } from "@/context/LanguageContext";
 
+const IsotypeYollotl = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto mb-8">
+        <path
+            d="M30 48C30 48 12 34 12 20C12 10 22 8 30 18"
+            stroke="#C5A059"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+        />
+        <path
+            d="M30 48C30 48 48 34 48 20C48 10 38 8 30 18"
+            stroke="#C5A059"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+        />
+    </svg>
+);
+
 export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "bone" }) {
     const { t, locale } = useLanguage();
     const isBone = theme === "bone";
     const bgColor = isBone ? "bg-[#F5F5F1]" : "bg-[#1A1A1A]";
     const textColor = isBone ? "text-brand-black" : "text-white";
     const subTextColor = isBone ? "text-stone-600" : "text-stone-400";
-
-    const IsotypeYollotl = () => (
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto mb-8">
-            <path
-                d="M30 48C30 48 12 34 12 20C12 10 22 8 30 18"
-                stroke="#C5A059"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-            />
-            <path
-                d="M30 48C30 48 48 34 48 20C48 10 38 8 30 18"
-                stroke="#C5A059"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-            />
-        </svg>
-    );
 
     return (
         <article className={`relative ${bgColor} min-h-screen py-32 px-8 overflow-hidden`} id="esencia">
@@ -78,7 +78,7 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
                         {(t("Heritage.philosophy") || "philosophy").split("'").map((part, i) => (
                             i % 2 !== 0 ? (
                                 <span key={i} className="group relative text-[#C5A059] font-bold italic cursor-help mx-1">
-                                    '{part}'
+                                    &apos;{part}&apos;
                                     <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 px-4 py-3 bg-stone-900 border border-stone-800 text-[9px] uppercase tracking-widest text-[#C5A059] w-48 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-2xl z-50 normal-case font-normal not-italic">
                                         {nahuatlGlossary.find(g => g.term === part)?.meaning || part}: {nahuatlGlossary.find(g => g.term === part)?.context || ""}
                                     </span>

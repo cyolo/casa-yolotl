@@ -31,19 +31,19 @@ export const authOptions: NextAuthOptions = {
         async signIn({ user }) {
             const isAdmin = SecurityValidator.isAdmin(user.email);
 
-            if (!isAdmin) {
-                SecurityValidator.logSecurityEvent("AUTH_LOGIN_REJECTED_STRICT", { email: user.email });
-                return false;
+            if (isAdmin) {
+                SecurityValidator.logSecurityEvent("AUTH_LOGIN_SUCCESS", { email: user.email });
+                return true;
             }
 
-            SecurityValidator.logSecurityEvent("AUTH_LOGIN_SUCCESS", { email: user.email });
-            return true;
+            SecurityValidator.logSecurityEvent("AUTH_LOGIN_DENIED", { email: user.email });
+            return false;
         },
         async session({ session, token }) {
             if (session?.user) {
                 // Inject the specific role from shared logic
                 const role = SecurityValidator.getUserRole(session.user.email);
-                (session.user as any).role = role;
+                (session.user as unknown as { role?: string }).role = role;
 
                 SecurityValidator.logSecurityEvent("SESSION_CREATED", {
                     email: session.user.email,
@@ -54,7 +54,7 @@ export const authOptions: NextAuthOptions = {
         },
         async jwt({ token, user }) {
             if (user) {
-                token.role = (user as any).role;
+                token.role = (user as unknown as { role?: string }).role;
             }
             return token;
         }
@@ -63,7 +63,6 @@ export const authOptions: NextAuthOptions = {
         signIn: "/auth/signin",
         error: "/auth/signin",
     },
-    useSecureCookies: process.env.APP_ENV !== "local",
 };
 
 const handler = NextAuth(authOptions);

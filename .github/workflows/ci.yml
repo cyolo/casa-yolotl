@@ -1,0 +1,46 @@
+name: Casa Yolotl CI
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+  pull_request:
+    branches:
+      - dev
+      - main
+
+jobs:
+  build-and-test:
+    name: Validate monorepo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint workspaces
+        run: npm run lint --workspaces --if-present
+
+      - name: Test workspaces
+        run: npm run test --workspaces --if-present
+
+      - name: Build workspaces
+        run: npm run build --workspaces --if-present
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+
+      - name: Docker build storefront
+        run: docker build --build-arg APP_NAME=storefront -t casa-yolotl-storefront-ci .
+
+      - name: Docker build admin
+        run: docker build --build-arg APP_NAME=admin -t casa-yolotl-admin-ci .

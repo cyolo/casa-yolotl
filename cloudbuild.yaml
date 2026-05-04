@@ -2,7 +2,18 @@
 # Automates Containerization and Cloud Run Deployment
 
 steps:
-  # 1. Install & Build Storefront
+  # 0. Instalación de dependencias (Setup)
+  - name: 'node:20'
+    entrypoint: 'npm'
+    args: ['install']
+
+  # 1. Validación Lógica (Unit Tests en packages/shared)
+  - name: 'node:20'
+    entrypoint: 'npm'
+    dir: 'packages/shared'
+    args: ['run', 'test']
+
+  # 2. Install & Build Storefront
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'build'
@@ -10,7 +21,7 @@ steps:
       - '-t', 'gcr.io/${PROJECT_ID}/casayolotl-storefront:${SHORT_SHA}'
       - '.'
   
-  # 2. Install & Build Admin
+  # 3. Install & Build Admin
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'build'
@@ -18,14 +29,19 @@ steps:
       - '-t', 'gcr.io/${PROJECT_ID}/casayolotl-admin:${SHORT_SHA}'
       - '.'
 
-  # 3. Push Images
+  # 4. Validación de Performance (Lighthouse)
+  - name: 'node:20'
+    entrypoint: 'node'
+    args: ['scripts/lh-check.js']
+
+  # 5. Push Images
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/${PROJECT_ID}/casayolotl-storefront:${SHORT_SHA}']
   
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/${PROJECT_ID}/casayolotl-admin:${SHORT_SHA}']
 
-  # 4. Deploy Storefront to Cloud Run
+  # 6. Deploy Storefront to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:
@@ -38,7 +54,7 @@ steps:
       - '--allow-unauthenticated'
       - '--set-secrets', 'NEXTAUTH_SECRET=NEXTAUTH_SECRET:latest,SUPABASE_SERVICE_ROLE_KEY=SUPABASE_SERVICE_ROLE_KEY:latest'
 
-  # 5. Deploy Admin to Cloud Run
+  # 7. Deploy Admin to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:

@@ -19,7 +19,7 @@ export default withAuth(
         const { pathname } = req.nextUrl;
         const token = req.nextauth.token;
         const email = token?.email;
-        const role = (token as any)?.role || "USER";
+        const role = (token as unknown as { role?: string })?.role || "USER";
         const authorizedEmail = process.env.AUTHORIZED_ADMIN_EMAIL;
 
         // Security Audit Log: Capture every access attempt to sensitive zones
@@ -43,6 +43,7 @@ export default withAuth(
             return NextResponse.redirect(new URL("/auth/signin?error=AccessDenied", req.url));
         }
 
+        // Specific Roles Logic (CEO required for certain sensitive sub-paths)
         if (pathname.startsWith("/dashboard/finances") && role !== "CEO") {
             SecurityValidator.logSecurityEvent("SENSITIVE_DATA_ACCESS_DENIED", { email, role, path: pathname });
             return NextResponse.redirect(new URL("/dashboard", req.url));

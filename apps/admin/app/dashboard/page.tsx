@@ -155,7 +155,7 @@ function PerformanceModule() {
                     </div>
                     <div className="flex-1 space-y-6">
                         <p className="text-xs text-stone-400 leading-relaxed uppercase tracking-wider">
-                            "Guardrail de rendimiento activo. El umbral de aprobación (90) se ha superado con éxito en el último build de producción."
+                            &quot;Guardrail de rendimiento activo. El umbral de aprobación (90) se ha superado con éxito en el último build de producción.&quot;
                         </p>
                         <div className="bg-emerald-500/10 border border-emerald-500/20 p-4 inline-flex items-center gap-3">
                             <CheckCircle2 className="w-4 h-4 text-emerald-500" />
@@ -227,7 +227,7 @@ function MetricCard({ title, value, status }: { title: string, value: string, st
     );
 }
 
-function DeploymentItem({ version, status, date, author, error }: any) {
+function DeploymentItem({ version, status, date, author, error }: { version: string, status: string, date: string, author: string, error?: string }) {
     return (
         <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 text-xs">
             <div className="flex items-center gap-6">
