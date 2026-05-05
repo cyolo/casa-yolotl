@@ -1,7 +1,7 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
-import { SecurityValidator } from "@casa-yolotl/shared";
+import { SecurityValidator } from "@casa-yolotl/shared/src/auth";
 
 // Security Guard: Validate critical environment variables
 const githubId = process.env.GITHUB_ID;
@@ -41,20 +41,21 @@ export const authOptions: NextAuthOptions = {
         },
         async session({ session, token }) {
             if (session?.user) {
-                // Inject the specific role from shared logic
-                const role = SecurityValidator.getUserRole(session.user.email);
-                (session.user as unknown as { role?: string }).role = role;
+                // Propagate role from token to session
+                session.user.role = token.role || "USER";
 
                 SecurityValidator.logSecurityEvent("SESSION_CREATED", {
                     email: session.user.email,
-                    role
+                    role: session.user.role
                 });
             }
             return session;
         },
         async jwt({ token, user }) {
+            // Initial sign in
             if (user) {
-                token.role = (user as unknown as { role?: string }).role;
+                const role = SecurityValidator.getUserRole(user.email);
+                token.role = role;
             }
             return token;
         }

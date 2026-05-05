@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
 import MobileMenu from "./navbar/MobileMenu";
-import { SITE_ROUTES } from "@casa-yolotl/shared";
+import { SITE_ROUTES } from "@casa-yolotl/shared/src/client";
 import { DESIGN_FLAGS } from "@/lib/design-flags";
 
 const Navbar = () => {

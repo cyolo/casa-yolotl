@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { allLanguages, Language } from "@/data/languages";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface TranslationStrings {
     [key: string]: unknown;
@@ -19,7 +19,6 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const router = useRouter();
     const pathname = usePathname();
 
     const [currentLanguage, setCurrentLanguageState] = useState<Language>(
@@ -39,9 +38,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
                 setCurrentLanguageState(foundLang);
             }
         }
-    }, [pathname]);
+    }, [pathname, currentLanguage.code]);
 
-    const loadDictionary = async (code: string) => {
+    const loadDictionary = React.useCallback(async (code: string) => {
         try {
             // Load Base (English) for fallbacks using dynamic import
             if (Object.keys(fallbackTranslations).length === 0) {
@@ -53,7 +52,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             try {
                 const response = await import(`../messages/${code}.json`);
                 setTranslations(response.default || response);
-            } catch (err) {
+            } catch {
                 // If specific language JSON doesn't exist, fallback to Empty (so fallback logic covers it)
                 setTranslations({});
             }
@@ -61,11 +60,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             console.error("Failed to load dictionary:", error);
             setTranslations({});
         }
-    };
+    }, [fallbackTranslations]);
 
     useEffect(() => {
         loadDictionary(currentLanguage.code).then(() => setInitialized(true));
-    }, [currentLanguage]);
+    }, [currentLanguage.code, loadDictionary]);
 
     const setLanguage = (code: string) => {
         const lang = allLanguages.find(l => l.code === code);

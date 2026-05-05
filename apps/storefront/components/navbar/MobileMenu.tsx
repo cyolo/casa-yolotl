@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import LocaleLink from "../LocaleLink";
 import LanguageSelector from "../LanguageSelector";
-import { NavLink } from "@casa-yolotl/shared";
+import { NavLink } from "@casa-yolotl/shared/src/client";
 
 interface MobileMenuProps {
     isOpen: boolean;
@@ -9,7 +9,7 @@ interface MobileMenuProps {
     onClose: () => void;
 }
 
-const MobileMenu = ({ isOpen, navLinks, onClose }: MobileMenuProps) => {
+const MobileMenu = ({ navLinks, onClose }: MobileMenuProps) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: -20 }}

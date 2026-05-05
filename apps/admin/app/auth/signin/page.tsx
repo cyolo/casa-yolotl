@@ -117,10 +117,13 @@ export default function SignInPage() {
             {/* Left Panel (Visual/Brand) */}
             <div className="hidden lg:block relative flex-1 bg-slate-950 overflow-hidden group/bg" style={{ minWidth: '0' }}>
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <Image
                         src="/auth/signin-bg.png"
                         alt="Ancient Mexican heritage craftsmanship"
-                        className="w-full h-full object-cover transition-transform duration-[20000ms] group-hover/bg:scale-125 opacity-70 scale-110 grayscale-[0.2] contrast-[1.1]"
+                        fill
+                        priority
+                        className="object-cover transition-transform duration-[20000ms] group-hover/bg:scale-125 opacity-70 scale-110 grayscale-[0.2] contrast-[1.1]"
+                        sizes="(max-width: 1024px) 0vw, 50vw"
                     />
                 </div>
 

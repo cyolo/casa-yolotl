@@ -4,4 +4,7 @@ export const DESIGN_FLAGS = {
   preserveGoldAmpersand: true,
   enableEditorialStorytellingLayout: true,
   enableLuxuryProductNarrative: true,
+  enableCompactLuxuryCatalog: true,
+  enableArtisanTraceability: true,
+  enableLuxuryInventoryStatus: true,
 };

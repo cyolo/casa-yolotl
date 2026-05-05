@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
+import { nahuatlGlossary } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 
 const IsotypeYollotl = () => (
@@ -26,7 +26,6 @@ export default function HeritageSection({ theme = "bone" }: { theme?: "dark" | "
     const isBone = theme === "bone";
     const bgColor = isBone ? "bg-brand-cream" : "bg-brand-black";
     const textColor = isBone ? "text-brand-black" : "text-brand-cream";
-    const subTextColor = isBone ? "text-brand-black/60" : "text-brand-cream/60";
 
     return (
         <article className={`relative ${bgColor} min-h-screen py-32 px-8 overflow-hidden`} id="esencia">

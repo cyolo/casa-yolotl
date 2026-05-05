@@ -1,3 +1,4 @@
+import "server-only";
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { IProductRepository, ProductFilters, PaginatedResult } from "./IProductRepository";
 import { Product } from "../data/products";

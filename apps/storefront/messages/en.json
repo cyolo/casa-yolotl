@@ -72,7 +72,28 @@
             "title": "Curated Objects",
             "subtitle": "Handmade pieces selected for their origin, material and quiet beauty.",
             "cta": "Explore the piece",
-            "badge": "Collection & Origin"
+            "badge": "Collection & Origin",
+            "empty": "Soon, new pieces from this collection.",
+            "categoryNavAria": "Filter products by category",
+            "traceability": {
+                "title": "Traceability",
+                "origin": "Origin",
+                "region": "Region",
+                "material": "Material",
+                "technique": "Technique",
+                "artisan": "Artisan",
+                "workshop": "Workshop",
+                "collection": "Collection",
+                "code": "Traceability Code"
+            },
+            "availability": {
+                "available": "Available",
+                "limited": "Limited availability",
+                "last_piece": "One piece available",
+                "sold_out": "Sold out",
+                "made_to_order": "Available by request",
+                "requestInfo": "Request information"
+            }
         },
         "crisis_cta": "Reserve with Concierge",
         "categories": {

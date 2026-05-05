@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Product, productService } from "@casa-yolotl/shared";
+import { Product } from "@casa-yolotl/shared/src/client";
 import ProductCard from "../ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
 const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion", "ceramica-montoya"];
 
 const LegacyProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) => {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("todos");
     const [products, setProducts] = useState<Product[]>(initialProducts);
     const [isLoading, setIsLoading] = useState(false);
@@ -17,22 +17,30 @@ const LegacyProductGrid = ({ initialProducts = [] }: { initialProducts?: Product
         const fetchProducts = async () => {
             setIsLoading(true);
             try {
-                let result;
-                if (activeCategory === "todos") {
-                    result = await productService.getProducts(1, 50);
-                } else {
-                    result = await productService.getProductsByCategory(activeCategory, 1, 50);
+                const categoryParam = activeCategory !== "todos" ? `&category=${activeCategory}` : "";
+                const response = await fetch(`/api/products?page=1&limit=50&locale=${locale}${categoryParam}`, {
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Products API failed with status ${response.status}`);
                 }
-                setProducts(result.items);
+
+                const result = await response.json();
+                setProducts(result.items ?? initialProducts);
             } catch (error) {
                 console.error("Failed to fetch products:", error);
+                setProducts(initialProducts);
             } finally {
                 setIsLoading(false);
             }
         };
 
         fetchProducts();
-    }, [activeCategory]);
+    }, [activeCategory, locale, initialProducts]);
 
     const handleTrackClick = (productId: string) => {
         console.log(`[TRACKING]: User clicked on product ${productId} to view in marketplace.`);

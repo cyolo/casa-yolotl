@@ -4,9 +4,8 @@ import { useState } from "react";
 import AdminNavbar from "@/components/AdminNavbar";
 import ROIChart from "@/components/ROIChart";
 import GeographyChart from "@/components/GeographyChart";
-import { BRAND_COLORS } from "@casa-yolotl/shared";
 import { Activity, ShieldCheck, Globe, Zap, AlertTriangle, CheckCircle2, BarChart3, PenLine, Save } from "lucide-react";
-import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
+import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared/src/client";
 
 // ... [rest of imports continue] ...
 
@@ -77,7 +76,10 @@ function StorytellingModule() {
     );
 }
 
+import { useSession } from "next-auth/react";
+
 export default function AdminDashboard() {
+    const { data: session } = useSession();
     const [activeTab, setActiveTab] = useState("performance");
 
     return (
@@ -90,7 +92,7 @@ export default function AdminDashboard() {
                     <div>
                         <h1 className="text-4xl font-serif text-white mb-4">Command Center</h1>
                         <p className="text-[10px] text-stone-500 uppercase tracking-[0.4em] font-sans">
-                            Casa Yolotl & Co. | <span className="text-brand-gold">Nivel de Seguridad CIARO</span>
+                            Casa Yolotl & Co. | <span className="text-brand-gold">Nivel de Seguridad CIARO</span> | <span className="text-white">Role: {session?.user?.role}</span>
                         </p>
                     </div>
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import StoryCard from "./StoryCard";
 import StoryModal from "./StoryModal";
-import { stories, Story, trackStoryView } from "@casa-yolotl/shared";
+import { stories, Story, trackStoryView } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 import { DESIGN_FLAGS } from "@/lib/design-flags";
 

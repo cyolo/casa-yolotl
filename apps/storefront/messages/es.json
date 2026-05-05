@@ -72,7 +72,28 @@
             "title": "Objetos Curados",
             "subtitle": "Piezas hechas a mano, seleccionadas por su origen, material y belleza silenciosa.",
             "cta": "Descubrir la pieza",
-            "badge": "Colección & Origen"
+            "badge": "Colección & Origen",
+            "empty": "Próximamente nuevas piezas de esta colección.",
+            "categoryNavAria": "Filtrar productos por categoría",
+            "traceability": {
+                "title": "Trazabilidad",
+                "origin": "Origen",
+                "region": "Región",
+                "material": "Material",
+                "technique": "Técnica",
+                "artisan": "Artesano",
+                "workshop": "Taller",
+                "collection": "Colección",
+                "code": "Código de trazabilidad"
+            },
+            "availability": {
+                "available": "Disponible",
+                "limited": "Disponibilidad limitada",
+                "last_piece": "Una pieza disponible",
+                "sold_out": "Agotado",
+                "made_to_order": "Disponible bajo solicitud",
+                "requestInfo": "Solicitar información"
+            }
         },
         "crisis_cta": "Reservar con Concierge",
         "categories": {

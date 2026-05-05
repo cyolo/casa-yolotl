@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import AdminNavbar from "@/components/AdminNavbar";
-import { ProductService, Product } from "@casa-yolotl/shared";
+import { Product } from "@casa-yolotl/shared/src/client";
 import { Package, DollarSign, TrendingUp, Edit3, ArrowLeft, Save, X, Loader2, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function InventoryPage() {
     const { data: session, status } = useSession();
@@ -21,21 +22,21 @@ export default function InventoryPage() {
             redirect("/auth/signin");
         }
 
-        // Strict Security: Only CEO can manage inventory
-        if (status === "authenticated" && session?.user?.email !== "cesar.vargas.alanis@gmail.com") {
-            redirect("/403");
-        }
-
         if (status === "authenticated") {
             fetchProducts();
         }
-    }, [status, session]);
+    }, [status]);
 
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            const { items } = await ProductService.getInstance().getProducts(1, 50, 'es');
-            setProducts(items);
+            const response = await fetch('/api/admin/products?page=1&limit=50&locale=es');
+            if (!response.ok) {
+                if (response.status === 403) redirect("/403");
+                throw new Error("Failed to fetch products");
+            }
+            const data = await response.json();
+            setProducts(data.items);
         } catch (error) {
             console.error("Error fetching products:", error);
         } finally {
@@ -49,11 +50,20 @@ export default function InventoryPage() {
         setMessage(null);
 
         try {
-            const service = ProductService.getInstance();
-            if (editingProduct.type === 'price') {
-                await service.updatePrice(editingProduct.id, parseFloat(editingProduct.value));
-            } else {
-                await service.updateStock(editingProduct.id, parseInt(editingProduct.value));
+            const endpoint = `/api/admin/products/${editingProduct.id}/${editingProduct.type}`;
+            const body = editingProduct.type === 'price'
+                ? { price: parseFloat(editingProduct.value) }
+                : { stock: parseInt(editingProduct.value) };
+
+            const response = await fetch(endpoint, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || "Update failed");
             }
 
             setMessage({ text: "Cambio aplicado exitosamente.", type: 'success' });
@@ -62,8 +72,9 @@ export default function InventoryPage() {
                 setMessage(null);
                 fetchProducts(); // Refresh data
             }, 1000);
-        } catch {
-            setMessage({ text: "Error al actualizar. Intente de nuevo.", type: 'error' });
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : "Error al actualizar. Intente de nuevo.";
+            setMessage({ text: errorMessage, type: 'error' });
         } finally {
             setIsUpdating(false);
         }
@@ -130,7 +141,13 @@ export default function InventoryPage() {
                                     <td className="p-6">
                                         <div className="flex items-center gap-4">
                                             <div className="w-12 h-12 bg-stone-950 border border-stone-800 overflow-hidden relative">
-                                                <img src={product.imageUrl} alt={product.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                                <Image
+                                                    src={product.imageUrl}
+                                                    alt={product.name}
+                                                    fill
+                                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                                    sizes="48px"
+                                                />
                                             </div>
                                             <div>
                                                 <span className="text-sm font-serif text-white block mb-1">{product.name}</span>
@@ -158,22 +175,27 @@ export default function InventoryPage() {
                                         </div>
                                     </td>
                                     <td className="p-6 text-right">
-                                        <div className="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <button
-                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
-                                                onClick={() => setEditingProduct({ id: product.id, type: 'price', value: product.price })}
-                                                title="Editar Precio"
-                                            >
-                                                <Edit3 className="w-3 h-3" />
-                                            </button>
-                                            <button
-                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
-                                                onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: product.stock.toString() })}
-                                                title="Ajustar Stock"
-                                            >
-                                                <Package className="w-3 h-3" />
-                                            </button>
-                                        </div>
+                                        {session?.user?.role === "CEO" && (
+                                            <div className="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <button
+                                                    className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
+                                                    onClick={() => setEditingProduct({ id: product.id, type: 'price', value: product.price })}
+                                                    title="Editar Precio"
+                                                >
+                                                    <Edit3 className="w-3 h-3" />
+                                                </button>
+                                                <button
+                                                    className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
+                                                    onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: product.stock.toString() })}
+                                                    title="Ajustar Stock"
+                                                >
+                                                    <Package className="w-3 h-3" />
+                                                </button>
+                                            </div>
+                                        )}
+                                        {session?.user?.role !== "CEO" && (
+                                            <span className="text-[10px] uppercase tracking-widest text-stone-600 italic">Lectura</span>
+                                        )}
                                     </td>
                                 </tr>
                             ))}
@@ -209,7 +231,7 @@ export default function InventoryPage() {
                             {editingProduct.type === 'price' ? 'Ajustar Precio' : 'Actualizar Inventario'}
                         </h3>
                         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-8">
-                            Admin Identity: {session?.user?.email}
+                            Admin Identity: {session?.user?.email} | Role: {session?.user?.role}
                         </p>
 
                         <div className="space-y-6">

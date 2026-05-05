@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-import { Story, products, Product } from "@casa-yolotl/shared";
+import { Story, products } from "@casa-yolotl/shared/src/client";
 import ProductCard from "./ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 import ReactMarkdown from "react-markdown";
@@ -70,10 +70,10 @@ const StoryModal = ({ story, isOpen, onClose }: StoryModalProps) => {
                         <div className="text-brand-black/80 font-sans leading-loose tracking-wide space-y-6">
                             <ReactMarkdown
                                 components={{
-                                    h1: ({ node: _node, ...props }) => <h1 className="text-3xl font-serif text-brand-black mt-12 mb-6" {...props} />,
-                                    h2: ({ node: _node, ...props }) => <h2 className="text-2xl font-serif text-brand-black mt-12 mb-6" {...props} />,
-                                    p: ({ node: _node, ...props }) => <p className="mb-6 font-sans leading-loose tracking-wide" {...props} />,
-                                    strong: ({ node: _node, ...props }) => <strong className="font-bold text-brand-black" {...props} />,
+                                    h1: ({ ...props }) => <h1 className="text-3xl font-serif text-brand-black mt-12 mb-6" {...props} />,
+                                    h2: ({ ...props }) => <h2 className="text-2xl font-serif text-brand-black mt-12 mb-6" {...props} />,
+                                    p: ({ ...props }) => <p className="mb-6 font-sans leading-loose tracking-wide" {...props} />,
+                                    strong: ({ ...props }) => <strong className="font-bold text-brand-black" {...props} />,
                                 }}
                             >
                                 {content}

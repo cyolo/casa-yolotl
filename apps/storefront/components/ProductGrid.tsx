@@ -1,18 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Product, productService } from "@casa-yolotl/shared";
-import ProductCard from "./ProductCard";
+import { Product } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 
-const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion", "ceramica-montoya"];
 
 import { DESIGN_FLAGS } from "@/lib/design-flags";
 import LegacyProductGrid from "./products/LegacyProductGrid";
 import LuxuryProductFeature from "./products/LuxuryProductFeature";
+import LuxuryCompactCatalog from "./products/LuxuryCompactCatalog";
 
 const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) => {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     const [products, setProducts] = useState<Product[]>(initialProducts);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -20,12 +19,22 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
         const fetchProducts = async () => {
             setIsLoading(true);
             try {
-                // For the editorial layout, we fetch all products or a curated set
-                // In this phase, we fetch all to show the narrative composition
-                const result = await productService.getProducts(1, 50);
-                setProducts(result.items);
+                const response = await fetch(`/api/products?page=1&limit=50&locale=${locale}`, {
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Products API failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                setProducts(result.items ?? initialProducts);
             } catch (error) {
                 console.error("Failed to fetch products:", error);
+                setProducts(initialProducts);
             } finally {
                 setIsLoading(false);
             }
@@ -34,7 +43,7 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
         if (DESIGN_FLAGS.enableLuxuryProductNarrative) {
             fetchProducts();
         }
-    }, []);
+    }, [locale, initialProducts]);
 
     if (!DESIGN_FLAGS.enableLuxuryProductNarrative) {
         return <LegacyProductGrid initialProducts={initialProducts} />;
@@ -44,7 +53,7 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
         <section className="py-32 lg:py-48 bg-brand-black text-brand-cream scroll-mt-24" id="curaduria">
             <div className="max-w-7xl mx-auto px-8">
                 {/* Editorial Header */}
-                <header className="mb-32 lg:mb-48 text-center md:text-left">
+                <header className="mb-24 lg:mb-32 text-center md:text-left">
                     <span className="luxury-kicker block mb-6">{t("Marketplace.editorial.badge")}</span>
                     <h2 className="luxury-heading text-4xl md:text-6xl lg:text-7xl mb-10 leading-tight">
                         {t("Marketplace.editorial.title")}
@@ -55,11 +64,13 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
                     </p>
                 </header>
 
-                {/* Editorial Narrative Flow */}
+                {/* Editorial Narrative Flow / Compact Strip */}
                 {isLoading ? (
                     <div className="flex justify-center py-40">
                         <div className="w-10 h-10 border-2 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
                     </div>
+                ) : DESIGN_FLAGS.enableCompactLuxuryCatalog ? (
+                    <LuxuryCompactCatalog products={products} />
                 ) : (
                     <div className="flex flex-col gap-24 lg:gap-40">
                         {products.map((product, index) => (
