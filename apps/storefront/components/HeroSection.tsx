@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import HeroBackground from "./hero/HeroBackground";
 import HeroActions from "./hero/HeroActions";
-import { SITE_ROUTES } from "@casa-yolotl/shared";
+import { SITE_ROUTES } from "@casa-yolotl/shared/src/client";
 
 const HeroSection = () => {
     const { t } = useLanguage();

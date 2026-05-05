@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Product, MARKETPLACE_CONFIG, trackMarketplaceExit } from "@casa-yolotl/shared";
+import { Product, MARKETPLACE_CONFIG, trackMarketplaceExit } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 import ProductTraceabilityPanel from "./ProductTraceabilityPanel";
 import ProductAvailabilityStatus from "./ProductAvailabilityStatus";

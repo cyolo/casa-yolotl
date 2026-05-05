@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Product, productService } from "@casa-yolotl/shared";
+import { Product } from "@casa-yolotl/shared/src/client";
 import ProductCard from "./ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -13,7 +13,7 @@ import LuxuryProductFeature from "./products/LuxuryProductFeature";
 import LuxuryCompactCatalog from "./products/LuxuryCompactCatalog";
 
 const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) => {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     const [products, setProducts] = useState<Product[]>(initialProducts);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -21,12 +21,22 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
         const fetchProducts = async () => {
             setIsLoading(true);
             try {
-                // For the editorial layout, we fetch all products or a curated set
-                // In this phase, we fetch all to show the narrative composition
-                const result = await productService.getProducts(1, 50);
-                setProducts(result.items);
+                const response = await fetch(`/api/products?page=1&limit=50&locale=${locale}`, {
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Products API failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                setProducts(result.items ?? initialProducts);
             } catch (error) {
                 console.error("Failed to fetch products:", error);
+                setProducts(initialProducts);
             } finally {
                 setIsLoading(false);
             }
@@ -35,7 +45,7 @@ const ProductGrid = ({ initialProducts = [] }: { initialProducts?: Product[] }) 
         if (DESIGN_FLAGS.enableLuxuryProductNarrative) {
             fetchProducts();
         }
-    }, []);
+    }, [locale, initialProducts]);
 
     if (!DESIGN_FLAGS.enableLuxuryProductNarrative) {
         return <LegacyProductGrid initialProducts={initialProducts} />;

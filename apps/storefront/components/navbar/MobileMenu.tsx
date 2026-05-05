@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import LocaleLink from "../LocaleLink";
 import LanguageSelector from "../LanguageSelector";
-import { NavLink } from "@casa-yolotl/shared";
+import { NavLink } from "@casa-yolotl/shared/src/client";
 
 interface MobileMenuProps {
     isOpen: boolean;

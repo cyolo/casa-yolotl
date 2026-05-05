@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
+import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 
 const IsotypeYollotl = () => (

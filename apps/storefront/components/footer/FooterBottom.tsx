@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { MARKETPLACE_CONFIG } from "@casa-yolotl/shared";
+import { MARKETPLACE_CONFIG } from "@casa-yolotl/shared/src/client";
 
 const FooterBottom = () => {
     const { t } = useLanguage();

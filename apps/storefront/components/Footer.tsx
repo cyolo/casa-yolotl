@@ -6,7 +6,7 @@ import FooterColumn from "./footer/FooterColumn";
 import FooterNewsletter from "./footer/FooterNewsletter";
 import FooterBottom from "./footer/FooterBottom";
 import HeroActions from "./hero/HeroActions";
-import { SITE_ROUTES } from "@casa-yolotl/shared";
+import { SITE_ROUTES } from "@casa-yolotl/shared/src/client";
 
 const Footer = () => {
     const { t } = useLanguage();

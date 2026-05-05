@@ -1,3 +1,4 @@
+import "server-only";
 import { IProductRepository, ProductFilters, PaginatedResult } from "./IProductRepository";
 import { products, Product } from "../data/products";
 

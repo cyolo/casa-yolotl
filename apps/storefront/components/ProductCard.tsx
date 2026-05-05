@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Product, trackMarketplaceExit, MARKETPLACE_CONFIG } from "@casa-yolotl/shared";
+import { Product, trackMarketplaceExit, MARKETPLACE_CONFIG } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface ProductCardProps {

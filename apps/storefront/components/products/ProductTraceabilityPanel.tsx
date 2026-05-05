@@ -1,6 +1,6 @@
 "use client";
 
-import { Product } from "@casa-yolotl/shared";
+import { Product } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 import { DESIGN_FLAGS } from "@/lib/design-flags";
 

@@ -1,3 +1,4 @@
+import "server-only";
 import { IProductRepository } from "./IProductRepository";
 import { StaticProductRepository } from "./StaticProductRepository";
 import { SupabaseProductRepository } from "./SupabaseProductRepository";

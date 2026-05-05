@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Story, products, Product } from "@casa-yolotl/shared";
+import { Story, products, Product } from "@casa-yolotl/shared/src/client";
 import ProductCard from "./ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 import ReactMarkdown from "react-markdown";

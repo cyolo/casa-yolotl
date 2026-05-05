@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Story } from "@casa-yolotl/shared";
+import { Story } from "@casa-yolotl/shared/src/client";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface StoryCardProps {

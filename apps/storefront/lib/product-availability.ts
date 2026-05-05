@@ -1,4 +1,4 @@
-import { Product } from "@casa-yolotl/shared";
+import { Product } from "@casa-yolotl/shared/src/client";
 
 export type ProductAvailabilityStatusType =
   | "available"
