@@ -39,7 +39,7 @@ export const authOptions: NextAuthOptions = {
             SecurityValidator.logSecurityEvent("AUTH_LOGIN_DENIED", { email: user.email });
             return false;
         },
-        async session({ session, token }) {
+        async session({ session }) {
             if (session?.user) {
                 // Inject the specific role from shared logic
                 const role = SecurityValidator.getUserRole(session.user.email);

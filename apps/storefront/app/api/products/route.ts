@@ -37,11 +37,11 @@ export async function GET(request: NextRequest) {
   const minPriceValue = minPriceRaw ? Number(minPriceRaw) : undefined;
   const maxPriceValue = maxPriceRaw ? Number(maxPriceRaw) : undefined;
 
-  let minPrice = Number.isFinite(minPriceValue)
+  const minPrice = Number.isFinite(minPriceValue)
     ? Math.max(0, minPriceValue as number)
     : undefined;
 
-  let maxPrice = Number.isFinite(maxPriceValue)
+  const maxPrice = Number.isFinite(maxPriceValue)
     ? Math.max(0, maxPriceValue as number)
     : undefined;
 

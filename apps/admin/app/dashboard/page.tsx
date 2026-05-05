@@ -4,7 +4,6 @@ import { useState } from "react";
 import AdminNavbar from "@/components/AdminNavbar";
 import ROIChart from "@/components/ROIChart";
 import GeographyChart from "@/components/GeographyChart";
-import { BRAND_COLORS } from "@casa-yolotl/shared";
 import { Activity, ShieldCheck, Globe, Zap, AlertTriangle, CheckCircle2, BarChart3, PenLine, Save } from "lucide-react";
 import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
 

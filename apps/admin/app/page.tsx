@@ -1,6 +1,5 @@
 "use client";
 
-import { BRAND_COLORS } from "@casa-yolotl/shared";
 import ROIChart from "@/components/ROIChart";
 import GeographyChart from "@/components/GeographyChart";
 import messages from "../../storefront/messages/admin/es.json";

@@ -7,6 +7,7 @@ import AdminNavbar from "@/components/AdminNavbar";
 import { ProductService, Product } from "@casa-yolotl/shared";
 import { Package, DollarSign, TrendingUp, Edit3, ArrowLeft, Save, X, Loader2, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function InventoryPage() {
     const { data: session, status } = useSession();
@@ -130,7 +131,13 @@ export default function InventoryPage() {
                                     <td className="p-6">
                                         <div className="flex items-center gap-4">
                                             <div className="w-12 h-12 bg-stone-950 border border-stone-800 overflow-hidden relative">
-                                                <img src={product.imageUrl} alt={product.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                                <Image
+                                                    src={product.imageUrl}
+                                                    alt={product.name}
+                                                    fill
+                                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                                    sizes="48px"
+                                                />
                                             </div>
                                             <div>
                                                 <span className="text-sm font-serif text-white block mb-1">{product.name}</span>

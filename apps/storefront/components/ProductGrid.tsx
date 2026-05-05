@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Product } from "@casa-yolotl/shared/src/client";
-import ProductCard from "./ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
-const categoriesKeys = ["todos", "mezcales", "artesanias", "decoracion", "ceramica-montoya"];
 
 import { DESIGN_FLAGS } from "@/lib/design-flags";
 import LegacyProductGrid from "./products/LegacyProductGrid";

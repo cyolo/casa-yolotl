@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useLanguage } from "@/context/LanguageContext";
 
 export default function StorefrontForbiddenPage() {
-    const { t } = useLanguage();
 
     return (
         <div className="min-h-screen bg-[#FDFCFB] flex items-center justify-center px-6">

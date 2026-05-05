@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import LocaleLink from "./LocaleLink";
 import { SITE_ROUTES } from "@casa-yolotl/shared/src/client";
 

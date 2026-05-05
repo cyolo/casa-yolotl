@@ -4,15 +4,12 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { allLanguages, languageCategories } from "@/data/languages";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname, useRouter } from "next/navigation";
 
 const LanguageSelector = () => {
     const { currentLanguage, setLanguage, t } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const dropdownRef = useRef<HTMLDivElement>(null);
-    const pathname = usePathname();
-    const router = useRouter();
 
     // Close dropdown on click outside
     useEffect(() => {

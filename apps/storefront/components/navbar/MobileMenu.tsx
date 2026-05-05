@@ -9,7 +9,7 @@ interface MobileMenuProps {
     onClose: () => void;
 }
 
-const MobileMenu = ({ isOpen, navLinks, onClose }: MobileMenuProps) => {
+const MobileMenu = ({ navLinks, onClose }: MobileMenuProps) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: -20 }}
