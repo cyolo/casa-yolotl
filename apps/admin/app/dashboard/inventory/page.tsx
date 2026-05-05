@@ -175,22 +175,27 @@ export default function InventoryPage() {
                                         </div>
                                     </td>
                                     <td className="p-6 text-right">
-                                        <div className="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <button
-                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
-                                                onClick={() => setEditingProduct({ id: product.id, type: 'price', value: product.price })}
-                                                title="Editar Precio"
-                                            >
-                                                <Edit3 className="w-3 h-3" />
-                                            </button>
-                                            <button
-                                                className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
-                                                onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: product.stock.toString() })}
-                                                title="Ajustar Stock"
-                                            >
-                                                <Package className="w-3 h-3" />
-                                            </button>
-                                        </div>
+                                        {session?.user?.role === "CEO" && (
+                                            <div className="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <button
+                                                    className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
+                                                    onClick={() => setEditingProduct({ id: product.id, type: 'price', value: product.price })}
+                                                    title="Editar Precio"
+                                                >
+                                                    <Edit3 className="w-3 h-3" />
+                                                </button>
+                                                <button
+                                                    className="p-2 border border-stone-700 text-stone-400 hover:border-brand-gold hover:text-brand-gold transition-all"
+                                                    onClick={() => setEditingProduct({ id: product.id, type: 'stock', value: product.stock.toString() })}
+                                                    title="Ajustar Stock"
+                                                >
+                                                    <Package className="w-3 h-3" />
+                                                </button>
+                                            </div>
+                                        )}
+                                        {session?.user?.role !== "CEO" && (
+                                            <span className="text-[10px] uppercase tracking-widest text-stone-600 italic">Lectura</span>
+                                        )}
                                     </td>
                                 </tr>
                             ))}
@@ -226,7 +231,7 @@ export default function InventoryPage() {
                             {editingProduct.type === 'price' ? 'Ajustar Precio' : 'Actualizar Inventario'}
                         </h3>
                         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-8">
-                            Admin Identity: {session?.user?.email}
+                            Admin Identity: {session?.user?.email} | Role: {session?.user?.role}
                         </p>
 
                         <div className="space-y-6">

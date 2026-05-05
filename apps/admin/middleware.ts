@@ -1,6 +1,7 @@
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
 import { SecurityValidator } from "@casa-yolotl/shared/src/auth";
+import { UserRole } from "@casa-yolotl/shared/src/auth/roles";
 
 // Security Guard: Ensure critical environment variables are present
 const NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET;
@@ -19,7 +20,7 @@ export default withAuth(
         const { pathname } = req.nextUrl;
         const token = req.nextauth.token;
         const email = token?.email;
-        const role = (token as unknown as { role?: string })?.role || "USER";
+        const role = (token as { role?: UserRole })?.role || "USER";
 
         // Security Audit Log: Capture every access attempt to sensitive zones
         SecurityValidator.logSecurityEvent("ZONE_ACCESS_REQUEST", {
@@ -43,7 +44,7 @@ export default withAuth(
         }
 
         // Specific Roles Logic (CEO required for certain sensitive sub-paths)
-        if (pathname.startsWith("/dashboard/finances") && role !== "CEO") {
+        if (pathname.startsWith("/dashboard/finances") && !SecurityValidator.canAccessFinances(role)) {
             SecurityValidator.logSecurityEvent("SENSITIVE_DATA_ACCESS_DENIED", { email, role, path: pathname });
             return NextResponse.redirect(new URL("/dashboard", req.url));
         }

@@ -11,12 +11,12 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const email = session.user.email;
-    const role = SecurityValidator.getUserRole(email);
+    const email = session.user.email ?? "unknown";
+    const role = session.user.role;
 
     // CEO and ADMIN can list products for inventory
-    if (role !== "CEO" && role !== "ADMIN") {
-        SecurityValidator.logSecurityEvent("ADMIN_UPDATE_DENIED", {
+    if (!SecurityValidator.canViewInventory(role)) {
+        SecurityValidator.logSecurityEvent("ADMIN_ACCESS_DENIED", {
             email,
             path: "/api/admin/products",
             reason: "Insufficient permissions for product listing"

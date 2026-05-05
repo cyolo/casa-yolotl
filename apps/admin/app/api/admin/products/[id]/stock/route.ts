@@ -15,11 +15,11 @@ export async function PATCH(
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const email = session.user.email;
-    const role = SecurityValidator.getUserRole(email);
+    const email = session.user.email ?? "unknown";
+    const role = session.user.role;
 
-    // Only CEO can update stock
-    if (role !== "CEO") {
+    // Only CEO can update inventory
+    if (!SecurityValidator.canModifyInventory(role)) {
         SecurityValidator.logSecurityEvent("ADMIN_UPDATE_DENIED", {
             email,
             path: `/api/admin/products/${id}/stock`,
