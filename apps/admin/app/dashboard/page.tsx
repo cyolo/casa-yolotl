@@ -5,7 +5,7 @@ import AdminNavbar from "@/components/AdminNavbar";
 import ROIChart from "@/components/ROIChart";
 import GeographyChart from "@/components/GeographyChart";
 import { Activity, ShieldCheck, Globe, Zap, AlertTriangle, CheckCircle2, BarChart3, PenLine, Save } from "lucide-react";
-import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared";
+import { heritageNarrative, nahuatlGlossary } from "@casa-yolotl/shared/src/client";
 
 // ... [rest of imports continue] ...
 

@@ -1,7 +1,7 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
-import { SecurityValidator } from "@casa-yolotl/shared";
+import { SecurityValidator } from "@casa-yolotl/shared/src/auth";
 
 // Security Guard: Validate critical environment variables
 const githubId = process.env.GITHUB_ID;

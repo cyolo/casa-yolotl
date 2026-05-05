@@ -10,7 +10,7 @@ import {
     ResponsiveContainer,
     Cell,
 } from "recharts";
-import { BRAND_COLORS } from "@casa-yolotl/shared";
+import { BRAND_COLORS } from "@casa-yolotl/shared/src/client";
 // import { useLanguage } from "@/context/LanguageContext"; // To be updated if admin has context
 
 export default function GeographyChart() {

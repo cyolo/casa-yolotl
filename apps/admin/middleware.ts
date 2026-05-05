@@ -1,6 +1,6 @@
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
-import { SecurityValidator } from "@casa-yolotl/shared";
+import { SecurityValidator } from "@casa-yolotl/shared/src/auth";
 
 // Security Guard: Ensure critical environment variables are present
 const NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET;

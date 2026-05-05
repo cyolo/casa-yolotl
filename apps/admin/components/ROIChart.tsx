@@ -11,7 +11,7 @@ import {
     Legend,
     ReferenceLine
 } from "recharts";
-import { BRAND_COLORS } from "@casa-yolotl/shared";
+import { BRAND_COLORS } from "@casa-yolotl/shared/src/client";
 
 const data = [
     { name: "Margen Neto", value: 24, target: 25 },

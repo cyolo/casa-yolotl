@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import AdminNavbar from "@/components/AdminNavbar";
-import { ProductService, Product } from "@casa-yolotl/shared";
+import { Product } from "@casa-yolotl/shared/src/client";
 import { Package, DollarSign, TrendingUp, Edit3, ArrowLeft, Save, X, Loader2, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,21 +22,21 @@ export default function InventoryPage() {
             redirect("/auth/signin");
         }
 
-        // Strict Security: Only CEO can manage inventory
-        if (status === "authenticated" && session?.user?.email !== "cesar.vargas.alanis@gmail.com") {
-            redirect("/403");
-        }
-
         if (status === "authenticated") {
             fetchProducts();
         }
-    }, [status, session]);
+    }, [status]);
 
     const fetchProducts = async () => {
         setIsLoading(true);
         try {
-            const { items } = await ProductService.getInstance().getProducts(1, 50, 'es');
-            setProducts(items);
+            const response = await fetch('/api/admin/products?page=1&limit=50&locale=es');
+            if (!response.ok) {
+                if (response.status === 403) redirect("/403");
+                throw new Error("Failed to fetch products");
+            }
+            const data = await response.json();
+            setProducts(data.items);
         } catch (error) {
             console.error("Error fetching products:", error);
         } finally {
@@ -50,11 +50,20 @@ export default function InventoryPage() {
         setMessage(null);
 
         try {
-            const service = ProductService.getInstance();
-            if (editingProduct.type === 'price') {
-                await service.updatePrice(editingProduct.id, parseFloat(editingProduct.value));
-            } else {
-                await service.updateStock(editingProduct.id, parseInt(editingProduct.value));
+            const endpoint = `/api/admin/products/${editingProduct.id}/${editingProduct.type}`;
+            const body = editingProduct.type === 'price'
+                ? { price: parseFloat(editingProduct.value) }
+                : { stock: parseInt(editingProduct.value) };
+
+            const response = await fetch(endpoint, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || "Update failed");
             }
 
             setMessage({ text: "Cambio aplicado exitosamente.", type: 'success' });
@@ -63,8 +72,9 @@ export default function InventoryPage() {
                 setMessage(null);
                 fetchProducts(); // Refresh data
             }, 1000);
-        } catch {
-            setMessage({ text: "Error al actualizar. Intente de nuevo.", type: 'error' });
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : "Error al actualizar. Intente de nuevo.";
+            setMessage({ text: errorMessage, type: 'error' });
         } finally {
             setIsUpdating(false);
         }
